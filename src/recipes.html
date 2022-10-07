@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Công thức nấu ăn</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper d-flex justify-content-between align-items-center">
+        <div class="logo">
+          <a href="./index.html"><img src="./img/home/logo.png" alt="" /></a>
+        </div>
+        <div class="nav d-none d-lg-flex">
+          <a href="./diet.html" class="nav-item">CHẾ ĐỘ ĂN</a>
+          <a href="#" class="nav-item"> MÓN ĂN</a>
+          <a href="./blog.html" class="nav-item"> BLOG</a>
+          <a href="./course.html" class="nav-item"> KHÓA HỌC NẤU ĂN</a>
+        </div>
+        <div class="header-feature d-flex align-items-center">
+          <div
+            class="header-feature-item user-btn d-none d-md-block text-light me-3"
+          >
+            <i class="bi bi-person-circle"></i>
+          </div>
+          <div class="header-feature-item text-light search-btn me-3 fs-4">
+            <i class="bi bi-search"></i>
+          </div>
+          <div
+            class="header-feature-item d-none d-md-block text-light search-btn me-3 fs-4"
+          >
+            <i class="bi bi-cart2"></i>
+          </div>
+          <div class="header-feature-item text-light d-md-none menu-btn">
+            <i class="bi bi-list"></i>
+            <div class="modal-layer">
+              <div class="menu-sidebar">
+                <a href=""> <div class="menu-sidebar-item">Trang chủ</div> </a
+                ><a href=""> <div class="menu-sidebar-item">Chế độ ăn</div> </a
+                ><a href=""> <div class="menu-sidebar-item">Món ăn</div> </a
+                ><a href=""> <div class="menu-sidebar-item">Blog</div> </a
+                ><a href="">
+                  <div class="menu-sidebar-item">Khóa học nấu ăn</div> </a
+                ><a href="">
+                  <div class="menu-sidebar-item">Tài khoản của tôi</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <div class="breadcumb">TRANG CHỦ / CÔNG THỨC NẤU ĂN</div>
+
+      <div class="body">
+        <div
+          class="heading d-flex justify-content-center align-items-center justify-content-sm-between"
+        >
+          <div class="content-decr">
+            <div class="title">CÔNG THỨC NẤU ĂN</div>
+            <div class="decr">
+              Khám phá các món ăn ngon, bổ, rẻ do cộng đồng cùng đóng góp.
+            </div>
+          </div>
+
+          <p class="create-btn"><i class="bi bi-plus"></i> Tạo công thức</p>
+        </div>
+        <div class="content">
+          <div class="row">
+            <div class="col-9">
+              <div class="row">
+                <div class="col-4">
+                  <div class="recipes-item border-item">
+                    <a href="">
+                      <!-- <div class="row align-items-center">
+                        <div class="col-5">
+                          <div class="recipes-item-thumb position-relative">
+                            <img src="./img/home/recipes/suon-rim.png" alt="" />
+                            <div class="recipes-time position-absolute">
+                              <p class="recipes-day">05</p>
+                              <p class="recipes-month">Jul</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-7">
+                          <h5 class="recipes-item-decr">
+                            <div class="recipes-item-name underline-hover-effect">
+                              SƯỜN RIM CHUA NGỌT
+                            </div>
+                            <p class="recipes-item-by">By Tâm Phạm</p>
+                          </h5>
+                        </div>
+                      </div> -->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-bg">
+      <div class="modal-overlay"></div>
+
+      <div class="modal-content">
+        <!-- Login form -->
+        <div class="auth-form login-form">
+          <div class="auth-form__header">
+            <div class="auth-form__heading">ĐĂNG NHẬP</div>
+          </div>
+
+          <div class="auth-form__form">
+            <form action="" class="form">
+              <div class="form-feild">
+                <input
+                  type="text"
+                  name="signin-name"
+                  id="signin-name"
+                  class="signin-name"
+                  placeholder="Tên đăng nhập"
+                />
+                <i class="bi bi-person input-icon"></i>
+              </div>
+
+              <div class="form-feild">
+                <input
+                  type="password"
+                  class="signin-password"
+                  name="signin-password"
+                  id="signin-password"
+                  placeholder="Mật khẩu"
+                />
+                <i class="bi bi-lock input-icon"></i>
+              </div>
+              <p class="forget-password text-end">Quên mật khẩu</p>
+              <button type="submit" class="submit-btn">Đăng nhập</button>
+            </form>
+            <p class="direction">
+              Bạn chưa có tài khoản?
+              <span class="direc-btn direc-register">Đăng ký</span>
+            </p>
+            <div class="signin-by">
+              <p>Đăng nhập bằng</p>
+              <div class="social-signin d-flex justify-content-center">
+                <a href=""
+                  ><div class="social-link">
+                    <img src=".img/home/signin/fb.jfif" alt="" /></div
+                ></a>
+                <a href=""
+                  ><div class="social-link">
+                    <img src=".img/home/signin/google.png" alt="" /></div
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Register -->
+        <div class="auth-form register-form">
+          <div class="auth-form__header">
+            <div class="auth-form__heading">ĐĂNG KÝ</div>
+          </div>
+
+          <div class="auth-form__form">
+            <form action="" class="form">
+              <div class="form-feild">
+                <input
+                  type="text"
+                  name="signin-name"
+                  id="signin-name"
+                  class="signin-name"
+                  placeholder="Tên đăng nhập"
+                />
+                <i class="bi bi-person input-icon"></i>
+              </div>
+
+              <div class="form-feild">
+                <input
+                  type="email"
+                  name="signup-email"
+                  id="signup-email"
+                  class="signin-name"
+                  placeholder="Email"
+                />
+                <i class="bi bi-person input-icon"></i>
+              </div>
+
+              <div class="form-feild">
+                <input
+                  type="password"
+                  class="signin-password"
+                  name="signin-password"
+                  id="signin-password"
+                  placeholder="Mật khẩu"
+                />
+                <i class="bi bi-lock input-icon"></i>
+              </div>
+
+              <div class="form-feild">
+                <input
+                  type="password"
+                  class="signin-password"
+                  name="signin-password"
+                  id="signin-password"
+                  placeholder="Nhập lại mật khẩu"
+                />
+                <i class="bi bi-lock input-icon"></i>
+              </div>
+
+              <button type="submit" class="submit-btn">Đăng ký</button>
+            </form>
+            <p class="direction">
+              Bạn đã có tài khoản?
+              <span class="direc-btn direc-login">Đăng nhập</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/recipes.js" type="module"></script>
+    <script src="../js/global.js" type="module"></script>
+  </body>
+</html>

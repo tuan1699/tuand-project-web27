@@ -8,7 +8,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(__dirname, "src/index.html"),
-        about: resolve(__dirname, "src/about.html"),
+        diet: resolve(__dirname, "src/diet.html"),
+        recipes: resolve(__dirname, "src/recipes.html"),
+        blog: resolve(__dirname, "src/blog.html"),
+        course: resolve(__dirname, "src/course.html"),
       },
     },
   },

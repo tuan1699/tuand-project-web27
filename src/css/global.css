@@ -20,7 +20,13 @@ p {
 
 html,
 p,
-a {
+a,
+h1,
+h2,
+h3,
+h5,
+h6,
+div {
   font-family: "Lato", sans-serif;
 }
 
@@ -33,8 +39,86 @@ a:hover {
   color: var(--active-color);
 }
 
+input,
 img {
   width: 100%;
+}
+
+/* Header */
+.header {
+  background-color: var(--sub-bg);
+}
+
+.wrapper {
+  padding: 0 20px;
+  min-height: 68px;
+}
+
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 30px;
+  font-size: 18px;
+}
+
+.nav-item:hover {
+  color: var(--active-color);
+}
+
+.header-feature {
+  font-size: 24px;
+}
+
+.header-feature-item:hover i {
+  cursor: pointer;
+  color: var(--active-color);
+}
+
+.title {
+  font-size: 30px;
+}
+
+.modal-layer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-sidebar {
+  position: absolute;
+  z-index: 11;
+  width: 50%;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+}
+
+.menu-sidebar-item {
+  border-bottom: 0.5px solid #ccc;
+}
+
+.menu-sidebar-item {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 20px 0px 20px 20px;
+  color: #333;
+}
+
+.menu-sidebar-item {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 20px 0px 20px 20px;
+  color: #000;
+}
+
+.menu-sidebar-item:hover {
+  background-color: #ccc;
 }
 
 .blog-item,
@@ -99,8 +183,318 @@ img {
   font-size: 14px;
 }
 
-.row {
+.recipes-item:hover .recipes-item-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+  /* opacity: 0.8; */
 }
 
+.recipes-item-thumb {
+  overflow: hidden;
+}
+
+.underline-hover-effect {
+  display: inline-block;
+  padding-bottom: 4px;
+  position: relative;
+}
+.underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--active-color);
+  transition: width 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.recipes-item:hover .underline-hover-effect::before {
+  width: 100%;
+}
+
+.quick-link:hover .quick-meal-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.quick-link:hover .underline-hover-effect::before {
+  width: 100%;
+}
+
+.quick-meal-thumb {
+  overflow: hidden;
+}
+
+.diet-link:hover .diet-item img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.diet-item {
+  overflow: hidden;
+}
+
+.popular-link:hover .recipes-popular-number {
+  color: var(--active-color);
+}
+
+.popular-link:hover .recipes-popular-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.suggest-link:hover .suggest-item-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
 /* ------------------------- */
 /* Công thức phổ biến */
+/* Course */
+
+.course-decr {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* Blog */
+
+.blog-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.blog-info {
+  color: var(--sub-bg);
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.blog-by::after {
+  position: relative;
+  top: 4px;
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  margin: 0 20px;
+  background-color: var(--sub-color);
+}
+
+.blog-link:hover .blog-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.blog-decr {
+  display: none;
+}
+
+.blog-thumb {
+  overflow: hidden;
+}
+
+/* modal */
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* animation: growth ease 0.4s; */
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  width: 400px;
+  background: #fff;
+  border-radius: 15px;
+  margin: auto;
+  z-index: 3;
+  animation: modalFadeIn ease 0.4s;
+}
+
+.auth-form {
+  text-align: center;
+  padding: 40px 40px;
+}
+
+.auth-form__heading {
+  font-size: 24px;
+  padding-bottom: 40px;
+}
+
+.form-feild {
+  position: relative;
+  width: 100%;
+  margin: 24px 0;
+  /* margin-bottom: 8px; */
+}
+
+.form-feild input {
+  padding: 6px 30px;
+  border-radius: 8px;
+  border: 0.5px solid #000;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+  top: 4px;
+}
+
+.submit-btn {
+  margin: 40px 0;
+  padding: 6px 0;
+  border-radius: 15px;
+  color: #fff;
+  width: 100%;
+  border: none;
+  background-color: var(--active-color);
+}
+
+.submit-btn:hover {
+  background-color: #ff744c;
+  cursor: pointer;
+}
+
+.forget-password {
+  font-size: 14px;
+}
+
+.forget-password:hover {
+  color: var(--active-color);
+  cursor: pointer;
+}
+
+.direction {
+  font-size: 14px;
+}
+
+.direc-btn {
+  color: var(--active-color);
+}
+
+.direc-btn:hover {
+  color: #ff744c;
+  cursor: pointer;
+}
+
+.signin-by {
+  margin-top: 40px;
+}
+
+.social-link {
+  width: 20px;
+  height: 20px;
+  margin: 0 4px;
+}
+
+.register-form {
+  display: none;
+}
+
+/* BreadCumb */
+
+.breadcumb {
+  padding: 20px 0px;
+}
+
+/* Nút tạo công thức */
+.create-btn {
+  background-color: #e49a0c;
+  color: #fff;
+  width: 150px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Heading từng Page */
+.decr {
+  font-size: 14px;
+}
+/* Animation */
+
+@keyframes modalFadeIn {
+  from {
+    transform: translateY(-200px);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes growth {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* .wrapper {
+    padding: 0 20px;
+  } */
+  .blog-decr {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* .wrapper {
+    padding: 0 20px;
+  } */
+  .slider-item-title {
+    font-size: 40px;
+  }
+
+  .slider-item-decr {
+    margin-bottom: 20px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* .wrapper {
+    padding: 0 20px;
+  } */
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+    margin: auto;
+    padding: 0;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .wrapper {
+    width: 1200px;
+    margin: auto;
+  }
+}
