@@ -1,4 +1,4 @@
-import "../css/index.css";
+import "css/index.css";
 
 const menuBtn = document.querySelector(".menu-btn");
 const menuSidebar = document.querySelector(".menu-sidebar");

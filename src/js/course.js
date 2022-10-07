@@ -1,1 +1,1 @@
-import "../css/course.css";
+import "css/course.css";
