@@ -1,1 +1,1 @@
-import "css/blog.css";
+import "../css/blog.css";

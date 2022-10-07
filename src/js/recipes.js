@@ -1,1 +1,1 @@
-import "css/recipes.css";
+import "../css/recipes.css";

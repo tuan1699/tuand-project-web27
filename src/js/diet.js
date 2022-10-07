@@ -1,1 +1,1 @@
-import "css/diet.css";
+import "../css/diet.css";
