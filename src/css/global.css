@@ -1,0 +1,106 @@
+:root {
+  --primary-color: #333;
+  --active-color: #ef9225;
+  --sub-color: rgb(151, 148, 148);
+  --primary-bg: #d8d8d8;
+  --sub-bg: #3c3b3d;
+  --font-sub: "'Lora', serif;";
+  --font-main: "'Lato', sans-serif";
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+*,
+p {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+p,
+a {
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: var(--active-color);
+}
+
+img {
+  width: 100%;
+}
+
+.blog-item,
+.course-item,
+.recipes-item,
+.diet-item {
+  margin-bottom: 24px;
+}
+
+.heading {
+  margin-bottom: 20px;
+}
+
+/* Xem thêm */
+.see-all:hover {
+  cursor: pointer;
+  color: var(--active-color);
+}
+
+.btn-see-all {
+  width: 80%;
+  border: 1px solid #000;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 40px;
+  font-size: 18px;
+}
+
+.btn-see-all.btn-quick-meal {
+  width: 80%;
+  border: 1px solid #fff;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 40px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.btn-see-all:hover {
+  background-color: var(--active-color);
+  border: 1px solid #000;
+
+  color: #000;
+}
+/* ---------------------- */
+.border-item {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #ccc;
+}
+/* Công thức nấu ăn item */
+
+.recipes-item-decr {
+  text-align: left;
+}
+
+.recipes-item-name {
+  margin-bottom: 16px;
+}
+
+.recipes-item-by {
+  font-size: 14px;
+}
+
+.row {
+}
+
+/* ------------------------- */
+/* Công thức phổ biến */

@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Mood</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper d-flex justify-content-between align-items-center">
+        <div class="logo">
+          <a href=""><img src="./img/home/logo.png" alt="" /></a>
+        </div>
+        <div class="nav d-none d-lg-flex">
+          <a href="" class="nav-item">CHẾ ĐỘ ĂN</a>
+          <a href="" class="nav-item"> MÓN ĂN</a>
+          <a href="" class="nav-item"> BLOG</a>
+          <a href="" class="nav-item"> KHÓA HỌC NẤU ĂN</a>
+        </div>
+        <div class="header-feature d-flex align-items-center">
+          <div class="header-feature-item d-none d-md-block text-light me-3">
+            <i class="bi bi-person-circle"></i>
+          </div>
+          <div class="header-feature-item text-light search-btn me-3 fs-4">
+            <i class="bi bi-search"></i>
+          </div>
+          <div
+            class="header-feature-item d-none d-md-block text-light search-btn me-3 fs-4"
+          >
+            <i class="bi bi-cart2"></i>
+          </div>
+          <div class="header-feature-item text-light d-md-none menu-btn">
+            <i class="bi bi-list"></i>
+            <div class="modal-layer">
+              <div class="menu-sidebar">
+                <a href=""> <div class="menu-sidebar-item">Trang chủ</div> </a
+                ><a href=""> <div class="menu-sidebar-item">Chế độ ăn</div> </a
+                ><a href=""> <div class="menu-sidebar-item">Món ăn</div> </a
+                ><a href=""> <div class="menu-sidebar-item">Blog</div> </a
+                ><a href="">
+                  <div class="menu-sidebar-item">Khóa học nấu ăn</div> </a
+                ><a href="">
+                  <div class="menu-sidebar-item">Tài khoản của tôi</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="slider position-relative">
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div
+              class="slider-item"
+              style="background-image: url(./img/home/slider-diet.png)"
+            >
+              <div
+                class="slider-item-text position-absolute text-light"
+                style="right: 10%; top: 50%"
+              >
+                <h1 class="slider-item-title">Diet For Healthy Life</h1>
+                <p class="slider-item-decr d-none d-md-block">
+                  Tôi đã từng mắc phải rất nhiều sai lầm khi yêu và cảm thấy hối
+                  hận gần như tất cả các cuộc tình mình trải qua. Tuy nhiên, tôi
+                  không hề hối hận vì những món ăn đã gắn liền với chúng.
+                </p>
+                <button class="btn-see-more">Xem ngay</button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              class="slider-item"
+              style="background-image: url(./img/home/slider-recipes.png)"
+            >
+              <div
+                class="slider-item-text position-absolute text-light"
+                style="left: 15%; top: 50%"
+              >
+                <h1 class="slider-item-title">Family Easy Recipes</h1>
+                <p class="slider-item-decr d-none d-md-block">
+                  Có ba cách để dẫn đến trái tim của em: mua thức ăn cho em, làm
+                  những món ăn mà em thích, cuối cùng là thức ăn của em.
+                </p>
+                <button class="btn-see-more">Xem ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div
+              class="slider-item"
+              style="background-image: url(./img/home/slider-blog.png)"
+            >
+              <div
+                class="slider-item-text position-absolute text-light"
+                style="right: 10%; top: 50%"
+              >
+                <h1 class="slider-item-title">Blog For Easy Cooking</h1>
+                <p class="slider-item-decr d-none d-md-block">
+                  Thế giới bếp núc với tôi vốn là một trò chơi tuyệt đẹp mà
+                  không biết từ lúc nào tôi đã chìm đắm. Tôi yêu thích cảm giác
+                  toàn tâm toàn ý làm ra một món ăn ngon, thưởng thức, chụp ảnh
+                  và viết lại những dòng chia sẻ về nó
+                </p>
+                <button class="btn-see-more">Xem ngay</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div
+              class="slider-item"
+              style="background-image: url(./img/home/slider-course.png)"
+            >
+              <div
+                class="slider-item-text position-absolute text-light"
+                style="left: 15%; top: 50%"
+              >
+                <h1 class="slider-item-title">Cooking Course</h1>
+                <p class="slider-item-decr d-none d-md-block">
+                  Hãy để chúng tôi đồng hành cùng bạn trên con đường vun đắp
+                  hạnh phúc gia đình bằng những kiến thức bổ ích, món ăn hấp
+                  dẫn, sự tận tình, chu đáo và tỉ mỉ
+                </p>
+                <button class="btn-see-more">Xem ngay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="body">
+      <div class="wrapper">
+        <div class="diet text-center">
+          <div
+            class="heading d-flex justify-content-center justify-content-sm-between"
+          >
+            <h2 class="title">CHẾ ĐỘ ĂN HOT</h2>
+            <p class="see-all d-none d-sm-block">Xem tất cả</p>
+          </div>
+
+          <div class="content">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="diet-item border-item">
+                  <img src="./img/home/diet/diet-keto.png" alt="" />
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="diet-item border-item">
+                  <img src="./img/home/diet/diet-paleo.png" alt="" />
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="diet-item border-item">
+                  <img src="./img/home/diet/diet-low.png" alt="" />
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="diet-item border-item">
+                  <img src="./img/home/diet/diet-low.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <button class="btn-see-all d-sm-none">Xem tất cả</button>
+          </div>
+        </div>
+
+        <div class="recipes text-center">
+          <div class="row">
+            <div class="col-12 col-lg-9">
+              <div class="row">
+                <div
+                  class="heading d-flex justify-content-center justify-content-sm-between"
+                >
+                  <h2 class="title">CÔNG THỨC MỚI NHẤT</h2>
+                  <p class="see-all d-none d-sm-block">Xem tất cả</p>
+                </div>
+
+                <div class="content">
+                  <div class="row">
+                    <div class="col-12 col-sm-6">
+                      <div class="recipes-item border-item">
+                        <a href="">
+                          <div class="row align-items-center">
+                            <div class="col-5">
+                              <div class="recipes-item-thumb position-relative">
+                                <img
+                                  src="./img/home/recipes/sun-ga-rang-muoi.png"
+                                  alt=""
+                                />
+                                <div class="recipes-time position-absolute">
+                                  <p class="recipes-day">05</p>
+                                  <p class="recipes-month">Jul</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-7">
+                              <h5 class="recipes-item-decr">
+                                <div class="recipes-item-name">
+                                  SỤN GÀ RANG MUỐI
+                                </div>
+                                <p class="recipes-item-by">By Tâm Phạm</p>
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                      <div class="recipes-item border-item">
+                        <a href="">
+                          <div class="row align-items-center">
+                            <div class="col-5">
+                              <div class="recipes-item-thumb position-relative">
+                                <img
+                                  src="./img/home/recipes/suon-rim.png"
+                                  alt=""
+                                />
+                                <div class="recipes-time position-absolute">
+                                  <p class="recipes-day">05</p>
+                                  <p class="recipes-month">Jul</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-7">
+                              <h5 class="recipes-item-decr">
+                                <div class="recipes-item-name">
+                                  CÁCH RIM SƯỜN CHUA NGỌT MỀM MỌNG RÓC XƯƠNG CỰC
+                                  DỄ
+                                </div>
+                                <p class="recipes-item-by">By Tâm Phạm</p>
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                      <div class="recipes-item border-item">
+                        <a href="">
+                          <div class="row align-items-center">
+                            <div class="col-5">
+                              <div class="recipes-item-thumb position-relative">
+                                <img
+                                  src="./img/home/recipes/ca-ngu.png"
+                                  alt=""
+                                />
+                                <div class="recipes-time position-absolute">
+                                  <p class="recipes-day">05</p>
+                                  <p class="recipes-month">Jul</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-7">
+                              <h5 class="recipes-item-decr">
+                                <div class="recipes-item-name">
+                                  CÁ NGỪ CUỘN RAU CỦ XỐT NẤM MÈ
+                                </div>
+                                <p class="recipes-item-by">By Tâm Phạm</p>
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                      <div class="recipes-item border-item">
+                        <a href="">
+                          <div class="row align-items-center">
+                            <div class="col-5">
+                              <div class="recipes-item-thumb position-relative">
+                                <img
+                                  src="./img/home/recipes/thit-kho.png"
+                                  alt=""
+                                />
+                                <div class="recipes-time position-absolute">
+                                  <p class="recipes-day">05</p>
+                                  <p class="recipes-month">Jul</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-7">
+                              <h5 class="recipes-item-decr">
+                                <div class="recipes-item-name">
+                                  THỊT KHO MĂNG NỨA
+                                </div>
+                                <p class="recipes-item-by">By Tâm Phạm</p>
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                      <div class="recipes-item border-item">
+                        <a href="">
+                          <div class="row align-items-center">
+                            <div class="col-5">
+                              <div class="recipes-item-thumb position-relative">
+                                <img src="./img/home/recipes/xoi.png" alt="" />
+                                <div class="recipes-time position-absolute">
+                                  <p class="recipes-day">05</p>
+                                  <p class="recipes-month">Jul</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-7">
+                              <h5 class="recipes-item-decr">
+                                <div class="recipes-item-name">
+                                  XÔI XÍU TRỨNG MUỐI
+                                </div>
+                                <p class="recipes-item-by">By Tâm Phạm</p>
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                      <div class="recipes-item border-item">
+                        <a href="">
+                          <div class="row align-items-center">
+                            <div class="col-5">
+                              <div class="recipes-item-thumb position-relative">
+                                <img
+                                  src="./img/home/recipes/chan-ga.png"
+                                  alt=""
+                                />
+                                <div class="recipes-time position-absolute">
+                                  <p class="recipes-day">05</p>
+                                  <p class="recipes-month">Jul</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-7">
+                              <h5 class="recipes-item-decr">
+                                <div class="recipes-item-name">
+                                  CHÂN GÀ NGÂM XÌ DẦU
+                                </div>
+                                <p class="recipes-item-by">By Tâm Phạm</p>
+                              </h5>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-see-all d-sm-none">Xem tất cả</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 d-none d-lg-block col-lg-3">
+              <div class="row">
+                <div class="col-12">
+                  <div class="heading">NHIỀU NGƯỜI THỰC HIỆN</div>
+                </div>
+
+                <div class="col-12">
+                  <div class="recipes-popular position-relative border-item">
+                    <div class="recipes-popular-top-1">
+                      <div class="recipes-popular-thumb">
+                        <img
+                          src="./img/home/recipes/recipes-thumb.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="recipes-popular-top position-absolute d-flex align-items-center"
+                    >
+                      <div class="recipes-popular-number">1</div>
+                      <div class="recipes-popular-decr text-start">
+                        <div class="recipes-popular-name">SỤN GÀ RANG MUỐI</div>
+                        <p class="recipes-popular-by">3 month</p>
+                      </div>
+                    </div>
+                    <div class="recipes-popular-item d-flex align-items-center">
+                      <div class="recipes-popular-number">2</div>
+                      <div class="recipes-popular-decr text-start">
+                        <div class="recipes-popular-name">
+                          TÔM THỊT NHỒI BÍ ĐAO
+                        </div>
+                        <p class="recipes-popular-by">3 month</p>
+                      </div>
+                    </div>
+
+                    <div class="recipes-popular-item d-flex align-items-center">
+                      <div class="recipes-popular-number">3</div>
+                      <div class="recipes-popular-decr text-start">
+                        <div class="recipes-popular-name">
+                          HÀU NƯỚNG PHÔ MAI
+                        </div>
+                        <p class="recipes-popular-by">3 month</p>
+                      </div>
+                    </div>
+
+                    <div class="recipes-popular-item d-flex align-items-center">
+                      <div class="recipes-popular-number">4</div>
+                      <div class="recipes-popular-decr text-start">
+                        <div class="recipes-popular-name">
+                          CÁ NGỪ CUỘN RAU CỦ SỐT NẤM MÈ
+                        </div>
+                        <p class="recipes-popular-by">3 month</p>
+                      </div>
+                    </div>
+
+                    <div class="recipes-popular-item d-flex align-items-center">
+                      <div class="recipes-popular-number">5</div>
+                      <div class="recipes-popular-decr text-start">
+                        <div class="recipes-popular-name">
+                          TÔM THỊT NHỒI BÍ ĐAO
+                        </div>
+                        <p class="recipes-popular-by">3 month</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="suggest text-center">
+          <div
+            class="heading d-flex justify-content-center justify-content-sm-between"
+          >
+            <h2 class="title">GỢI Ý CHO BẠN</h2>
+          </div>
+
+          <div class="content">
+            <div class="row">
+              <div class="col-6 col-md-12 col-lg-6">
+                <div class="row">
+                  <div class="col-12 col-md-3 col-lg-3">
+                    <div class="suggest-item">
+                      <div class="suggest-item-thumb">
+                        <img src="./img/home/suggest/banh-my.png" alt="" />
+                      </div>
+                      <div class="suggest-item-name">Bánh mỳ</div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3 col-lg-3">
+                    <div class="suggest-item">
+                      <div class="suggest-item-thumb">
+                        <img src="./img/home/suggest/banh-ngot.png" alt="" />
+                      </div>
+                      <div class="suggest-item-name">Bánh Ngọt</div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3 col-lg-3">
+                    <div class="suggest-item">
+                      <div class="suggest-item-thumb">
+                        <img src="./img/home/suggest/breakfast.png" alt="" />
+                      </div>
+                      <div class="suggest-item-name">Breakfast</div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3 col-lg-3">
+                    <div class="suggest-item">
+                      <div class="suggest-item-thumb">
+                        <img src="./img/home/suggest/drink.png" alt="" />
+                      </div>
+                      <div class="suggest-item-name">Đồ uống</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-12 col-lg-6">
+                <div class="row">
+                  <div class="col-12 col-md-3 col-lg-3">
+                    <div class="suggest-item">
+                      <div class="suggest-item-thumb">
+                        <img src="./img/home/suggest/khai-vi.png" alt="" />
+                      </div>
+                      <div class="suggest-item-name">Khai vị</div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3 col-lg-3">
+                    <div class="suggest-item">
+                      <div class="suggest-item-thumb">
+                        <img src="./img/home/suggest/mon-chinh.png" alt="" />
+                      </div>
+                      <div class="suggest-item-name">Món chính</div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3 col-lg-3">
+                    <div class="suggest-item">
+                      <div class="suggest-item-thumb">
+                        <img src="./img/home/suggest/mon-phu.png" alt="" />
+                      </div>
+                      <div class="suggest-item-name">Món phụ</div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3 col-lg-3">
+                    <div class="suggest-item">
+                      <div class="suggest-item-thumb">
+                        <img src="./img/home/suggest/trang-mieng.png" alt="" />
+                      </div>
+                      <div class="suggest-item-name">Tráng miệng</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quick-meal text-center">
+        <div class="wrapper">
+          <div
+            class="heading d-flex justify-content-center justify-content-sm-between"
+          >
+            <h2 class="title">BỮA ĂN NHANH CHUẨN BỊ DƯỚI 30 PHÚT</h2>
+            <p class="see-all d-none d-md-block">Xem tất cả</p>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="row">
+            <div class="col-6 col-sm-4 col-lg-2">
+              <div class="quick-meal-item">
+                <div class="quick-meal-thumb">
+                  <img src="./img/home/quick-meal/banh-my-trung.png" alt="" />
+                </div>
+
+                <div class="quick-meal-decr">
+                  <div class="quick-meal-info text-start">
+                    <p class="quick-meal-name">Bánh mỳ trứng ốp la</p>
+                    <div class="quick-meal-time">
+                      30 minutes <i class="bi bi-alarm"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-sm-4 col-lg-2">
+              <div class="quick-meal-item">
+                <div class="quick-meal-thumb">
+                  <img src="./img/home/quick-meal/ngu-coc.png" alt="" />
+                </div>
+
+                <div class="quick-meal-decr">
+                  <div class="quick-meal-info text-start">
+                    <p class="quick-meal-name">Ngũ cốc các loại</p>
+                    <div class="quick-meal-time">
+                      30 minutes <i class="bi bi-alarm"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-lg-2">
+              <div class="quick-meal-item">
+                <div class="quick-meal-thumb">
+                  <img src="./img/home/quick-meal/sanwich.png" alt="" />
+                </div>
+
+                <div class="quick-meal-decr">
+                  <div class="quick-meal-info text-start">
+                    <p class="quick-meal-name">Sandwich</p>
+                    <div class="quick-meal-time">
+                      30 minutes <i class="bi bi-alarm"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-lg-2">
+              <div class="quick-meal-item">
+                <div class="quick-meal-thumb">
+                  <img src="./img/home/quick-meal/my-xao.png" alt="" />
+                </div>
+
+                <div class="quick-meal-decr">
+                  <div class="quick-meal-info text-start">
+                    <p class="quick-meal-name">Mỳ xào rau củ</p>
+                    <div class="quick-meal-time">
+                      30 minutes <i class="bi bi-alarm"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-lg-2">
+              <div class="quick-meal-item">
+                <div class="quick-meal-thumb">
+                  <img src="./img/home/quick-meal/my-y.png" alt="" />
+                </div>
+
+                <div class="quick-meal-decr">
+                  <div class="quick-meal-info text-start">
+                    <p class="quick-meal-name">Mỳ Ý</p>
+                    <div class="quick-meal-time">
+                      30 minutes <i class="bi bi-alarm"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-lg-2">
+              <div class="quick-meal-item">
+                <div class="quick-meal-thumb">
+                  <img src="./img/home/quick-meal/com-chien.png" alt="" />
+                </div>
+
+                <div class="quick-meal-decr">
+                  <div class="quick-meal-info text-start">
+                    <p class="quick-meal-name">Cơm chiên</p>
+                    <div class="quick-meal-time">
+                      30 minutes <i class="bi bi-alarm"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn-see-all btn-quick-meal d-sm-none">
+            Xem tất cả
+          </button>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="course">
+          <div
+            class="heading d-flex justify-content-center justify-content-sm-between"
+          >
+            <h2 class="title">KHÓA HỌC NẤU ĂN GIA ĐÌNH</h2>
+            <p class="see-all d-none d-sm-block">Xem tất cả</p>
+          </div>
+
+          <div class="content">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="course-item border-item">
+                  <div class="course-thumb">
+                    <img
+                      src="./img/home/course/bua-sang-thong-minh.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="course-info">
+                    <div class="course-name text-center">
+                      BỮA SÁNG THÔNG MINH
+                    </div>
+                    <p class="course-decr">
+                      Khóa học cung cấp công thức chế biến món ăn sáng ngon,
+                      phương pháp nấu tiết kiệm thời gian nhưng đảm bảo dinh
+                      dưỡng.
+                    </p>
+                  </div>
+                  <button class="btn-siginup">ĐĂNG KÝ KHÓA HỌC</button>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="course-item border-item">
+                  <div class="course-thumb">
+                    <img src="./img/home/course/mon-ngon-ba-mien.png" alt="" />
+                  </div>
+                  <div class="course-info">
+                    <div class="course-name text-center">MÓN NGON BA MIỀN</div>
+                    <p class="course-decr">
+                      Tham gia lớp học, bạn sẽ tích lũy được kiến thức, kỹ năng
+                      nấu nhiều món ăn hấp dẫn từ Chuyên gia.
+                    </p>
+                  </div>
+                  <button class="btn-siginup">ĐĂNG KÝ KHÓA HỌC</button>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="course-item border-item">
+                  <div class="course-thumb">
+                    <img src="./img/home/course/hom-nay-an-gi.png" alt="" />
+                  </div>
+                  <div class="course-info">
+                    <div class="course-name text-center">HÔM NAY ĂN GÌ</div>
+                    <p class="course-decr">
+                      Khóa học giúp bạn có thể biến nguyên liệu quen thuộc thành
+                      món ăn thơm ngon, lạ miệng, làm phong phú thực đơn.
+                    </p>
+                  </div>
+                  <button class="btn-siginup">ĐĂNG KÝ KHÓA HỌC</button>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="course-item border-item">
+                  <div class="course-thumb">
+                    <img src="./img/home/course/hong-kong.png" alt="" />
+                  </div>
+                  <div class="course-info">
+                    <div class="course-name text-center">ĐIỂM TÂM HONGKONG</div>
+                    <p class="course-decr">
+                      Các món ăn đặc trưng của xứ Cảng Thơm để làm phong phú hơn
+                      bữa sáng cho cả gia đình của bạn.
+                    </p>
+                  </div>
+                  <button class="btn-siginup">ĐĂNG KÝ KHÓA HỌC</button>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="course-item border-item">
+                  <div class="course-thumb">
+                    <img src="./img/home/course/mon-an-duong-pho.png" alt="" />
+                  </div>
+                  <div class="course-info">
+                    <div class="course-name text-center">MÓN ĂN ĐƯỜNG PHỐ</div>
+                    <p class="course-decr">
+                      Giúp bạn thấu hiểu cặn kẽ cách chế biến thành công các món
+                      ăn vặt đường phố đặc trưng của Việt Nam.
+                    </p>
+                  </div>
+                  <button class="btn-siginup">ĐĂNG KÝ KHÓA HỌC</button>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="course-item border-item">
+                  <div class="course-thumb">
+                    <img src="./img/home/course/mon-an-bo-duong.png" alt="" />
+                  </div>
+                  <div class="course-info">
+                    <div class="course-name text-center">MÓN ĂN BỔ DƯỠNG</div>
+                    <p class="course-decr">
+                      Giúp bạn nắm vững kiến thứ chế biến nhiều món ngon bổ sung
+                      dưỡng chất, nâng cao sức khỏe cho người thân.
+                    </p>
+                  </div>
+                  <button class="btn-siginup">ĐĂNG KÝ KHÓA HỌC</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog">
+          <div
+            class="heading d-flex justify-content-center justify-content-sm-between"
+          >
+            <h2 class="title">BLOG</h2>
+            <p class="see-all d-none d-sm-block">Xem tất cả</p>
+          </div>
+
+          <div class="content">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <div class="blog-item">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="blog-thumb">
+                        <img src="./img/home/blog/dua.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="blog-decr">
+                        <div class="blog-name">
+                          HỌC CÁCH CẮT DỨA (THƠM) 2 KIỂU CỰC DỄ
+                        </div>
+                      </div>
+                      <div class="blog-info d-flex align-items-center">
+                        <div class="blog-by">by Hà Vy</div>
+                        <div class="blog-time">March 13, 2021</div>
+                      </div>
+                      <p class="blog-decr d-none d-sm-block">
+                        Mâm cơm nhà vào tháng Ba, thường có canh rau tập tàng
+                        nấu riêu cua. Vì là mùa xuân, mọi thứ trong vườn, ngoài
+                        đồng đều xanh biếc, mơn mởn, ngon nõn...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6">
+                <div class="blog-item">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="blog-thumb">
+                        <img
+                          src="./img/home/blog/com-nha-thang-ba.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="blog-decr">
+                        <div class="blog-name">CƠM NHÀ THÁNG BA</div>
+                      </div>
+                      <div class="blog-info d-flex align-items-center">
+                        <div class="blog-by">by Hà Vy</div>
+                        <div class="blog-time">March 13, 2021</div>
+                      </div>
+                      <p class="blog-decr d-none d-sm-block">
+                        Mâm cơm nhà vào tháng Ba, thường có canh rau tập tàng
+                        nấu riêu cua. Vì là mùa xuân, mọi thứ trong vườn, ngoài
+                        đồng đều xanh biếc, mơn mởn, ngon nõn...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6">
+                <div class="blog-item">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="blog-thumb">
+                        <img src="./img/home/blog/hoa-gao.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="blog-decr">
+                        <div class="blog-name">
+                          THÁNG BA, HOA GẠO. THỬ LÀM MÓN “HOA GẠO XÀO” TRONG
+                          TRUYỀN THUYẾT
+                        </div>
+                      </div>
+                      <div class="blog-info d-flex align-items-center">
+                        <div class="blog-by">by Hà Vy</div>
+                        <div class="blog-time">March 13, 2021</div>
+                      </div>
+                      <p class="blog-decr d-none d-sm-block">
+                        Chưa năm nào hoa gạo nở đều, đỏ rực và đẹp đẽ như năm
+                        nay. Mùa hoa gạo gắn liền với bao nhiêu kỉ niệm tuổi thơ
+                        đẹp đẽ. Có ai còn nhớ mùa hoa gạo đỏ rực, cả lũ…
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6">
+                <div class="blog-item">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="blog-thumb">
+                        <img src="./img/home/blog/cho-buoi.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="blog-decr">
+                        <div class="blog-name">
+                          CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
+                        </div>
+                      </div>
+                      <div class="blog-info d-flex align-items-center">
+                        <div class="blog-by">by Hà Vy</div>
+                        <div class="blog-time">March 13, 2021</div>
+                      </div>
+                      <p class="blog-decr d-none d-sm-block">
+                        CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG hoàn
+                        toàn từ rau củ quả “Trung thu là Tết Thiếu Nhi, Không có
+                        chó bưởi còn gì là vui!”
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="social d-flex justify-content-center">
+        <div class="social-item d-flex align-items-center">
+          <span class="social-icon">
+            <i class="bi bi-facebook"></i>
+          </span>
+          <p class="social-name d-none d-md-block">FACEBOOK</p>
+        </div>
+
+        <div class="social-item d-flex align-items-center">
+          <span class="social-icon">
+            <i class="bi bi-facebook"></i>
+          </span>
+          <p class="social-name d-none d-md-block">TWITTER</p>
+        </div>
+
+        <div class="social-item d-flex align-items-center">
+          <span class="social-icon">
+            <i class="bi bi-facebook"></i>
+          </span>
+          <p class="social-name d-none d-md-block">GOOGLE</p>
+        </div>
+
+        <div class="social-item d-flex align-items-center">
+          <span class="social-icon">
+            <i class="bi bi-facebook"></i>
+          </span>
+          <p class="social-name d-none d-md-block">INSTAGRAM</p>
+        </div>
+
+        <div class="social-item d-flex align-items-center">
+          <span class="social-icon">
+            <i class="bi bi-facebook"></i>
+          </span>
+          <p class="social-name d-none d-md-block">PINTEREST</p>
+        </div>
+
+        <div class="social-item d-flex align-items-center">
+          <span class="social-icon">
+            <i class="bi bi-facebook"></i>
+          </span>
+          <p class="social-name d-none d-md-block">YOUTOBE</p>
+        </div>
+
+        <div class="social-item d-flex align-items-center">
+          <span class="social-icon">
+            <i class="bi bi-facebook"></i>
+          </span>
+          <p class="social-name d-none d-md-block">EMAIL</p>
+        </div>
+
+        <div class="social-item d-flex align-items-center">
+          <span class="social-icon">
+            <i class="bi bi-facebook"></i>
+          </span>
+          <p class="social-name d-none d-md-block">SNAPCHAT</p>
+        </div>
+      </div>
+      <div class="copy-right">
+        @2022 - Food Mood. All Right Reserved. Designed and Developed by Tuan
+        Dang Van
+      </div>
+    </section>
+
+    <script src="../js/index.js" type="module"></script>
+    <script src="../js/global.js" type="module"></script>
+  </body>
+</html>
