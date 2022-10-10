@@ -36,11 +36,15 @@
             <i class="bi bi-list"></i>
             <div class="modal-layer">
               <div class="menu-sidebar">
-                <a href=""> <div class="menu-sidebar-item">Trang chủ</div> </a
-                ><a href=""> <div class="menu-sidebar-item">Chế độ ăn</div> </a
-                ><a href=""> <div class="menu-sidebar-item">Món ăn</div> </a
-                ><a href=""> <div class="menu-sidebar-item">Blog</div> </a
-                ><a href="">
+                <a href="./index.html">
+                  <div class="menu-sidebar-item">Trang chủ</div> </a
+                ><a href="./diet.html">
+                  <div class="menu-sidebar-item">Chế độ ăn</div> </a
+                ><a href="./recipes.html">
+                  <div class="menu-sidebar-item">Món ăn</div> </a
+                ><a href="./blog.html">
+                  <div class="menu-sidebar-item">Blog</div> </a
+                ><a href="./course.html">
                   <div class="menu-sidebar-item">Khóa học nấu ăn</div> </a
                 ><a href="">
                   <div class="menu-sidebar-item">Tài khoản của tôi</div>
@@ -57,58 +61,786 @@
 
       <div class="body">
         <div
-          class="heading d-flex justify-content-center align-items-center justify-content-sm-between"
+          class="heading d-block d-md-flex justify-content-center align-items-center justify-content-sm-between"
         >
           <div class="content-decr">
             <div class="title">CÔNG THỨC NẤU ĂN</div>
-            <div class="decr">
+            <div class="decr-page">
               Khám phá các món ăn ngon, bổ, rẻ do cộng đồng cùng đóng góp.
             </div>
           </div>
 
-          <p class="create-btn"><i class="bi bi-plus"></i> Tạo công thức</p>
+          <p class="create-btn my-3">
+            <i class="bi bi-plus"></i> Tạo công thức
+          </p>
         </div>
         <div class="content">
           <div class="row">
-            <div class="col-9">
-              <div class="row">
-                <div class="col-4">
-                  <div class="recipes-item border-item">
+            <div class="col-12 col-lg-9">
+              <div class="filter-field">
+                <div class="filter-heading d-flex justify-content-between">
+                  <div class="filter-heading-title">Chọn món theo</div>
+                  <div class="filter-clear">Xóa lựa chọn</div>
+                </div>
+                <form action="" class="filter-form d-flex">
+                  <div class="form-field">
+                    <select name="season" id="season">
+                      <option value="#">Mùa</option>
+                      <option value="spring">Mùa Xuân</option>
+                      <option value="summer">Mùa Hạ</option>
+                      <option value="fall">Mùa Thu</option>
+                      <option value="winter">Mùa Đông</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <select name="region" id="region">
+                      <option value="#">Vùng miền</option>
+                      <option value="North-side">Miền Bắc</option>
+                      <option value="Central">Miền Trung</option>
+                      <option value="South-side">Miền Nam</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <select name="type" id="type">
+                      <option value="#">Loại</option>
+                      <option value="main">Món chính</option>
+                      <option value="sub">Món phụ</option>
+                      <option value="appetizer">Khai vị</option>
+                      <option value="beverage">Đồ uống</option>
+                      <option value="dessert">Tráng miệng</option>
+                      <option value="bread">Bánh mỳ</option>
+                      <option value="cake">Bánh ngọt</option>
+                      <option value="drink">Ăn nhậu</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <select name="time" id="time">
+                      <option value="#">Thời gian nấu</option>
+                      <option value="30">Dưới 30 phút</option>
+                      <option value="1hour">1 tiếng</option>
+                      <option value="2hour">2 tiếng</option>
+                      <option value="long">Nấu nhừ</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <select name="process" id="process">
+                      <option value="#">Cách chế biến</option>
+                      <option value="">Món luộc</option>
+                      <option value="#">Món xào</option>
+                      <option value="#">Món chiên, rán</option>
+                      <option value="#">Nước chấm</option>
+                      <option value="#">Rang</option>
+                      <option value="#">Đút lò</option>
+                      <option value="#">Ngâm</option>
+                      <option value="#">Nấu canh</option>
+                      <option value="#">Rim</option>
+                      <option value="#">Hầm</option>
+                      <option value="#">Kho</option>
+                      <option value="#">Salad</option>
+                      <option value="#">Nướng</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <select name="process" id="process">
+                      <option value="#">Thành phần</option>
+                      
+                    </select>
+                  </div>
+                </form>
+              </div>
+              <div class="recipes-list">
+                <div class="row">
+                  <div class="col-12 col-sm-6 col-lg-4">
                     <a href="">
-                      <!-- <div class="row align-items-center">
-                        <div class="col-5">
-                          <div class="recipes-item-thumb position-relative">
-                            <img src="./img/home/recipes/suon-rim.png" alt="" />
-                            <div class="recipes-time position-absolute">
-                              <p class="recipes-day">05</p>
-                              <p class="recipes-month">Jul</p>
+                      <div class="recipes-item border-item">
+                        <div class="recipes-item-thumb">
+                          <img src="./img/recipes/ga-an-may.png" alt="" />
+                        </div>
+
+                        <div class="recipes-item-decr">
+                          <div class="recipes-item-name">
+                            CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ
+                          </div>
+                          <div class="item-info d-flex align-items-center">
+                            <div class="item-by">by Hà Vy</div>
+                            <div class="item-time">March 13, 2021</div>
+                          </div>
+                          <div
+                            class="recipes-item-bonus d-flex justify-content-between"
+                          >
+                            <div class="duration">
+                              45 phút<i class="duration-icon bi bi-clock"></i>
+                            </div>
+                            <div class="recipes-feature">
+                              <i class="favourite bi bi-bookmark"></i>
+
+                              <i class="share bi bi-share"></i>
                             </div>
                           </div>
                         </div>
-                        <div class="col-7">
-                          <h5 class="recipes-item-decr">
-                            <div class="recipes-item-name underline-hover-effect">
-                              SƯỜN RIM CHUA NGỌT
-                            </div>
-                            <p class="recipes-item-by">By Tâm Phạm</p>
-                          </h5>
-                        </div>
-                      </div> -->
+                      </div>
                     </a>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="">
+                      <div class="recipes-item border-item">
+                        <div class="recipes-item-thumb">
+                          <img src="./img/recipes/ga-an-may.png" alt="" />
+                        </div>
+
+                        <div class="recipes-item-decr">
+                          <div class="recipes-item-name">
+                            CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ
+                          </div>
+                          <div class="item-info d-flex align-items-center">
+                            <div class="item-by">by Hà Vy</div>
+                            <div class="item-time">March 13, 2021</div>
+                          </div>
+                          <div
+                            class="recipes-item-bonus d-flex justify-content-between"
+                          >
+                            <div class="duration">
+                              45 phút<i class="duration-icon bi bi-clock"></i>
+                            </div>
+                            <div class="recipes-feature">
+                              <i class="favourite bi bi-bookmark"></i>
+
+                              <i class="share bi bi-share"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="">
+                      <div class="recipes-item border-item">
+                        <div class="recipes-item-thumb">
+                          <img src="./img/recipes/ga-an-may.png" alt="" />
+                        </div>
+
+                        <div class="recipes-item-decr">
+                          <div class="recipes-item-name">
+                            CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ
+                          </div>
+                          <div class="item-info d-flex align-items-center">
+                            <div class="item-by">by Hà Vy</div>
+                            <div class="item-time">March 13, 2021</div>
+                          </div>
+                          <div
+                            class="recipes-item-bonus d-flex justify-content-between"
+                          >
+                            <div class="duration">
+                              45 phút<i class="duration-icon bi bi-clock"></i>
+                            </div>
+                            <div class="recipes-feature">
+                              <i class="favourite bi bi-bookmark"></i>
+
+                              <i class="share bi bi-share"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="">
+                      <div class="recipes-item border-item">
+                        <div class="recipes-item-thumb">
+                          <img src="./img/recipes/ga-an-may.png" alt="" />
+                        </div>
+
+                        <div class="recipes-item-decr">
+                          <div class="recipes-item-name">
+                            CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ
+                          </div>
+                          <div class="item-info d-flex align-items-center">
+                            <div class="item-by">by Hà Vy</div>
+                            <div class="item-time">March 13, 2021</div>
+                          </div>
+                          <div
+                            class="recipes-item-bonus d-flex justify-content-between"
+                          >
+                            <div class="duration">
+                              45 phút<i class="duration-icon bi bi-clock"></i>
+                            </div>
+                            <div class="recipes-feature">
+                              <i class="favourite bi bi-bookmark"></i>
+
+                              <i class="share bi bi-share"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="">
+                      <div class="recipes-item border-item">
+                        <div class="recipes-item-thumb">
+                          <img src="./img/recipes/ga-an-may.png" alt="" />
+                        </div>
+
+                        <div class="recipes-item-decr">
+                          <div class="recipes-item-name">
+                            CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ
+                          </div>
+                          <div class="item-info d-flex align-items-center">
+                            <div class="item-by">by Hà Vy</div>
+                            <div class="item-time">March 13, 2021</div>
+                          </div>
+                          <div
+                            class="recipes-item-bonus d-flex justify-content-between"
+                          >
+                            <div class="duration">
+                              45 phút<i class="duration-icon bi bi-clock"></i>
+                            </div>
+                            <div class="recipes-feature">
+                              <i class="favourite bi bi-bookmark"></i>
+
+                              <i class="share bi bi-share"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="">
+                      <div class="recipes-item border-item">
+                        <div class="recipes-item-thumb">
+                          <img src="./img/recipes/ga-an-may.png" alt="" />
+                        </div>
+
+                        <div class="recipes-item-decr">
+                          <div class="recipes-item-name">
+                            CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ
+                          </div>
+                          <div class="item-info d-flex align-items-center">
+                            <div class="item-by">by Hà Vy</div>
+                            <div class="item-time">March 13, 2021</div>
+                          </div>
+                          <div
+                            class="recipes-item-bonus d-flex justify-content-between"
+                          >
+                            <div class="duration">
+                              45 phút<i class="duration-icon bi bi-clock"></i>
+                            </div>
+                            <div class="recipes-feature">
+                              <i class="favourite bi bi-bookmark"></i>
+
+                              <i class="share bi bi-share"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="">
+                      <div class="recipes-item border-item">
+                        <div class="recipes-item-thumb">
+                          <img src="./img/recipes/ga-an-may.png" alt="" />
+                        </div>
+
+                        <div class="recipes-item-decr">
+                          <div class="recipes-item-name">
+                            CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ
+                          </div>
+                          <div class="item-info d-flex align-items-center">
+                            <div class="item-by">by Hà Vy</div>
+                            <div class="item-time">March 13, 2021</div>
+                          </div>
+                          <div
+                            class="recipes-item-bonus d-flex justify-content-between"
+                          >
+                            <div class="duration">
+                              45 phút<i class="duration-icon bi bi-clock"></i>
+                            </div>
+                            <div class="recipes-feature">
+                              <i class="favourite bi bi-bookmark"></i>
+
+                              <i class="share bi bi-share"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="">
+                      <div class="recipes-item border-item">
+                        <div class="recipes-item-thumb">
+                          <img src="./img/recipes/ga-an-may.png" alt="" />
+                        </div>
+
+                        <div class="recipes-item-decr">
+                          <div class="recipes-item-name">
+                            CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ
+                          </div>
+                          <div class="item-info d-flex align-items-center">
+                            <div class="item-by">by Hà Vy</div>
+                            <div class="item-time">March 13, 2021</div>
+                          </div>
+                          <div
+                            class="recipes-item-bonus d-flex justify-content-between"
+                          >
+                            <div class="duration">
+                              45 phút<i class="duration-icon bi bi-clock"></i>
+                            </div>
+                            <div class="recipes-feature">
+                              <i class="favourite bi bi-bookmark"></i>
+
+                              <i class="share bi bi-share"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="">
+                      <div class="recipes-item border-item">
+                        <div class="recipes-item-thumb">
+                          <img src="./img/recipes/ga-an-may.png" alt="" />
+                        </div>
+
+                        <div class="recipes-item-decr">
+                          <div class="recipes-item-name">
+                            CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ
+                          </div>
+                          <div class="item-info d-flex align-items-center">
+                            <div class="item-by">by Hà Vy</div>
+                            <div class="item-time">March 13, 2021</div>
+                          </div>
+                          <div
+                            class="recipes-item-bonus d-flex justify-content-between"
+                          >
+                            <div class="duration">
+                              45 phút<i class="duration-icon bi bi-clock"></i>
+                            </div>
+                            <div class="recipes-feature">
+                              <i class="favourite bi bi-bookmark"></i>
+
+                              <i class="share bi bi-share"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="">
+                      <div class="recipes-item border-item">
+                        <div class="recipes-item-thumb">
+                          <img src="./img/recipes/ga-an-may.png" alt="" />
+                        </div>
+
+                        <div class="recipes-item-decr">
+                          <div class="recipes-item-name underline-hover-effect">
+                            CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ
+                          </div>
+                          <div class="item-info d-flex align-items-center">
+                            <div class="item-by">by Hà Vy</div>
+                            <div class="item-time">March 13, 2021</div>
+                          </div>
+                          <div
+                            class="recipes-item-bonus d-flex justify-content-between"
+                          >
+                            <div class="duration">
+                              45 phút<i class="duration-icon bi bi-clock"></i>
+                            </div>
+                            <div class="recipes-feature">
+                              <i class="favourite bi bi-bookmark"></i>
+
+                              <i class="share bi bi-share"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="">
+                      <div class="recipes-item border-item">
+                        <div class="recipes-item-thumb">
+                          <img src="./img/recipes/ga-an-may.png" alt="" />
+                        </div>
+
+                        <div class="recipes-item-decr">
+                          <div class="recipes-item-name">
+                            CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ
+                          </div>
+                          <div class="item-info d-flex align-items-center">
+                            <div class="item-by">by Hà Vy</div>
+                            <div class="item-time">March 13, 2021</div>
+                          </div>
+                          <div
+                            class="recipes-item-bonus d-flex justify-content-between"
+                          >
+                            <div class="duration">
+                              45 phút<i class="duration-icon bi bi-clock"></i>
+                            </div>
+                            <div class="recipes-feature">
+                              <i class="favourite bi bi-bookmark"></i>
+
+                              <i class="share bi bi-share"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="">
+                      <div class="recipes-item border-item">
+                        <div class="recipes-item-thumb">
+                          <img src="./img/recipes/ga-an-may.png" alt="" />
+                        </div>
+
+                        <div class="recipes-item-decr">
+                          <div class="recipes-item-name">
+                            CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ
+                          </div>
+                          <div class="item-info d-flex align-items-center">
+                            <div class="item-by">by Hà Vy</div>
+                            <div class="item-time">March 13, 2021</div>
+                          </div>
+                          <div
+                            class="recipes-item-bonus d-flex justify-content-between"
+                          >
+                            <div class="duration">
+                              45 phút<i class="duration-icon bi bi-clock"></i>
+                            </div>
+                            <div class="recipes-feature">
+                              <i class="favourite bi bi-bookmark"></i>
+
+                              <i class="share bi bi-share"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="controller d-flex justify-content-center">
+                    <span class="controller-item active">1</span>
+
+                    <span class="controller-item">2</span>
+
+                    <span class="controller-item">3</span>
+
+                    <span class="controller-item">4</span>
+
+                    <span class="controller-item">5</span>
+
+                    <span class="controller-item controller-next"
+                      ><i class="bi bi-chevron-right"></i
+                    ></span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-3"></div>
+            <div class="d-none d-lg-block col-lg-3">
+              <div class="side-bar-content">
+                <div class="popular-recipes">
+                  <div class="heading-sidebar">NHIỀU NGƯỜI THỰC HIỆN</div>
+                  <div class="recipes-popular position-relative border-item">
+                    <a href="" class="popular-link">
+                      <div class="recipes-popular-top-1">
+                        <div class="recipes-popular-thumb overflow-hidden">
+                          <img
+                            src="./img/home/recipes/recipes-thumb.png"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="recipes-popular-top position-absolute d-flex align-items-center"
+                        >
+                          <div class="recipes-popular-number">1</div>
+                          <div class="recipes-popular-decr text-start">
+                            <div class="recipes-popular-name">
+                              SỤN GÀ RANG MUỐI
+                            </div>
+                            <p class="recipes-popular-by">3 month</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="" class="popular-link">
+                      <div
+                        class="recipes-popular-item d-flex align-items-center"
+                      >
+                        <div class="recipes-popular-number">2</div>
+                        <div class="recipes-popular-decr text-start">
+                          <div class="recipes-popular-name">
+                            TÔM THỊT NHỒI BÍ ĐAO
+                          </div>
+                          <p class="recipes-popular-by">3 month</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="" class="popular-link">
+                      <div
+                        class="recipes-popular-item d-flex align-items-center"
+                      >
+                        <div class="recipes-popular-number">3</div>
+                        <div class="recipes-popular-decr text-start">
+                          <div class="recipes-popular-name">
+                            HÀU NƯỚNG PHÔ MAI
+                          </div>
+                          <p class="recipes-popular-by">3 month</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="" class="popular-link">
+                      <div
+                        class="recipes-popular-item d-flex align-items-center"
+                      >
+                        <div class="recipes-popular-number">4</div>
+                        <div class="recipes-popular-decr text-start">
+                          <div class="recipes-popular-name">
+                            CÁ NGỪ CUỘN RAU CỦ SỐT NẤM MÈ
+                          </div>
+                          <p class="recipes-popular-by">3 month</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="" class="popular-link">
+                      <div
+                        class="recipes-popular-item d-flex align-items-center"
+                      >
+                        <div class="recipes-popular-number">5</div>
+                        <div class="recipes-popular-decr text-start">
+                          <div class="recipes-popular-name">
+                            TÔM THỊT NHỒI BÍ ĐAO
+                          </div>
+                          <p class="recipes-popular-by">3 month</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="popular-blog">
+                  <div class="heading-sidebar">BÀI ĐĂNG NỔI BẬT</div>
+                  <div class="popular-blog-item">
+                    <div class="popular-blog-thumb">
+                      <img src="./img/blog/cho-buoi.png" alt="" />
+                    </div>
+
+                    <div class="popular-blog-name">
+                      CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
+                    </div>
+                    <div class="item-info d-flex align-items-center">
+                      <div class="item-by">by Hà Vy</div>
+                      <div class="item-time">March 13, 2021</div>
+                    </div>
+                  </div>
+
+                  <div class="popular-blog-item">
+                    <div class="popular-blog-thumb">
+                      <img src="./img/blog/cho-buoi.png" alt="" />
+                    </div>
+
+                    <div class="popular-blog-name">
+                      CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
+                    </div>
+                    <div class="item-info d-flex align-items-center">
+                      <div class="item-by">by Hà Vy</div>
+                      <div class="item-time">March 13, 2021</div>
+                    </div>
+                  </div>
+
+                  <div class="popular-blog-item">
+                    <div class="popular-blog-thumb">
+                      <img src="./img/blog/cho-buoi.png" alt="" />
+                    </div>
+
+                    <div class="popular-blog-name">
+                      CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
+                    </div>
+                    <div class="item-info d-flex align-items-center">
+                      <div class="item-by">by Hà Vy</div>
+                      <div class="item-time">March 13, 2021</div>
+                    </div>
+                  </div>
+
+                  <div class="popular-blog-item">
+                    <div class="popular-blog-thumb">
+                      <img src="./img/blog/cho-buoi.png" alt="" />
+                    </div>
+
+                    <div class="popular-blog-name">
+                      CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
+                    </div>
+                    <div class="item-info d-flex align-items-center">
+                      <div class="item-by">by Hà Vy</div>
+                      <div class="item-time">March 13, 2021</div>
+                    </div>
+                  </div>
+
+                  <div class="popular-blog-item">
+                    <div class="popular-blog-thumb">
+                      <img src="./img/blog/cho-buoi.png" alt="" />
+                    </div>
+
+                    <div class="popular-blog-name">
+                      CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
+                    </div>
+                    <div class="item-info d-flex align-items-center">
+                      <div class="item-by">by Hà Vy</div>
+                      <div class="item-time">March 13, 2021</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="popular-video">
+                  <div class="heading-sidebar">VIDEO NỔI BẬT</div>
+                  <div class="video-item">
+                    <iframe
+                      width="100%"
+                      height="160"
+                      src="https://www.youtube.com/embed/KKvsCxioJeQ"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+
+                  <div class="video-item">
+                    <iframe
+                      width="100%"
+                      height="160"
+                      src="https://www.youtube.com/embed/KKvsCxioJeQ"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+
+                  <div class="video-item">
+                    <iframe
+                      width="100%"
+                      height="160"
+                      src="https://www.youtube.com/embed/KKvsCxioJeQ"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <section class="footer">
+      <div class="social d-flex justify-content-center">
+        <a href="https://www.facebook.com/">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-facebook"></i>
+            </span>
+            <p class="social-name d-none d-md-block">FACEBOOK</p>
+          </div>
+        </a>
+
+        <a href="https://twitter.com/?lang=vi">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-twitter"></i>
+            </span>
+            <p class="social-name d-none d-md-block">TWITTER</p>
+          </div>
+        </a>
+
+        <a href="https://google.com">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-google"></i>
+            </span>
+            <p class="social-name d-none d-md-block">GOOGLE</p>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/foodaholic.ig/">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-instagram"></i>
+            </span>
+            <p class="social-name d-none d-md-block">INSTAGRAM</p>
+          </div>
+        </a>
+
+        <a href="https://www.pinterest.com/search/pins/?q=food&rs=typed">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-pinterest"></i>
+            </span>
+            <p class="social-name d-none d-md-block">PINTEREST</p>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/c/Delight_Studios/videos">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-youtube"></i>
+            </span>
+            <p class="social-name d-none d-md-block">YOUTUBE</p>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-envelope"></i>
+            </span>
+            <p class="social-name d-none d-md-block">EMAIL</p>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-snapchat"></i>
+            </span>
+            <p class="social-name d-none d-md-block">SNAPCHAT</p>
+          </div>
+        </a>
+      </div>
+      <div class="copy-right">
+        @2022 - Food Mood. All Right Reserved. Designed and Developed by Tuan
+        Dang Van
+      </div>
+    </section>
+
     <div class="modal-bg">
       <div class="modal-overlay"></div>
 
-      <div class="modal-content">
+      <div class="auth-body">
         <!-- Login form -->
         <div class="auth-form login-form">
           <div class="auth-form__header">

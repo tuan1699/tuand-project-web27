@@ -1,0 +1,87 @@
+/* POPULAR */
+
+.item-info {
+  color: var(--sub-bg);
+  padding-top: 8px;
+  font-size: 14px;
+}
+
+.item-by::after {
+  position: relative;
+  top: 4px;
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  margin: 0 16px;
+  background-color: var(--sub-color);
+}
+
+.share {
+  margin-left: 10px;
+}
+
+.recipes-popular-number {
+  min-width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+}
+
+.recipes-popular {
+  margin-top: 20px;
+}
+
+.recipes-popular-top {
+  width: 100%;
+  top: 50px;
+  left: 0;
+  gap: 10px;
+  padding: 32px 10px 32px 30px;
+
+  color: #fff;
+  gap: 10px;
+}
+
+.recipes-popular-item {
+  gap: 10px;
+  padding: 32px 10px 32px 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.popular-link:hover .recipes-popular-number {
+  color: var(--active-color);
+}
+
+.popular-link:hover .recipes-popular-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.popular-blog-item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--sub-color);
+}
+
+
+
+.heading-sidebar {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.side-bar-content::-webkit-scrollbar {
+  display: none;
+}
+
+.popular-recipes,
+.popular-blog,
+.popular-video {
+  margin-bottom: 40px;
+}
+
+.video-item {
+  margin-top: 20px;
+}

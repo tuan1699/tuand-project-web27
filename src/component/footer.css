@@ -1,0 +1,32 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: var(--active-color);
+}
+
+.social {
+  gap: 30px;
+  padding: 30px;
+  border-bottom: 0.5px solid #fff;
+}
+
+.social-name {
+  font-size: 12px;
+}
+
+.social-icon {
+  margin-right: 4px;
+}
+
+.copy-right {
+  font-size: 12px;
+  padding: 30px;
+  text-align: center;
+}

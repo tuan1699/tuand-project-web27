@@ -1,0 +1,110 @@
+/* modal */
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* animation: growth ease 0.4s; */
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.auth-body {
+  width: 400px;
+  background: #fff;
+  border-radius: 15px;
+  margin: auto;
+  z-index: 3;
+  animation: modalFadeIn ease 0.4s;
+}
+
+.auth-form {
+  text-align: center;
+  padding: 40px 40px;
+}
+
+.auth-form__heading {
+  font-size: 24px;
+  padding-bottom: 40px;
+}
+
+.form-feild {
+  position: relative;
+  width: 100%;
+  margin: 24px 0;
+  /* margin-bottom: 8px; */
+}
+
+.form-feild input {
+  padding: 6px 30px;
+  border-radius: 8px;
+  border: 0.5px solid #000;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+  top: 4px;
+}
+
+.submit-btn {
+  margin: 40px 0;
+  padding: 6px 0;
+  border-radius: 15px;
+  color: #fff;
+  width: 40%;
+
+  border: none;
+  background-color: var(--active-color);
+}
+
+.submit-btn:hover {
+  background-color: #ff744c;
+  cursor: pointer;
+}
+
+.forget-password {
+  font-size: 14px;
+}
+
+.forget-password:hover {
+  color: var(--active-color);
+  cursor: pointer;
+}
+
+.direction {
+  font-size: 14px;
+}
+
+.direc-btn {
+  color: var(--active-color);
+}
+
+.direc-btn:hover {
+  color: #ff744c;
+  cursor: pointer;
+}
+
+.signin-by {
+  margin-top: 40px;
+}
+
+.social-link {
+  width: 20px;
+  height: 20px;
+  margin: 0 4px;
+}
+
+.register-form {
+  display: none;
+}

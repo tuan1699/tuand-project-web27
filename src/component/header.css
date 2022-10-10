@@ -1,0 +1,100 @@
+/* HEADER */
+.header {
+  background-color: var(--sub-bg);
+}
+
+.wrapper {
+  padding: 0 20px;
+  min-height: 68px;
+}
+
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 30px;
+  font-size: 18px;
+}
+
+.nav-item:hover {
+  color: var(--active-color);
+}
+
+.header-feature {
+  font-size: 24px;
+}
+
+.header-feature-item:hover i {
+  cursor: pointer;
+  color: var(--active-color);
+}
+
+.title {
+  font-size: 30px;
+}
+
+.modal-layer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-sidebar {
+  position: absolute;
+  z-index: 11;
+  width: 50%;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+}
+
+.menu-sidebar-item {
+  border-bottom: 0.5px solid #ccc;
+}
+
+.menu-sidebar-item {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 20px 0px 20px 20px;
+  color: #333;
+}
+
+.menu-sidebar-item {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 20px 0px 20px 20px;
+  color: #000;
+}
+
+.menu-sidebar-item:hover {
+  background-color: #ccc;
+}
+
+/* BREADCUMB */
+.breadcumb {
+  margin: 20px 0 0 0;
+}
+
+.heading {
+  margin: 40px 0 40px 0;
+}
+
+.decr-page {
+  font-size: 14px;
+}
+
+.create-btn {
+  background-color: #e49a0c;
+  color: #fff;
+  width: 150px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

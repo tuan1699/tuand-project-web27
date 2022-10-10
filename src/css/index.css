@@ -1,3 +1,139 @@
+/* Header */
+.header {
+  background-color: var(--sub-bg);
+}
+
+.wrapper {
+  padding: 0 20px;
+  min-height: 68px;
+}
+
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 30px;
+  font-size: 18px;
+}
+
+.nav-item:hover {
+  color: var(--active-color);
+}
+
+.header-feature {
+  font-size: 24px;
+}
+
+.header-feature-item:hover i {
+  cursor: pointer;
+  color: var(--active-color);
+}
+
+.title {
+  font-size: 30px;
+}
+
+.modal-layer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-sidebar {
+  position: absolute;
+  z-index: 11;
+  width: 50%;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+}
+
+.menu-sidebar-item {
+  border-bottom: 0.5px solid #ccc;
+}
+
+.menu-sidebar-item {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 20px 0px 20px 20px;
+  color: #333;
+}
+
+.menu-sidebar-item {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 20px 0px 20px 20px;
+  color: #000;
+}
+
+.menu-sidebar-item:hover {
+  background-color: #ccc;
+}
+
+.blog-item,
+.course-item,
+.recipes-item,
+.diet-item {
+  margin-bottom: 24px;
+}
+
+.blog,
+.course,
+.recipes,
+.suggest,
+.diet {
+  margin: 40px 0;
+}
+
+.heading {
+  margin-bottom: 20px;
+}
+
+.heading-popular {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Xem thêm */
+.see-all:hover {
+  cursor: pointer;
+  color: var(--active-color);
+}
+
+.btn-see-all {
+  width: 80%;
+  border: 1px solid #000;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 40px;
+  font-size: 18px;
+}
+
+.btn-see-all.btn-quick-meal {
+  width: 80%;
+  border: 1px solid #fff;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 40px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.btn-see-all:hover {
+  background-color: var(--active-color);
+  border: 1px solid #000;
+
+  color: #000;
+}
+
+/* SLIDER */
+
 .slider {
   width: 100%;
 }
@@ -5,7 +141,6 @@
 .slider-item {
   width: 100%;
   padding-top: 40%;
-  /* background-image: url(./img/home/slider-diet.png); */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -13,9 +148,6 @@
 .slider-item-text {
   width: 45%;
   transform: translateY(-50%);
-  /* display: flex;
-  flex-direction: column;
-  gap: 20px; */
 }
 
 .slider-item-title {
@@ -37,17 +169,60 @@
   border: 1px solid var(--active-color);
 }
 
-.blog,
-.course,
-.recipes,
-.suggest,
-.diet {
-  margin: 40px 0;
+/* DIET */
+.diet-link:hover .diet-item img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
-/* .diet-item {
+.diet-item {
   overflow: hidden;
-} */
+}
+
+/* RECIPES */
+
+.recipes-item-decr {
+  text-align: left;
+}
+
+.recipes-item-name {
+  margin-bottom: 16px;
+}
+
+.recipes-item-by {
+  font-size: 14px;
+}
+
+.recipes-item:hover .recipes-item-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+  /* opacity: 0.8; */
+}
+
+.recipes-item-thumb {
+  overflow: hidden;
+}
+
+.underline-hover-effect {
+  display: inline-block;
+  padding-bottom: 4px;
+  position: relative;
+}
+.underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--active-color);
+  transition: width 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.recipes-item:hover .underline-hover-effect::before {
+  width: 100%;
+}
 
 .recipes-time {
   z-index: 0;
@@ -71,6 +246,8 @@
   font-size: 12px;
 }
 
+/* POPULAR */
+
 .recipes-popular-number {
   min-width: 40px;
   height: 40px;
@@ -82,7 +259,6 @@
 
 .recipes-popular {
   margin-top: 20px;
-  /* padding-bottom: 40px; */
 }
 
 .recipes-popular-top {
@@ -101,8 +277,66 @@
   padding: 32px 10px 32px 30px;
   border-bottom: 1px solid #ccc;
 }
+
+.popular-link:hover .recipes-popular-number {
+  color: var(--active-color);
+}
+
+.popular-link:hover .recipes-popular-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+/* SUGGESTION */
+
+.suggest-link:hover .suggest-item-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.suggest-link:hover .suggest-item-thumb {
+  transform: scale(1.1) rotate(8deg);
+  transition: 0.5s ease;
+}
+
 .suggest-item-thumb {
   border-radius: 40px;
+  overflow: hidden;
+}
+/* BLOG */
+
+.blog-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.blog-info {
+  color: var(--sub-bg);
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.blog-by::after {
+  position: relative;
+  top: 4px;
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  margin: 0 20px;
+  background-color: var(--sub-color);
+}
+
+.blog-link:hover .blog-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.blog-decr {
+  display: none;
+}
+
+.blog-thumb {
   overflow: hidden;
 }
 
@@ -112,6 +346,20 @@
   color: var(--active-color);
   padding: 70px 0;
 }
+
+.quick-link:hover .quick-meal-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.quick-link:hover .underline-hover-effect::before {
+  width: 100%;
+}
+
+.quick-meal-thumb {
+  overflow: hidden;
+}
+
 .quick-meal-info {
   padding: 10px 10px;
 }
@@ -130,6 +378,13 @@
 /* Khóa học nấu ăn */
 .course-item {
   background-color: var(--sub-bg);
+}
+
+.course-decr {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .course-info {
@@ -157,7 +412,7 @@
   overflow: hidden;
 }
 
-.btn-siginup {
+.course-register {
   width: 100%;
   border: none;
   padding: 10px 0;
@@ -166,32 +421,12 @@
 }
 /* -------------- */
 
-.footer {
-  background-color: #000;
-  color: #fff;
-}
-
-.social {
-  gap: 30px;
-  padding: 30px;
-  border-bottom: 0.5px solid #fff;
-}
-
-.social-name {
-  font-size: 12px;
-}
-
-.social-icon {
-  margin-right: 4px;
-}
-
-.copy-right {
-  font-size: 12px;
-  padding: 30px;
-  text-align: center;
-}
 /* ---------- */
-
+.border-item {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #ccc;
+}
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   /* .wrapper {

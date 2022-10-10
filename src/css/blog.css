@@ -1,3 +1,44 @@
+.blog-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.blog-info {
+  color: var(--sub-bg);
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.blog-by::after {
+  position: relative;
+  top: 4px;
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  margin: 0 20px;
+  background-color: var(--sub-color);
+}
+
+.blog-item {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--sub-color);
+}
+
+.blog-link:hover .blog-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.blog-decr {
+  display: none;
+}
+
+.blog-thumb {
+  overflow: hidden;
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   /* .wrapper {
