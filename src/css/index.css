@@ -332,10 +332,6 @@
   transition: 0.5s ease;
 }
 
-.blog-decr {
-  display: none;
-}
-
 .blog-thumb {
   overflow: hidden;
 }
