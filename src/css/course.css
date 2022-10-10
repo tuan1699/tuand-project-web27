@@ -86,6 +86,25 @@
   margin-bottom: 20px;
 }
 
+.cource-popular-item {
+  padding: 20px 0px;
+  border-bottom: 1px solid #ccc;
+}
+
+.course-popular {
+  margin-bottom: 40px;
+}
+
+.course-popular-name {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.course-popular-price {
+  font-size: 14px;
+  color: var(--active-color);
+}
+
 /*  */
 .border-item {
   border-radius: 15px;

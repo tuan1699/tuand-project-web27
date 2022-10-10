@@ -101,6 +101,54 @@
   box-shadow: 0 0 10px #ccc;
 }
 
+.filter-field {
+  margin-bottom: 40px;
+}
+
+.filter-heading-title {
+  margin-bottom: 20px;
+}
+
+.filter-heading-title {
+  font-size: 18px;
+}
+
+.select-form {
+  flex-wrap: wrap;
+}
+
+.filter-form {
+  /* max-height: 0px;
+  overflow: hidden; */
+}
+
+.form-field select {
+  padding: 4px 10px;
+}
+
+.form-field select:focus {
+  border: 1px solid var(--active-color);
+}
+
+.form-field {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-field {
+  padding: 4px 10px;
+  margin-right: 20px;
+  border: none;
+}
+
+.btn-field:hover {
+  cursor: pointer;
+  background-color: var(--active-color);
+  color: #fff;
+}
+
+
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   /* .wrapper {

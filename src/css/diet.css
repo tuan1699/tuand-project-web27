@@ -1,9 +1,89 @@
+.diet-heading {
+  margin-bottom: 20px;
+}
+
+.diet-suggest,
+.diet-popular,
+.diet-community {
+  margin-bottom: 40px;
+}
+
+.diet-suggest-item,
+.diet-popular-item,
+.diet-community-item {
+  height: 200px;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.diet-community-title,
+.diet-suggest-title {
+  position: relative;
+  top: 300px;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  font-size: 20px;
+  color: #fff;
+  line-height: 200px;
+  text-align: center;
+}
+
+.diet-popular-title {
+  bottom: 20px;
+  left: 20px;
+  background-color: var(--active-color);
+  border-radius: 15px;
+  padding: 4px 10px;
+  color: #fff;
+}
+
+.diet-suggest-item:hover .diet-suggest-title {
+  top: 0px;
+  cursor: pointer;
+}
+
+.diet-community-item:hover .diet-community-title {
+  top: 0px;
+  cursor: pointer;
+}
+
+/* SIDEBAR */
+.side-bar-content {
+  height: 1290px;
+  overflow-y: scroll;
+}
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) {
+  /* .wrapper {
+        padding: 0 20px;
+      } */
+  .diet-suggest-item,
+  .diet-popular-item,
+  .diet-community-item {
+    height: 280px;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   /* .wrapper {
         padding: 0 20px;
       } */
-
+  .diet-suggest-item,
+  .diet-popular-item,
+  .diet-community-item {
+    height: 200px;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
