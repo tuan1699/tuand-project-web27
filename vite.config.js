@@ -13,6 +13,8 @@ export default defineConfig({
         recipes: resolve(__dirname, "src/recipes.html"),
         blog: resolve(__dirname, "src/blog.html"),
         course: resolve(__dirname, "src/course.html"),
+        cart: resolve(__dirname, "src/cart.html"),
+        postitem: resolve(__dirname, "src/post-item.html"),
       },
     },
   },

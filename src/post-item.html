@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper d-flex justify-content-between align-items-center">
+        <div class="logo">
+          <a href="./index.html"><img src="./img/home/logo.png" alt="" /></a>
+        </div>
+        <div class="nav d-none d-lg-flex">
+          <a href="./diet.html" class="nav-item">CHẾ ĐỘ ĂN</a>
+          <a href="./recipes.html" class="nav-item"> MÓN ĂN</a>
+          <a href="#" class="nav-item"> BLOG</a>
+          <a href="./course.html" class="nav-item"> KHÓA HỌC NẤU ĂN</a>
+        </div>
+        <div class="header-feature d-flex align-items-center">
+          <div
+            class="header-feature-item user-btn d-none d-md-block text-light me-3"
+          >
+            <i class="bi bi-person-circle"></i>
+          </div>
+          <div class="header-feature-item text-light search-btn me-3 fs-4">
+            <i class="bi bi-search"></i>
+          </div>
+          <div
+            class="header-feature-item d-none d-md-block text-light cart me-3 fs-4"
+          >
+            <a href="cart.html" class="text-light"
+              ><i class="bi bi-cart2"></i
+            ></a>
+          </div>
+          <div class="header-feature-item text-light d-md-none menu-btn">
+            <i class="bi bi-list"></i>
+            <div class="modal-layer">
+              <div class="menu-sidebar">
+                <a href="./index.html">
+                  <div class="menu-sidebar-item">Trang chủ</div> </a
+                ><a href="./cart.html">
+                  <div class="menu-sidebar-item">Giỏ hàng</div> </a
+                ><a href="./diet.html">
+                  <div class="menu-sidebar-item">Chế độ ăn</div> </a
+                ><a href="./recipes.html">
+                  <div class="menu-sidebar-item">Món ăn</div> </a
+                ><a href="./blog.html">
+                  <div class="menu-sidebar-item">Blog</div> </a
+                ><a href="./course.html">
+                  <div class="menu-sidebar-item">Khóa học nấu ăn</div> </a
+                ><a href="">
+                  <div class="menu-sidebar-item">Tài khoản của tôi</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <div class="breadcumb">
+        TRANG CHỦ / MÓN ĂN / CƠM RANG TÔM DỨA THÁI LAN CỰC NGON
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-12 col-lg-9">
+            <div class="post-field">
+              <div class="heading-post">
+                <div class="row">
+                  <div class="col-md-5 col-12">
+                    <img src="./img/post/com-rang/hero-img.png" alt="" />
+                  </div>
+                  <div class="col-md-7 col-12">
+                    <h2 class="recipes-name">
+                      CƠM RANG TÔM DỨA THÁI LAN CỰC NGON
+                    </h2>
+                    <div class="recipes-post-info">
+                      <div class="author-post">
+                        <span class="format-post"
+                          ><i class="bi bi-person-fill"></i>
+                          Tác giả:
+                        </span>
+                        <span class="format-value">Hà Vy</span>
+                      </div>
+                      <div class="method-post">
+                        <span class="format-post"
+                          ><i class="bi bi-person-fill"></i>
+                          Phương thức:
+                        </span>
+                        <span class="format-value">Chiên, rán</span>
+                      </div>
+                      <div class="cuisine-post">
+                        <span class="format-post"
+                          ><i class="bi bi-person-fill"></i>
+                          Nguyên liệu chính:
+                        </span>
+                        <span class="format-value">Tôm, Cơm</span>
+                      </div>
+                      <div class="tags-post">
+                        <span class="format-post"
+                          ><i class="bi bi-person-fill"></i>
+                          Tags:
+                        </span>
+                        <span class="format-value">#Tôm, #Cơm</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="decr-post">
+                <div class="post-title">Mô tả</div>
+
+                <p>
+                  Gần như lần nào đi ăn hàng đồ Thái, nhà mình cũng gọi món này.
+                  Cơm rang thơm nức mùi dứa chín, vị chua chua ngọt ngọt đậm đà,
+                  cơm tơi bùi ráo hạt, mà cách làm cực dễ nhá! Lưu lại cách làm,
+                  làm thử ngay nha các bạn ơi.
+                </p>
+              </div>
+              <div class="decr-post">
+                <div class="d-flex justify-content-between">
+                  <div class="post-title">Thành phần</div>
+                  <div class="amount-field">
+                    Khẩu phần
+                    <select name="amount" id="amount">
+                      <option value="">1 người</option>
+                      <option value="">2 người</option>
+                      <option value="">3 người</option>
+                      <option value="">4 người</option>
+                      <option value="">5 người</option>
+                      <option value="">6 người</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="ingredients-list">
+                  <div class="ingredients-item d-flex">
+                    <input
+                      type="checkbox"
+                      name="have-ingredients"
+                      id="have-ingredients"
+                      class="have-ingredients"
+                    />
+
+                    <div class="ingredients-quantity">
+                      2 <span class="unit">bát</span>
+                    </div>
+                    <div class="ingredients-name">CƠM</div>
+                  </div>
+                  <div class="ingredients-item d-flex">
+                    <input
+                      type="checkbox"
+                      name="have-ingredients"
+                      id="have-ingredients"
+                      class="have-ingredients"
+                    />
+
+                    <div class="ingredients-quantity">
+                      1/2 <span class="unit">quả</span>
+                    </div>
+                    <div class="ingredients-name">DỨA</div>
+                  </div>
+                  <div class="ingredients-item d-flex">
+                    <input
+                      type="checkbox"
+                      name="have-ingredients"
+                      id="have-ingredients"
+                      class="have-ingredients"
+                    />
+
+                    <div class="ingredients-quantity">
+                      100<spam class="unit">gram</spam>
+                    </div>
+                    <div class="ingredients-name">TÔM</div>
+                  </div>
+                  <div class="ingredients-item d-flex">
+                    <input
+                      type="checkbox"
+                      name="have-ingredients"
+                      id="have-ingredients"
+                      class="have-ingredients"
+                    />
+
+                    <div class="ingredients-quantity">
+                      1/2 <span class="unit">quả</span>
+                    </div>
+                    <div class="ingredients-name">TRỨNG GÀ</div>
+                  </div>
+                  <div class="ingredients-item d-flex">
+                    <input
+                      type="checkbox"
+                      name="have-ingredients"
+                      id="have-ingredients"
+                      class="have-ingredients"
+                    />
+
+                    <div class="ingredients-quantity">
+                      200 <span class="unit">gram</span>
+                    </div>
+                    <div class="ingredients-name">ĐẬU HÀ LAN</div>
+                  </div>
+                  <div class="ingredients-item d-flex">
+                    <input
+                      type="checkbox"
+                      name="have-ingredients"
+                      id="have-ingredients"
+                      class="have-ingredients"
+                    />
+
+                    <div class="ingredients-quantity">
+                      1/2 <span class="unit">quả</span>
+                    </div>
+                    <div class="ingredients-name">CÀ RỐT</div>
+                  </div>
+                  <div class="sub-ingredient">Gia vị</div>
+                  <div class="ingredients-item d-flex">
+                    <input
+                      type="checkbox"
+                      name="have-ingredients"
+                      id="have-ingredients"
+                      class="have-ingredients"
+                    />
+
+                    <div class="ingredients-quantity">
+                      1 <span class="unit">thìa cà phê</span>
+                    </div>
+                    <div class="ingredients-name">DẦU HÀO</div>
+                  </div>
+                  <div class="ingredients-item d-flex">
+                    <input
+                      type="checkbox"
+                      name="have-ingredients"
+                      id="have-ingredients"
+                      class="have-ingredients"
+                    />
+
+                    <div class="ingredients-quantity">
+                      1 <span class="unit">thìa cà phê</span>
+                    </div>
+                    <div class="ingredients-name">XÌ DẦU</div>
+                  </div>
+                  <div class="ingredients-item d-flex">
+                    <input
+                      type="checkbox"
+                      name="have-ingredients"
+                      id="have-ingredients"
+                      class="have-ingredients"
+                    />
+
+                    <div class="ingredients-quantity">
+                      1/3 <span class="unit">thìa cà phê</span>
+                    </div>
+                    <div class="ingredients-name">MUỐI</div>
+                  </div>
+                </div>
+              </div>
+              <div class="decr-post">
+                <div class="post-title">Các bước thực hiện</div>
+                <div class="step">
+                  <div class="step-number">Bước 1:</div>
+                  <div class="wrapper-step">
+                    <div class="step-thumb">
+                      <img src="./img/post/com-rang/step-1.png" alt="" />
+                    </div>
+                    <div class="step-decr">
+                      Dứa chọn quả chín vừa vàng đều đẹp không dập hỏng. Rửa
+                      thật sạch toàn bộ vỏ dứa bên ngoài & để ráo.
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">Bước 2:</div>
+                  <div class="wrapper-step">
+                    <div class="step-thumb">
+                      <img src="./img/post/com-rang/step-2.png" alt="" />
+                    </div>
+                    <div class="step-decr">
+                      Dứa chọn quả chín vừa vàng đều đẹp không dập hỏng. Rửa
+                      thật sạch toàn bộ vỏ dứa bên ngoài & để ráo.
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">Bước 3:</div>
+                  <div class="wrapper-step">
+                    <div class="step-thumb">
+                      <img src="./img/post/com-rang/step-3.png" alt="" />
+                    </div>
+                    <div class="step-decr">
+                      Dứa chọn quả chín vừa vàng đều đẹp không dập hỏng. Rửa
+                      thật sạch toàn bộ vỏ dứa bên ngoài & để ráo.
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">Bước 4:</div>
+                  <div class="wrapper-step">
+                    <div class="step-thumb">
+                      <img src="./img/post/com-rang/step-4.png" alt="" />
+                    </div>
+                    <div class="step-decr">
+                      Dứa chọn quả chín vừa vàng đều đẹp không dập hỏng. Rửa
+                      thật sạch toàn bộ vỏ dứa bên ngoài & để ráo.
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">Bước 5:</div>
+                  <div class="wrapper-step">
+                    <div class="step-thumb">
+                      <img src="./img/post/com-rang/step-5.png" alt="" />
+                    </div>
+                    <div class="step-decr">
+                      Dứa chọn quả chín vừa vàng đều đẹp không dập hỏng. Rửa
+                      thật sạch toàn bộ vỏ dứa bên ngoài & để ráo.
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">Bước 6:</div>
+                  <div class="wrapper-step">
+                    <div class="step-thumb">
+                      <img src="./img/post/com-rang/step-6.png" alt="" />
+                    </div>
+                    <div class="step-decr">
+                      Dứa chọn quả chín vừa vàng đều đẹp không dập hỏng. Rửa
+                      thật sạch toàn bộ vỏ dứa bên ngoài & để ráo.
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">Bước 7:</div>
+                  <div class="wrapper-step">
+                    <div class="step-thumb">
+                      <img src="./img/post/com-rang/step-7.png" alt="" />
+                    </div>
+                    <div class="step-decr">
+                      Dứa chọn quả chín vừa vàng đều đẹp không dập hỏng. Rửa
+                      thật sạch toàn bộ vỏ dứa bên ngoài & để ráo.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-lg-block col-lg-3">
+            <div class="side-bar-content">
+              <div class="popular-recipes">
+                <div class="heading-sidebar">NHIỀU NGƯỜI THỰC HIỆN</div>
+                <div class="recipes-popular position-relative border-item">
+                  <a href="" class="popular-link">
+                    <div class="recipes-popular-top-1">
+                      <div class="recipes-popular-thumb overflow-hidden">
+                        <img
+                          src="./img/home/recipes/recipes-thumb.png"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="recipes-popular-top position-absolute d-flex align-items-center"
+                      >
+                        <div class="recipes-popular-number">1</div>
+                        <div class="recipes-popular-decr text-start">
+                          <div class="recipes-popular-name">
+                            SỤN GÀ RANG MUỐI
+                          </div>
+                          <p class="recipes-popular-by">3 month</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="" class="popular-link">
+                    <div class="recipes-popular-item d-flex align-items-center">
+                      <div class="recipes-popular-number">2</div>
+                      <div class="recipes-popular-decr text-start">
+                        <div class="recipes-popular-name">
+                          TÔM THỊT NHỒI BÍ ĐAO
+                        </div>
+                        <p class="recipes-popular-by">3 month</p>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="" class="popular-link">
+                    <div class="recipes-popular-item d-flex align-items-center">
+                      <div class="recipes-popular-number">3</div>
+                      <div class="recipes-popular-decr text-start">
+                        <div class="recipes-popular-name">
+                          HÀU NƯỚNG PHÔ MAI
+                        </div>
+                        <p class="recipes-popular-by">3 month</p>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="" class="popular-link">
+                    <div class="recipes-popular-item d-flex align-items-center">
+                      <div class="recipes-popular-number">4</div>
+                      <div class="recipes-popular-decr text-start">
+                        <div class="recipes-popular-name">
+                          CÁ NGỪ CUỘN RAU CỦ SỐT NẤM MÈ
+                        </div>
+                        <p class="recipes-popular-by">3 month</p>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="" class="popular-link">
+                    <div class="recipes-popular-item d-flex align-items-center">
+                      <div class="recipes-popular-number">5</div>
+                      <div class="recipes-popular-decr text-start">
+                        <div class="recipes-popular-name">
+                          TÔM THỊT NHỒI BÍ ĐAO
+                        </div>
+                        <p class="recipes-popular-by">3 month</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="popular-blog">
+                <div class="heading-sidebar">BÀI ĐĂNG NỔI BẬT</div>
+                <div class="popular-blog-item">
+                  <div class="popular-blog-thumb">
+                    <img src="./img/blog/cho-buoi.png" alt="" />
+                  </div>
+
+                  <div class="popular-blog-name">
+                    CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
+                  </div>
+                  <div class="item-info d-flex align-items-center">
+                    <div class="item-by">by Hà Vy</div>
+                    <div class="item-time">March 13, 2021</div>
+                  </div>
+                </div>
+
+                <div class="popular-blog-item">
+                  <div class="popular-blog-thumb">
+                    <img src="./img/blog/cho-buoi.png" alt="" />
+                  </div>
+
+                  <div class="popular-blog-name">
+                    CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
+                  </div>
+                  <div class="item-info d-flex align-items-center">
+                    <div class="item-by">by Hà Vy</div>
+                    <div class="item-time">March 13, 2021</div>
+                  </div>
+                </div>
+
+                <div class="popular-blog-item">
+                  <div class="popular-blog-thumb">
+                    <img src="./img/blog/cho-buoi.png" alt="" />
+                  </div>
+
+                  <div class="popular-blog-name">
+                    CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
+                  </div>
+                  <div class="item-info d-flex align-items-center">
+                    <div class="item-by">by Hà Vy</div>
+                    <div class="item-time">March 13, 2021</div>
+                  </div>
+                </div>
+
+                <div class="popular-blog-item">
+                  <div class="popular-blog-thumb">
+                    <img src="./img/blog/cho-buoi.png" alt="" />
+                  </div>
+
+                  <div class="popular-blog-name">
+                    CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
+                  </div>
+                  <div class="item-info d-flex align-items-center">
+                    <div class="item-by">by Hà Vy</div>
+                    <div class="item-time">March 13, 2021</div>
+                  </div>
+                </div>
+
+                <div class="popular-blog-item">
+                  <div class="popular-blog-thumb">
+                    <img src="./img/blog/cho-buoi.png" alt="" />
+                  </div>
+
+                  <div class="popular-blog-name">
+                    CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
+                  </div>
+                  <div class="item-info d-flex align-items-center">
+                    <div class="item-by">by Hà Vy</div>
+                    <div class="item-time">March 13, 2021</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="popular-video">
+                <div class="heading-sidebar">VIDEO NỔI BẬT</div>
+                <div class="video-item">
+                  <iframe
+                    width="100%"
+                    height="160"
+                    src="https://www.youtube.com/embed/KKvsCxioJeQ"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+
+                <div class="video-item">
+                  <iframe
+                    width="100%"
+                    height="160"
+                    src="https://www.youtube.com/embed/KKvsCxioJeQ"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+
+                <div class="video-item">
+                  <iframe
+                    width="100%"
+                    height="160"
+                    src="https://www.youtube.com/embed/KKvsCxioJeQ"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="footer">
+      <div class="social d-flex justify-content-center">
+        <a href="https://www.facebook.com/">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-facebook"></i>
+            </span>
+            <p class="social-name d-none d-md-block">FACEBOOK</p>
+          </div>
+        </a>
+
+        <a href="https://twitter.com/?lang=vi">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-twitter"></i>
+            </span>
+            <p class="social-name d-none d-md-block">TWITTER</p>
+          </div>
+        </a>
+
+        <a href="https://google.com">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-google"></i>
+            </span>
+            <p class="social-name d-none d-md-block">GOOGLE</p>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/foodaholic.ig/">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-instagram"></i>
+            </span>
+            <p class="social-name d-none d-md-block">INSTAGRAM</p>
+          </div>
+        </a>
+
+        <a href="https://www.pinterest.com/search/pins/?q=food&rs=typed">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-pinterest"></i>
+            </span>
+            <p class="social-name d-none d-md-block">PINTEREST</p>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/c/Delight_Studios/videos">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-youtube"></i>
+            </span>
+            <p class="social-name d-none d-md-block">YOUTUBE</p>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-envelope"></i>
+            </span>
+            <p class="social-name d-none d-md-block">EMAIL</p>
+          </div>
+        </a>
+
+        <a href="">
+          <div class="social-item d-flex align-items-center">
+            <span class="social-icon">
+              <i class="bi bi-snapchat"></i>
+            </span>
+            <p class="social-name d-none d-md-block">SNAPCHAT</p>
+          </div>
+        </a>
+      </div>
+      <div class="copy-right">
+        @2022 - Food Mood. All Right Reserved. Designed and Developed by Tuan
+        Dang Van
+      </div>
+    </section>
+
+    <div class="modal-bg">
+      <div class="modal-overlay"></div>
+
+      <div class="auth-body">
+        <!-- Login form -->
+        <div class="auth-form login-form">
+          <div class="auth-form__header">
+            <div class="auth-form__heading">ĐĂNG NHẬP</div>
+          </div>
+
+          <div class="auth-form__form">
+            <form action="" class="form">
+              <div class="form-feild">
+                <input
+                  type="text"
+                  name="signin-name"
+                  id="signin-name"
+                  class="signin-name"
+                  placeholder="Tên đăng nhập"
+                />
+                <i class="bi bi-person input-icon"></i>
+              </div>
+
+              <div class="form-feild">
+                <input
+                  type="password"
+                  class="signin-password"
+                  name="signin-password"
+                  id="signin-password"
+                  placeholder="Mật khẩu"
+                />
+                <i class="bi bi-lock input-icon"></i>
+              </div>
+              <p class="forget-password text-end">Quên mật khẩu</p>
+              <button type="submit" class="submit-btn">Đăng nhập</button>
+            </form>
+            <p class="direction">
+              Bạn chưa có tài khoản?
+              <span class="direc-btn direc-register">Đăng ký</span>
+            </p>
+            <div class="signin-by">
+              <p>Đăng nhập bằng</p>
+              <div class="social-signin d-flex justify-content-center">
+                <a href=""
+                  ><div class="social-link">
+                    <img src="./img/home/signin/fb.jfif" alt="" /></div
+                ></a>
+                <a href=""
+                  ><div class="social-link">
+                    <img src="./img/home/signin/google.png" alt="" /></div
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Register -->
+        <div class="auth-form register-form">
+          <div class="auth-form__header">
+            <div class="auth-form__heading">ĐĂNG KÝ</div>
+          </div>
+
+          <div class="auth-form__form">
+            <form action="" class="form">
+              <div class="form-feild">
+                <input
+                  type="text"
+                  name="signin-name"
+                  id="signin-name"
+                  class="signin-name"
+                  placeholder="Tên đăng nhập"
+                />
+                <i class="bi bi-person input-icon"></i>
+              </div>
+
+              <div class="form-feild">
+                <input
+                  type="email"
+                  name="signup-email"
+                  id="signup-email"
+                  class="signin-name"
+                  placeholder="Email"
+                />
+                <i class="bi bi-person input-icon"></i>
+              </div>
+
+              <div class="form-feild">
+                <input
+                  type="password"
+                  class="signin-password"
+                  name="signin-password"
+                  id="signin-password"
+                  placeholder="Mật khẩu"
+                />
+                <i class="bi bi-lock input-icon"></i>
+              </div>
+
+              <div class="form-feild">
+                <input
+                  type="password"
+                  class="signin-password"
+                  name="signin-password"
+                  id="signin-password"
+                  placeholder="Nhập lại mật khẩu"
+                />
+                <i class="bi bi-lock input-icon"></i>
+              </div>
+
+              <button type="submit" class="submit-btn">Đăng ký</button>
+            </form>
+            <p class="direction">
+              Bạn đã có tài khoản?
+              <span class="direc-btn direc-login">Đăng nhập</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/post-item.js" type="module"></script>
+    <script src="js/global.js" type="module"></script>
+  </body>
+</html>

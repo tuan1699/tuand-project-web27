@@ -7,6 +7,7 @@
   --sub-bg: #3c3b3d;
   --font-sub: "'Lora', serif;";
   --font-main: "'Lato', sans-serif";
+  --fs-post-title: 24px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
@@ -49,7 +50,11 @@ a:hover {
   color: initial;
 }
 
-input,
+.form input {
+  width: 100%;
+}
+/* 
+input, */
 img {
   width: 100%;
 }

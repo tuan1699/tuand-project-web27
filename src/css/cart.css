@@ -1,60 +1,75 @@
-.course-item {
-  background-color: var(--sub-bg);
+.check-out-field input,
+textarea {
+  width: 100%;
+  padding: 4px 0 4px 20px;
+}
+
+li {
+  list-style: none;
+}
+
+.pay-method input {
+  width: auto;
+}
+
+.info-user-field {
   margin-bottom: 24px;
 }
 
-.course-field {
-  margin-bottom: 40px;
-}
-
-.course-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.course-decr {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.course-info {
-  margin: 0 10px;
-}
-
-.course-name {
-  font-size: 18px;
-  padding: 10px 0;
-  color: var(--active-color);
+.course-item {
+  padding: 30px 0;
   border-bottom: 1px solid #ccc;
 }
 
-.course-decr {
-  color: #fff;
-  margin: 10px 0;
+.course-info {
+  width: 240px;
 }
 
-.course-link:hover .course-thumb img {
-  transform: scale(1.3);
-  transition: 0.5s ease;
+.cart-quantity {
+  width: 60px;
+  padding-left: 20px;
 }
 
-.course-thumb {
-  overflow: hidden;
+.list-check-out {
+  padding-bottom: 40px;
+  border-bottom: 1px solid#333;
 }
 
-.course-register {
-  width: 100%;
+.btn-pay {
   border: none;
-  padding: 10px 0;
-  background-color: #595b68;
+  width: 100%;
+  padding: 8px 0;
+  background-color: var(--active-color);
   color: #fff;
 }
 
+.check-out-field {
+  margin-top: 40px;
+}
+
+.title-info {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.list-heading {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.item-checkout {
+  margin-bottom: 20px;
+}
+
+.summary {
+  margin: 30px 0;
+}
+
+/*  CONTACT */
 .contact-footer {
   position: relative;
-  /* background-image: url("./img/course/contact.jpg"); */
   background-size: cover;
   min-height: 500px;
   animation: animationBt ease-in-out 10s;
@@ -66,7 +81,6 @@
   max-width: 600px;
   position: absolute;
   top: 40px;
-  /* transform: translateY(-50%); */
   left: 50%;
   transform: translateX(-50%);
   padding: 30px;
@@ -83,48 +97,50 @@
 
 .contact-input {
   padding: 8px 10px;
-  /* border-radius: 15px; */
   border: 1px solid #ccc;
   margin-bottom: 20px;
 }
 
-.cource-popular-item {
-  padding: 20px 0px;
-  border-bottom: 1px solid #ccc;
-}
-
-.course-popular {
+.customer-info {
   margin-bottom: 40px;
 }
 
-.course-popular-name {
-  font-size: 16px;
-  margin-bottom: 14px;
+.check-out {
+  margin-bottom: 40px;
 }
 
-.course-popular-price {
-  font-size: 14px;
-  color: var(--active-color);
+.pay-method span {
+  font-weight: 600;
 }
 
-/*  */
-.border-item {
-  border-radius: 15px;
+.pay-method-item {
+  padding: 16px 0;
+}
+
+.method-decr {
+  height: 0;
   overflow: hidden;
-  box-shadow: 0 0 10px #ccc;
+  padding: 0 16px;
+  transition: height 0.5s;
 }
+
+.method-decr.active {
+  height: 200px;
+  transition: height 0.5s;
+}
+
+@media (min-width: 576px) {
+  .cart-container {
+    padding: 80px;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  /* .wrapper {
-        padding: 0 20px;
-      } */
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  /* .wrapper {
-        padding: 0 20px;
-      } */
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
