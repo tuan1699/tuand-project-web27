@@ -29,7 +29,7 @@
 }
 
 .title {
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .modal-layer {
@@ -107,21 +107,19 @@
 }
 
 .btn-see-all {
-  width: 80%;
   border: 1px solid #000;
   background-color: transparent;
-  padding: 10px;
+  padding: 8px 16px;
   border-radius: 40px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .btn-see-all.btn-quick-meal {
-  width: 80%;
   border: 1px solid #fff;
   background-color: transparent;
   padding: 10px;
   border-radius: 40px;
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
 }
 
@@ -186,10 +184,16 @@
   text-align: left;
 }
 
+.recipes-item-info {
+  font-size: 14px;
+  align-items: center;
+}
+
 .recipes-item-name {
   margin-bottom: 16px;
 }
 
+.recipes-time,
 .recipes-item-by {
   font-size: 14px;
 }
@@ -202,6 +206,14 @@
 
 .recipes-item-thumb {
   overflow: hidden;
+}
+
+.add-favourite {
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  color: #fff;
+  font-size: 20px;
 }
 
 .underline-hover-effect {
@@ -290,12 +302,12 @@
 /* SUGGESTION */
 
 .suggest-link:hover .suggest-item-thumb img {
-  transform: scale(1.3);
+  transform: scale(1.2);
   transition: 0.5s ease;
 }
 
 .suggest-link:hover .suggest-item-thumb {
-  transform: scale(1.1) rotate(8deg);
+  transform: scale(1.1) rotate(4deg);
   transition: 0.5s ease;
 }
 
@@ -370,14 +382,22 @@
 /* Khóa học nấu ăn */
 .course-item {
   background-color: var(--sub-bg);
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .course-info {
+  /* height: 150px; */
   margin: 0 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .course-name {
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
   padding: 10px 0;
   color: var(--active-color);
 }
@@ -402,6 +422,10 @@
   padding: 10px 0;
   background-color: #595b68;
   color: #fff;
+}
+
+.course-register:hover {
+  background-color: var(--active-color);
 }
 /* -------------- */
 
@@ -433,10 +457,28 @@
   } */
   .slider-item-title {
     font-size: 40px;
+    margin-bottom: 20px;
   }
 
   .slider-item-decr {
+    font-size: 16px;
+    font-style: italic;
     margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .course-info {
+    height: 150px;
+    /* margin: 0 10px; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .course-name {
+    flex: 1;
   }
 }
 
@@ -445,6 +487,13 @@
   /* .wrapper {
     padding: 0 20px;
   } */
+
+  .course-decr {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
@@ -453,6 +502,18 @@
     width: 1200px;
     margin: auto;
     padding: 0;
+    /* padding: 0 120px; */
+  }
+
+  .slider-item-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+
+  .slider-item-decr {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 40px;
   }
 }
 
@@ -461,5 +522,6 @@
   .wrapper {
     width: 1200px;
     margin: auto;
+    /* padding: 0 120px; */
   }
 }
