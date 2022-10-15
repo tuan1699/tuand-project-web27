@@ -1,0 +1,214 @@
+/* NAV */
+.input-info {
+  width: 100%;
+  padding: 8px 0 8px 16px;
+  border-radius: 5px;
+  line-height: 20px;
+  border: 1px solid var(--active-color);
+  /* background-color: #ccc; */
+}
+
+.info-field {
+  margin-bottom: 20px;
+}
+.ingre-nav-item {
+  padding: 8px 40px;
+  color: #000;
+}
+
+.ingre-nav-item:hover {
+  background-color: var(--sub-bg);
+  cursor: pointer;
+  border-radius: 15px;
+  color: #fff;
+}
+.ingre-content-item {
+  display: none;
+}
+.ingre-content-item.active {
+  display: block;
+}
+
+.ingre-nav-item.active {
+  background-color: var(--sub-bg);
+  color: #fff;
+  border-radius: 15px;
+}
+
+.ingre-nav {
+  background-color: #ccc;
+  border-radius: 15px;
+}
+
+.ingre-content {
+  margin-top: 40px;
+}
+
+/* THONG TIN */
+.next-btn {
+  display: inline-block;
+  float: right;
+  padding: 8px 30px;
+  border-radius: 15px;
+  margin-top: 20px;
+  background-color: #ccc;
+  color: #000;
+}
+
+/* NGUYEN LIEU */
+.input-field input {
+  width: 100%;
+}
+/* label {
+  width: 150px;
+} */
+
+.unit-input {
+  width: 120px;
+}
+
+.next-btn:hover {
+  background-color: var(--active-color);
+  color: #fff;
+  cursor: pointer;
+}
+/* NGUYEN LIEU */
+.ingredient-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  margin-bottom: 12px;
+}
+
+.quantity-spice,
+.quantity-main {
+  width: 60px;
+
+  margin-right: 12px;
+}
+
+.spice,
+.main-ingredient {
+  margin-bottom: 40px;
+}
+
+.add-btn-spice,
+.add-btn {
+  padding: 4px 16px;
+  background-color: #ccc;
+  display: inline-block;
+}
+
+.add-btn-spice:hover,
+.add-btn:hover {
+  background-color: var(--active-color);
+  color: #fff;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.list-spice,
+.list-ingredient {
+  margin-top: 40px;
+}
+
+.spice-item,
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding-right: 110px;
+}
+
+.delete-ingre {
+  font-size: 14px;
+  margin-right: 16px;
+}
+
+.delete-ingre:hover {
+  cursor: pointer;
+  color: var(--active-color);
+}
+
+/* CÁCH NẤU */
+.list-step {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.step-item input,
+.step-item textarea {
+  width: 100%;
+  height: auto;
+}
+
+.step-item {
+  padding: 10px;
+
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+.create-recipes-btn {
+  float: right;
+  background-color: #e49a0c;
+  color: #fff;
+  width: 150px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-recipes-btn:hover {
+  cursor: pointer;
+  background-color: var(--active-color);
+  color: #fff;
+}
+@media (min-width: 576px) {
+  .ingre-container {
+    padding: 80px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .ingre-content-item {
+    padding: 0 80px;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+    margin: auto;
+    padding: 0;
+  }
+
+  .contact-form {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 120px;
+    padding: 30px;
+    background-color: #fff;
+    text-align: center;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .wrapper {
+    width: 1200px;
+    margin: auto;
+  }
+}

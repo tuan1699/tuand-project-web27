@@ -316,15 +316,11 @@
   font-size: 14px;
 }
 
-.blog-by::after {
-  position: relative;
-  top: 4px;
-  content: "";
+.line {
   display: inline-block;
   width: 1px;
   height: 20px;
-  margin: 0 20px;
-  background-color: var(--sub-color);
+  background-color: #ccc;
 }
 
 .blog-link:hover .blog-thumb img {
@@ -376,22 +372,14 @@
   background-color: var(--sub-bg);
 }
 
-.course-decr {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
 .course-info {
   margin: 0 10px;
 }
 
 .course-name {
-  font-size: 18px;
+  font-size: 14px;
   padding: 10px 0;
   color: var(--active-color);
-  border-bottom: 1px solid #ccc;
 }
 
 .course-decr {
@@ -422,6 +410,21 @@
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 0 10px #ccc;
+}
+
+@media (min-width: 576px) {
+  .course-name {
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .course-decr {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
