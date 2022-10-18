@@ -55,6 +55,7 @@ function renderCart() {
     </div>`;
     }).join("")
   );
+  sum();
 }
 
 const deleteItem = (event) => {
@@ -94,18 +95,9 @@ renderCart();
 
 // Tính tổng tiền trong giỏ hàng
 function sum() {
-  // let cartBox = JSON.parse(localStorage.getItem("cartBox")) || [];
-  // let total = 0;
-
-  // for (let i = 0; i < cartBox.length; i++) {
-  //   let price = new Number(cartBox[i].price);
-  //   // console.log( typeof cartBox[i].price);
-  //   total += price;
-  // }
-
-  // console.log(total);
   let total = 0;
-  const cartItems = document.querySelectorAll(".item-checkout");
+
+  const cartItems = document.querySelectorAll(".course-item");
   for (let i = 0; i < cartItems.length; i++) {
     let price = cartItems[i].querySelector(".course-price").textContent;
 
@@ -114,4 +106,8 @@ function sum() {
   }
   const totalField = document.querySelector(".summary-price");
   totalField.textContent = total;
+
+  // console.log(cartItems);
 }
+
+// sum();
