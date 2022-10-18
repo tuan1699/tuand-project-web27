@@ -4,6 +4,8 @@ import "../component/auth.css";
 import "../component/footer.css";
 import "../component/sidebar.css";
 import "../component/header.css";
+import $ from "jquery";
+import _ from "lodash";
 
 import "../js/modal.js";
 
@@ -16,3 +18,100 @@ payOption.forEach((optionItem, index) => {
     methodDecr[index].classList.add("active");
   };
 });
+
+// Render cart từ local Storage
+
+function renderCart() {
+  const cartBox = JSON.parse(localStorage.getItem("cartBox")) || [];
+  const cartItemTemp = $("#item-in-cart").html();
+
+  const cartItem = _.template(cartItemTemp);
+  $(".cart-list").append(
+    _.map(cartBox, (course) => {
+      const dom = $(cartItem(course));
+      dom.find(".delete-course").on("click", course, deleteItem);
+      return dom;
+    })
+  );
+
+  $(".list-check-out").html(
+    _.map(cartBox, (course) => {
+      return `<div
+      class="item-checkout d-flex justify-content-between align-items-center"
+    >
+      <div class="course-info">
+        <div class="row">
+          <div class="col-6">
+            <img src="${course.thumb}" alt="" />
+          </div>
+          <div class="col-6">
+            <div class="cart-name">
+            ${course.name}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="course-price">${course.price}</div>
+    </div>`;
+    }).join("")
+  );
+}
+
+const deleteItem = (event) => {
+  event.preventDefault();
+  let cartBox = JSON.parse(localStorage.getItem("cartBox")) || [];
+  cartBox = _.filter(cartBox, (i) => i.id !== event.data.id);
+
+  localStorage.setItem("cartBox", JSON.stringify(cartBox));
+
+  event.target.closest(".course-item").remove();
+
+  $(".list-check-out").html(
+    _.map(cartBox, (course) => {
+      return `<div
+      class="item-checkout d-flex justify-content-between align-items-center"
+    >
+      <div class="course-info">
+        <div class="row">
+          <div class="col-6">
+            <img src="${course.thumb}" alt="" />
+          </div>
+          <div class="col-6">
+            <div class="cart-name">
+            ${course.name}
+            </div>
+          </div>  
+        </div>
+      </div>
+      <div class="course-price">${course.price}</div>
+    </div>`;
+    }).join("")
+  );
+  sum();
+};
+
+renderCart();
+
+// Tính tổng tiền trong giỏ hàng
+function sum() {
+  // let cartBox = JSON.parse(localStorage.getItem("cartBox")) || [];
+  // let total = 0;
+
+  // for (let i = 0; i < cartBox.length; i++) {
+  //   let price = new Number(cartBox[i].price);
+  //   // console.log( typeof cartBox[i].price);
+  //   total += price;
+  // }
+
+  // console.log(total);
+  let total = 0;
+  const cartItems = document.querySelectorAll(".item-checkout");
+  for (let i = 0; i < cartItems.length; i++) {
+    let price = cartItems[i].querySelector(".course-price").textContent;
+
+    let newPrice = parseInt(price);
+    total += newPrice;
+  }
+  const totalField = document.querySelector(".summary-price");
+  totalField.textContent = total;
+}

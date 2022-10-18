@@ -67,6 +67,14 @@ li {
   margin: 30px 0;
 }
 
+.delete-course:hover {
+  color: var(--active-color);
+  transform: scale(1.4);
+  transition: 0.2s ease;
+
+  cursor: pointer;
+}
+
 /*  CONTACT */
 .contact-footer {
   position: relative;

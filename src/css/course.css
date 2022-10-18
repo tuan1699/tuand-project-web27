@@ -52,6 +52,30 @@
   color: #fff;
 }
 
+.course-register:hover {
+  background-color: var(--active-color);
+}
+
+.mentor-name {
+  font-weight: 600;
+  color: var(--active-color);
+}
+
+.react-user-info {
+  text-align: center;
+  padding: 8px 0;
+  font-size: 18px;
+  color: var(--active-color);
+}
+
+.reac-name {
+  font-weight: 600;
+}
+
+.reac-content {
+  padding: 0 10px;
+}
+
 .contact-footer {
   position: relative;
   /* background-image: url("./img/course/contact.jpg"); */

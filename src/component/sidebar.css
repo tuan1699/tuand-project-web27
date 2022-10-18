@@ -12,7 +12,7 @@
   content: "";
   display: inline-block;
   width: 1px;
-  height: 20px;
+  height: 16px;
   margin: 0 16px;
   background-color: var(--sub-color);
 }
@@ -64,8 +64,6 @@
   padding: 20px 0;
   border-bottom: 1px solid var(--sub-color);
 }
-
-
 
 .heading-sidebar {
   font-size: 18px;

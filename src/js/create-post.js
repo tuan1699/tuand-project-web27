@@ -7,6 +7,7 @@ import "../component/sidebar.css";
 import "../component/header.css";
 
 import "../js/modal.js";
+import $ from "jquery";
 
 const navItems = document.querySelectorAll(".ingre-nav-item");
 const ingreContents = document.querySelectorAll(".ingre-content-item");
@@ -98,20 +99,36 @@ const decrInput = document.querySelector(".decr-input");
 
 const listStepArr = [];
 
-function renderList() {
-  function deleteStep(id) {
-    const index = listStepArr.findIndex((item) => {
-      return item.id === id;
-    });
-    listStepArr.splice(index, 1);
-    renderList();
-  }
+// function renderList() {
+//   const items = listStepArr.map((item, index) => {
+//     return `<div class="step-item">
+//     <div class="step-heading d-flex justify-content-between">
+//     <div>Bước <span class="step-number">${index + 1}</span></div>
+//     <div class="deleteBtn">Xóa</div>
+//     </div>
+//     <textarea
+//       name=""
+//       id=""
+//       cols="30"
+//       rows="10"
+//       class="decr-input"
+//       placeholder="Mô tả"
+//     >${item.decr}</textarea>
+//     <input type="file" name="" id="" />
+//   </div>`;
+//   });
+//   listStep.innerHTML = items.join("");
+// }
 
+function renderList() {
+  listStep.innerHTML = "";
   const items = listStepArr.map((item, index) => {
-    return `<div class="step-item">
+    const parser = new DOMParser();
+    const dom = parser.parseFromString(
+      `<div class="step-item">
     <div class="step-heading d-flex justify-content-between">
     <div>Bước <span class="step-number">${index + 1}</span></div>
-    <div class="deleteBtn">Xóa</div>
+    <div class="deleteBtn" data = "${index}">Xóa</div>
     </div>
     <textarea
       name=""
@@ -122,12 +139,23 @@ function renderList() {
       placeholder="Mô tả"
     >${item.decr}</textarea>
     <input type="file" name="" id="" />
-  </div>`;
+  </div>`,
+      "text/html"
+    );
+    return dom;
   });
-  listStep.innerHTML = items.join("");
+
+  items.forEach((item) => {
+    const content = item.querySelector(".step-item");
+    const del = item.querySelector(".deleteBtn");
+    del.addEventListener("click", deleteBtn(del.getAttribute("data")));
+    listStep.append(content);
+  });
 }
 
-renderList();
+function deleteBtn(index) {
+  console.log(index);
+}
 
 addStepBtn.addEventListener("click", () => {
   const newStep = {
@@ -139,5 +167,3 @@ addStepBtn.addEventListener("click", () => {
   listStepArr.push(newStep);
   renderList();
 });
-
-

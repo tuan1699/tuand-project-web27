@@ -66,45 +66,25 @@
 
       <div class="body">
         <div class="cart-container">
-          <p>2 khóa học đang chờ bạn khám phá</p>
-
           <div class="cart-list">
-            <div
-              class="course-item d-flex justify-content-between align-items-center"
-            >
-              <div class="course-info">
-                <div class="row">
-                  <div class="col-6">
-                    <img src="./img/course/hong-kong.png" alt="" />
-                  </div>
-                  <div class="col-6">
-                    <div class="cart-name">CHUYÊN ĐỀ ĐIỂM TÂM HONGKONG</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="course-price">1.700.700Đ</div>
-
-              <div class="delete-course"><i class="bi bi-x-lg"></i></div>
-            </div>
-            <div
-              class="course-item d-flex justify-content-between align-items-center"
-            >
-              <div class="course-info">
-                <div class="row">
-                  <div class="col-6">
-                    <img src="./img/course/hong-kong.png" alt="" />
-                  </div>
-                  <div class="col-6">
-                    <div class="cart-name">CHUYÊN ĐỀ ĐIỂM TÂM HONGKONG</div>
+            <template id="item-in-cart">
+              <div
+                class="course-item d-flex justify-content-between align-items-center"
+              >
+                <div class="course-info">
+                  <div class="row">
+                    <div class="col-6">
+                      <img src="${thumb}" alt="" />
+                    </div>
+                    <div class="col-6">
+                      <div class="cart-name">${name}</div>
+                    </div>
                   </div>
                 </div>
+                <div class="course-price">${price}</div>
+                <div class="delete-course"><i class="bi bi-x-lg"></i></div>
               </div>
-
-              <div class="course-price">1.700.700Đ</div>
-
-              <div class="delete-course"><i class="bi bi-x-lg"></i></div>
-            </div>
+            </template>
           </div>
 
           <div class="check-out-field">
@@ -150,12 +130,12 @@
               <div class="col-12 col-lg-6">
                 <div class="check-out">
                   <p class="title-info">THÔNG TIN KHÓA HỌC</p>
+                  <div class="list-heading d-flex justify-content-between">
+                    <p>Khóa học</p>
+                    <p>Thành tiền</p>
+                  </div>
                   <div class="list-check-out">
-                    <div class="list-heading d-flex justify-content-between">
-                      <p>Khóa học</p>
-                      <p>Thành tiền</p>
-                    </div>
-                    <div
+                    <!-- <div
                       class="item-checkout d-flex justify-content-between align-items-center"
                     >
                       <div class="course-info">
@@ -188,7 +168,7 @@
                         </div>
                       </div>
                       <div class="course-price">1.700.700Đ</div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="summary d-flex justify-content-between">
                     <p>TỔNG</p>
