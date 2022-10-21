@@ -5,149 +5,10 @@ import "../component/sidebar.css";
 import "../component/header.css";
 import $ from "jquery";
 import _ from "lodash";
+import { recipesList } from "./db";
+import { addToFav } from "./ulist";
 
 import "../js/modal.js";
-
-const recipesList = [
-  {
-    id: 1,
-    name: "CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ",
-    thumb: "./img/recipes/ga-an-may.png",
-    auth: "Hà Vy",
-    date: "March 13, 2021",
-    duration: "45",
-    season: "spring",
-    region: "north",
-    type: "main",
-    method: "luoc",
-  },
-
-  {
-    id: 2,
-    name: "HÀU NƯỚNG PHOMAI NGON NHẤT THẾ GIỚI",
-    thumb: "./img/recipes/ga-an-may.png",
-    auth: "Hà Vy",
-    date: "March 13, 2021",
-    duration: "45",
-    season: "spring",
-    region: "north",
-    type: "main",
-    method: "luoc",
-  },
-  {
-    id: 3,
-    name: "CÁCH LÀM GÀ ĂN MÀY CAO SANG QUYỀN QUÝ",
-    thumb: "./img/recipes/xoi-ga.png",
-    auth: "Hà Vy",
-    date: "March 13, 2021",
-    duration: "45",
-    season: "spring",
-    region: "north",
-    type: "main",
-    method: "luoc",
-  },
-
-  {
-    id: 4,
-    name: "CÁCH LỌC XƯƠNG GÀ LUỘC CỰC DỄ",
-    thumb: "./img/recipes/ga-luoc.png",
-    auth: "Hà Vy",
-    date: "March 13, 2021",
-    duration: "45",
-    season: "spring",
-    region: "north",
-    type: "main",
-    method: "luoc",
-  },
-
-  {
-    id: 5,
-    name: "CÁCH MUỐI CÁ HỒI RUBY SIÊU TO KHỔNG LỒ",
-    thumb: "./img/recipes/ca-hoi.png",
-    auth: "Hà Vy",
-    date: "March 13, 2021",
-    duration: "45",
-    season: "spring",
-    region: "north",
-    type: "main",
-    method: "luoc",
-  },
-
-  {
-    id: 6,
-    name: "CÁ TRẮM KHO MĂNG CAY BẰNG NỒI ÁP SUẤT",
-    thumb: "./img/recipes/ca-tram.png",
-    auth: "Hà Vy",
-    date: "March 13, 2021",
-    duration: "45",
-    season: "spring",
-    region: "north",
-    type: "main",
-    method: "luoc",
-  },
-
-  {
-    id: 7,
-    name: "CÁ VƯỢC OM XỐT YOSENABE KIỂU NHẬT",
-    thumb: "./img/recipes/ca-vuoc.png",
-    auth: "Hà Vy",
-    date: "March 13, 2021",
-    duration: "45",
-    season: "spring",
-    region: "north",
-    type: "main",
-    method: "luoc",
-  },
-
-  {
-    id: 8,
-    name: "THỊT KHÂU NHỤC KIỂU QUẢNG ĐÔNG",
-    thumb: "./img/recipes/khau-nhuc.png",
-    auth: "Hà Vy",
-    date: "March 13, 2021",
-    duration: "45",
-    season: "spring",
-    region: "north",
-    type: "main",
-    method: "luoc",
-  },
-  {
-    id: 9,
-    name: "CÁCH LÀM GÀ NƯỚNG CAY XÈ PIRI PIRI",
-    thumb: "./img/recipes/ga-nuong.png",
-    auth: "Hà Vy",
-    date: "March 13, 2021",
-    duration: "45",
-    season: "spring",
-    region: "north",
-    type: "main",
-    method: "luoc",
-  },
-  {
-    id: 10,
-    name: "MẸO CHIÊN CÁ GIÒN TAN Bằng NCKD",
-    thumb: "./img/recipes/ca-chien.png",
-    auth: "Hà Vy",
-    date: "March 13, 2021",
-    duration: "45",
-    season: "spring",
-    region: "north",
-    type: "main",
-    method: "luoc",
-  },
-  {
-    id: 11,
-    name: "TỰ LÀM THỊT QUAY GIÒN BÌ",
-    thumb: "./img/recipes/thit-quay.png",
-    auth: "Hà Vy",
-    date: "March 13, 2021",
-    duration: "45",
-    season: "spring",
-    region: "north",
-    type: "main",
-    method: "luoc",
-  },
-];
 
 // DÙNG DOM PARSER ĐỂ THÊM VÀO DANH SÁCH YÊU THÍCH
 
@@ -212,35 +73,22 @@ const recipesList = [
 //   })
 // );
 
+const bySeason = document.querySelector("#season");
+const byRegion = document.querySelector("#region");
+const bycategory = document.querySelector("#category");
+const byTime = document.querySelector("#time");
+const byMethod = document.querySelector("#process");
+
 // DÙNG TEMPLATE
 
-const addToFav = (event) => {
-  event.preventDefault();
-
-  const favouriteBox = JSON.parse(localStorage.getItem("favBox")) || [];
-
-  const item = favouriteBox.find((i) => i.id === event.data.id);
-
-  if (item) {
-    alert("Bạn rất muốn thực hiện món ăn này đúng không? Mau mau vào bếp nào");
-  } else {
-    favouriteBox.push(event.data);
-    alert("Đã thêm vào danh sách yêu thích");
-  }
-
-  localStorage.setItem("favBox", JSON.stringify(favouriteBox));
-
-  console.log("test");
-};
-
 let start = 0;
-let itemPerPage = 3;
+let itemPerPage = 12;
 let end = itemPerPage;
 let currentPage = 1;
 let totalPage = Math.ceil(recipesList.length / itemPerPage);
 const numberCurrent = document.querySelector(".current-page");
 
-function renderRecipes() {
+function renderRecipes(recipesList) {
   const recipesTemplate = $("#recipesTemp").html();
 
   const recipe = _.template(recipesTemplate);
@@ -254,39 +102,95 @@ function renderRecipes() {
       return dom;
     }
   });
-  $(".recipes-list").html("");
   $(".recipes-list").append(html);
 }
 
-// NEXT PAGE
-const nextBtn = document.querySelector(".next-page");
-nextBtn.addEventListener("click", () => {
-  if (currentPage < totalPage) {
-    currentPage++;
-  } else {
-    currentPage = totalPage;
-  }
-  console.log(currentPage);
+$(function () {
+  const recipesTemplate = $("#recipesTemp").html();
+  const recipe = _.template(recipesTemplate);
+  let recipeByCategory;
 
-  start = (currentPage - 1) * itemPerPage;
-  end = currentPage * itemPerPage;
-  renderRecipes();
-  numberCurrent.textContent = currentPage;
+  const url = new URL(location.href);
+  const category = url.searchParams.get("category");
+
+  if (category) {
+    bycategory.value = category;
+    recipeByCategory = _.filter(recipesList, (recipes) => {
+      return recipes.category == category;
+    });
+  } else {
+    recipeByCategory = _.map(recipesList, (recipes) => recipes);
+  }
+
+  $(".recipes-list").append(
+    _.map(recipeByCategory, (recipes, index) => {
+      if (index >= start && index < end) {
+        const dom = $(recipe(recipes));
+
+        dom.find(".add-favourite").on("click", recipes, addToFav);
+
+        return dom;
+      }
+    })
+  );
 });
+
+// NEXT PAGE
+// const nextBtn = document.querySelector(".next-page");
+// nextBtn.addEventListener("click", () => {
+//   if (currentPage < totalPage) {
+//     currentPage++;
+//   } else {
+//     currentPage = totalPage;
+//   }
+
+//   start = (currentPage - 1) * itemPerPage;
+//   end = currentPage * itemPerPage;
+//   renderRecipes();
+//   numberCurrent.textContent = currentPage;
+// });
 
 // PREV PAGE
-const prevBtn = document.querySelector(".prev-page");
-prevBtn.addEventListener("click", () => {
-  if (currentPage <= 1) {
-    currentPage = 1;
-  } else {
-    currentPage--;
-  }
-  console.log(currentPage);
-  start = (currentPage - 1) * itemPerPage;
-  end = currentPage * itemPerPage;
-  renderRecipes();
-  numberCurrent.textContent = currentPage;
-});
+// const prevBtn = document.querySelector(".prev-page");
+// prevBtn.addEventListener("click", () => {
+//   if (currentPage <= 1) {
+//     currentPage = 1;
+//   } else {
+//     currentPage--;
+//   }
+//   start = (currentPage - 1) * itemPerPage;
+//   end = currentPage * itemPerPage;
+//   renderRecipes();
+//   numberCurrent.textContent = currentPage;
+// });
 
-renderRecipes();
+// LỌC SẢN PHẨM
+
+// bySeason.onchange = function () {
+//   renderRecipes();
+// };
+
+// function filter(recipesList, filterBy) {
+//   let clone;
+//   if (filterBy === "#") {
+//     clone = recipesList.map((recipes) => recipes);
+//   } else {
+//     clone = recipesList.filter((recipes) => recipes.season === filterBy);
+//   }
+//   return clone;
+// }
+
+// console.log(bySeason);
+// HIỂN THỊ TẤT CẢ CÔNG THỨC
+
+// const resetFilter = document.querySelector(".clear-filter");
+// resetFilter.onclick = function () {
+//   bySeason.value = "#";
+//   byRegion.value = "#";
+//   byType.value = "#";
+//   byTime.value = "#";
+//   byMethod.value = "#";
+//   renderRecipes();
+// };
+
+// CHI TIẾT SẢN PHẨM

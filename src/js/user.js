@@ -6,6 +6,7 @@ import "../component/sidebar.css";
 import "../component/header.css";
 import $ from "jquery";
 import _ from "lodash";
+// import { recipesList } from "./db";
 
 import "../js/modal.js";
 
@@ -48,5 +49,4 @@ const deleteItem = (event) => {
   localStorage.setItem("favBox", JSON.stringify(favBox));
 
   event.target.closest(".blog-item").remove();
-  // console.log(favBox);
 };

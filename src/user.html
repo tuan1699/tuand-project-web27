@@ -156,30 +156,7 @@
             <div class="user-content-item"></div>
 
             <div class="user-content-item">
-              <div class="fav-field">
-                <template id="favItem">
-
-                    <div class="blog-item">
-                      <div class="row">
-                        <div class="col-6">
-                          <div class="blog-thumb position-relative">
-                            <img src="${thumb}" alt="" />
-                            <i class="bi bi-x remove-btn"></i>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="blog-name">${name}</div>
-                          <div class="blog-info d-flex align-items-center">
-                            <div class="blog-by">${auth}</div>
-                            <div class="blog-time">${date}</div>
-                          </div>
-                          <p class="blog-decr d-none d-sm-block"></p>
-                        </div>
-                      </div>
-                    </div>
-
-                </template>
-              </div>
+              <div class="fav-field"></div>
             </div>
 
             <div class="user-content-item">
@@ -406,6 +383,26 @@
         </div>
       </div>
     </div>
+    <script type="text/html" id="favItem">
+      <div class="blog-item">
+        <div class="row">
+          <div class="col-6">
+            <div class="blog-thumb position-relative">
+              <img src="${ thumb }" alt="" />
+              <i class="bi bi-x remove-btn"></i>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="blog-name">${name}</div>
+            <div class="blog-info d-flex align-items-center">
+              <div class="blog-by">${auth}</div>
+              <div class="blog-time">${date}</div>
+            </div>
+            <p class="blog-decr d-none d-sm-block"></p>
+          </div>
+        </div>
+      </div>
+    </script>
     <script src="js/user.js" type="module"></script>
     <script src="js/global.js" type="module"></script>
   </body>

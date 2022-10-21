@@ -3,94 +3,22 @@ import "../component/auth.css";
 import "../component/footer.css";
 import $ from "jquery";
 import _ from "lodash";
+import { addToCart } from "./ulist";
+import { addToFav } from "./ulist";
+import { suggestList } from "./db";
+import { recipesList } from "./db";
+import { courseList } from "./db";
 
 import "../js/modal.js";
 
-const courseList = [
-  {
-    id: 1,
-    name: "BỮA SÁNG THÔNG MINH",
-    thumb: "/img/course/bua-sang-thong-minh.png",
-    price: 1700000,
-    decr: " Khóa học cung cấp công thức chế biến món ăn sáng ngon,phương pháp nấu tiết kiệm thời gian nhưng đảm bảo dinh dưỡng.",
-  },
-  {
-    id: 2,
-    name: "MÓN NGON BA MIỀN",
-    thumb: "/img/course/mon-ngon-ba-mien.png",
-    price: 1800000,
-    decr: " Tham gia lớp học, bạn sẽ tích lũy được kiến thức, kỹ năng nấu nhiều món ăn hấp dẫn từ Chuyên gia",
-  },
-  {
-    id: 3,
-    name: "HÔM NAY ĂN GÌ",
-    thumb: "/img/course/hom-nay-an-gi.png",
-    price: 1600000,
-    decr: " Khóa học giúp bạn có thể biến nguyên liệu quen thuộc thành món ăn thơm ngon, lạ miệng, làm phong phú thực đơn.",
-  },
-
-  {
-    id: 4,
-    name: "ĐIỂM TÂM HONGKONG",
-    thumb: "/img/course/hong-kong.png",
-    price: 1600000,
-    decr: "Các món ăn đặc trưng của xứ Cảng Thơm để làm phong phú hơn bữa sáng cho cả gia đình của bạn.",
-  },
-  {
-    id: 5,
-    name: "MÓN ĂN ĐƯỜNG PHỐ",
-    thumb: "/img/course/mon-an-duong-pho.png",
-    price: 1600000,
-    decr: "Giúp bạn thấu hiểu cặn kẽ cách chế biến thành công các món ăn vặt đường phố đặc trưng của Việt Nam.",
-  },
-
-  {
-    id: 6,
-    name: "MÓN ĂN ĐƯỜNG PHỐ",
-    thumb: "/img/course/mon-an-duong-pho.png",
-    price: 1600000,
-    decr: "Giúp bạn thấu hiểu cặn kẽ cách chế biến thành công các món ăn vặt đường phố đặc trưng của Việt Nam.     ",
-  },
-  {
-    id: 7,
-    name: "MÓN ĂN BỔ DƯỠNG",
-    thumb: "/img/course/mon-an-bo-duong.png",
-    price: 1600000,
-    decr: "Giúp bạn nắm vững kiến thứ chế biến nhiều món ngon bổ sung dưỡng chất, nâng cao sức khỏe cho người thân.",
-  },
-  {
-    id: 8,
-    name: "BÁNH PAPPAROTI",
-    thumb: "/img/course/paroti.png",
-    price: 500000,
-    decr: "Nhiều người nghĩ rằng làm bánh papparoti thật khó, nhưng bất ngờ là món bánh này lại có công thức khá đơn giản. Bạn chỉ cần một chút bí quyết, một chút mẹo nhỏ là có thể tạo ra những chiếc bánh thơm lừng.",
-  },
-];
-
-const addToCart = (event) => {
-  event.preventDefault();
-
-  const cartBox = JSON.parse(localStorage.getItem("cartBox")) || [];
-
-  const item = cartBox.find((item) => item.id === event.data.id);
-  console.log(cartBox);
-
-  if (item) {
-    alert("Khóa học đã có trong giỏ hàng");
-  } else {
-    cartBox.push(event.data);
-    alert("Đã thêm khóa học vào giỏ hàng");
-  }
-
-  localStorage.setItem("cartBox", JSON.stringify(cartBox));
-};
-
 $(function () {
-  //   const courseTemp = $("#course-template").html();
+  const recipesTemplate = $("#recipesTemplate").html();
 
-  //   const course = _.template(courseTemp);
+  const recipe = _.template(recipesTemplate);
+  const recipesHomeList = recipesList.slice(-6);
 
-  //   console.log(recipe(recipesList[1]));
+  const suggestTemplate = $("#suggestTemplate").html();
+  const suggestTemp = _.template(suggestTemplate);
 
   $(".course-field").append(
     _.map(courseList, (courseItem) => {
@@ -117,6 +45,24 @@ $(function () {
     </div>`);
 
       dom.find(".course-register").on("click", courseItem, addToCart);
+
+      return dom;
+    })
+  );
+
+  $(".recipes-list").append(
+    _.map(recipesHomeList, (recipes) => {
+      const dom = $(recipe(recipes));
+
+      dom.find(".add-favourite").on("click", recipes, addToFav);
+
+      return dom;
+    })
+  );
+
+  $(".suggest-list").append(
+    _.map(suggestList, (suggest) => {
+      const dom = $(suggestTemp(suggest));
 
       return dom;
     })

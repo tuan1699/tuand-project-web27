@@ -1,5 +1,8 @@
-.content {
+/* .content {
   margin-top: 40px;
+} */
+.breadcumb {
+  margin-bottom: 40px;
 }
 
 .heading-post {
@@ -87,6 +90,10 @@
   color: #000;
   font-weight: 500;
 }
+
+.side-bar-content {
+  margin-top: 80px;
+}
 /* Small devices (tablets, 576px and up) */
 @media (min-width: 576px) {
 }
@@ -97,10 +104,6 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .post-field {
-    padding: 0px 40px;
-    /* background-color: #ccc; */
-  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */

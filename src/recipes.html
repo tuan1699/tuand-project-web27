@@ -83,71 +83,67 @@
         <div class="content">
           <div class="row">
             <div class="col-12">
-              <div class="filter-field">
-                <form action="" class="filter-form">
-                  <div class="select-form">
-                    <div class="form-field">
-                      <select name="season" id="season">
-                        <option value="#">Mùa</option>
-                        <option value="spring">Mùa Xuân</option>
-                        <option value="summer">Mùa Hạ</option>
-                        <option value="fall">Mùa Thu</option>
-                        <option value="winter">Mùa Đông</option>
-                      </select>
-                    </div>
-                    <div class="form-field">
-                      <select name="region" id="region">
-                        <option value="#">Vùng miền</option>
-                        <option value="North-side">Miền Bắc</option>
-                        <option value="Central">Miền Trung</option>
-                        <option value="South-side">Miền Nam</option>
-                      </select>
-                    </div>
-                    <div class="form-field">
-                      <select name="type" id="type">
-                        <option value="#">Loại</option>
-                        <option value="main">Món chính</option>
-                        <option value="sub">Món phụ</option>
-                        <option value="appetizer">Khai vị</option>
-                        <option value="beverage">Đồ uống</option>
-                        <option value="dessert">Tráng miệng</option>
-                        <option value="bread">Bánh mỳ</option>
-                        <option value="cake">Bánh ngọt</option>
-                        <option value="drink">Ăn nhậu</option>
-                      </select>
-                    </div>
-                    <div class="form-field">
-                      <select name="time" id="time">
-                        <option value="#">Thời gian nấu</option>
-                        <option value="30">Dưới 30 phút</option>
-                        <option value="1hour">1 tiếng</option>
-                        <option value="2hour">2 tiếng</option>
-                        <option value="long">Nấu nhừ</option>
-                      </select>
-                    </div>
-                    <div class="form-field">
-                      <select name="process" id="process">
-                        <option value="#">Cách chế biến</option>
-                        <option value="">Món luộc</option>
-                        <option value="#">Món xào</option>
-                        <option value="#">Món chiên, rán</option>
-                        <option value="#">Nước chấm</option>
-                        <option value="#">Rang</option>
-                        <option value="#">Đút lò</option>
-                        <option value="#">Ngâm</option>
-                        <option value="#">Nấu canh</option>
-                        <option value="#">Rim</option>
-                        <option value="#">Hầm</option>
-                        <option value="#">Kho</option>
-                        <option value="#">Salad</option>
-                        <option value="#">Nướng</option>
-                      </select>
-                    </div>
-                    <span class="filter-btn"><i class="bi bi-funnel"></i></span>
-                    <p class="clear-filter">Xóa lựa chọn</p>
+              <form action="" id="filter-field">
+                <div class="select-form">
+                  <div class="form-field">
+                    <select name="season" id="season">
+                      <option value="">Mùa</option>
+                      <option value="spring">Mùa Xuân</option>
+                      <option value="summer">Mùa Hạ</option>
+                      <option value="fall">Mùa Thu</option>
+                      <option value="winter">Mùa Đông</option>
+                    </select>
                   </div>
-                </form>
-              </div>
+                  <div class="form-field">
+                    <select name="region" id="region">
+                      <option value="">Vùng miền</option>
+                      <option value="north-side">Miền Bắc</option>
+                      <option value="central">Miền Trung</option>
+                      <option value="south-side">Miền Nam</option>
+                    </select>
+                  </div>
+                  <div class="form-field">
+                    <select name="type" id="category">
+                      <option value="">Loại</option>
+                      <option value="main">Món chính</option>
+                      <option value="sub">Món phụ</option>
+                      <option value="appetizer">Khai vị</option>
+                      <option value="beverage">Đồ uống</option>
+                      <option value="dessert">Tráng miệng</option>
+                      <option value="cake">Bánh</option>
+                    </select>
+                  </div>
+                  <div class="form-field">
+                    <select name="time" id="time">
+                      <option value="">Thời gian nấu</option>
+                      <option value="30">Dưới 30 phút</option>
+                      <option value="1hour">1 tiếng</option>
+                      <option value="2hour">2 tiếng</option>
+                      <option value="long">Nấu nhừ</option>
+                    </select>
+                  </div>
+                  <div class="form-field">
+                    <select name="process" id="process">
+                      <option value="">Cách chế biến</option>
+                      <option value="boil">Món luộc</option>
+                      <option value="fry">Món xào</option>
+                      <option value="fried">Món chiên, rán</option>
+                      <option value="sauce">Nước chấm</option>
+                      <option value="rang">Rang</option>
+
+                      <option value="ngam">Ngâm</option>
+                      <option value="suop">Nấu canh</option>
+                      <option value="rim">Rim</option>
+                      <option value="ham">Hầm</option>
+                      <option value="kho">Kho</option>
+                      <option value="salad">Salad</option>
+                      <option value="grill">Nướng</option>
+                    </select>
+                  </div>
+                  <!-- <span class="filter-btn"><i class="bi bi-funnel"></i></span> -->
+                  <p class="clear-filter">Hiển thị tất cả công thức</p>
+                </div>
+              </form>
             </div>
             <div class="col-12 col-lg-9">
               <div class="recipes-list row">
@@ -594,7 +590,7 @@
 
     <script type="text/html" id="recipesTemp">
       <div class="col-6 col-sm-6 col-lg-4">
-        <a href="">
+        <a href="post-item.html?id=${ id }">
           <div class="recipes-item border-item">
             <div class="recipes-item-thumb position-relative">
               <img src="${thumb}" alt="" />
@@ -622,6 +618,8 @@
         </a>
       </div>
     </script>
+
+    <script type="text/html" id="detail-recipes"></script>
     <script src="js/recipes.js" type="module"></script>
     <script src="js/global.js" type="module"></script>
   </body>
