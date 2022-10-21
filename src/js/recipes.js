@@ -81,12 +81,12 @@ const byMethod = document.querySelector("#process");
 
 // DÙNG TEMPLATE
 
-let start = 0;
-let itemPerPage = 12;
-let end = itemPerPage;
-let currentPage = 1;
-let totalPage = Math.ceil(recipesList.length / itemPerPage);
-const numberCurrent = document.querySelector(".current-page");
+// let start = 0;
+// let itemPerPage = 12;
+// let end = itemPerPage;
+// let currentPage = 1;
+// let totalPage = Math.ceil(recipesList.length / itemPerPage);
+// const numberCurrent = document.querySelector(".current-page");
 
 function renderRecipes(recipesList) {
   const recipesTemplate = $("#recipesTemp").html();
@@ -123,14 +123,12 @@ $(function () {
   }
 
   $(".recipes-list").append(
-    _.map(recipeByCategory, (recipes, index) => {
-      if (index >= start && index < end) {
-        const dom = $(recipe(recipes));
+    _.map(recipeByCategory, (recipes) => {
+      const dom = $(recipe(recipes));
 
-        dom.find(".add-favourite").on("click", recipes, addToFav);
+      dom.find(".add-favourite").on("click", recipes, addToFav);
 
-        return dom;
-      }
+      return dom;
     })
   );
 });

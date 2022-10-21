@@ -9,10 +9,47 @@ export const addToFav = (event) => {
   const item = favouriteBox.find((i) => i.id === event.data.id);
 
   if (item) {
-    alert("Bạn rất muốn thực hiện món ăn này đúng không? Mau mau vào bếp nào");
+    // alert("Bạn rất muốn thực hiện món ăn này đúng không? Mau mau vào bếp nào");
+    toastr["success"]("I do not think that means what you think it means.");
+
+    toastr.options = {
+      closeButton: false,
+      debug: false,
+      newestOnTop: false,
+      progressBar: false,
+      positionClass: "toast-bottom-center",
+      preventDuplicates: false,
+      onclick: null,
+      showDuration: "300",
+      hideDuration: "1000",
+      timeOut: "5000",
+      extendedTimeOut: "1000",
+      showEasing: "swing",
+      hideEasing: "linear",
+      showMethod: "fadeIn",
+      hideMethod: "fadeOut",
+    };
   } else {
     favouriteBox.push(event.data);
-    alert("Đã thêm vào danh sách yêu thích");
+    toastr["success"]("I do not think that means what you think it means.");
+
+    toastr.options = {
+      closeButton: false,
+      debug: false,
+      newestOnTop: false,
+      progressBar: false,
+      positionClass: "toast-bottom-center",
+      preventDuplicates: false,
+      onclick: null,
+      showDuration: "300",
+      hideDuration: "1000",
+      timeOut: "5000",
+      extendedTimeOut: "1000",
+      showEasing: "swing",
+      hideEasing: "linear",
+      showMethod: "fadeIn",
+      hideMethod: "fadeOut",
+    };
   }
 
   localStorage.setItem("favBox", JSON.stringify(favouriteBox));
