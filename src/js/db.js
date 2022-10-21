@@ -437,4 +437,12 @@ export const blogList = [
     auth: "March 6, 2022",
     date: "Oanh Han",
   },
+  {
+    id: 21,
+    name: "TỪ A-Z CÁCH LÀM KIM CHI TRUYỀN THỐNG HÀN QUỐC",
+    thumb: "./img/blog/kim-chi.png",
+    decr: "Không chỉ đơn thuần là một món ăn truyền thống, kimchi còn là gắn liền với bề dày lịch sử, văn hóa và con người của xứ sở này. Và nếu bạn chưa biết thì kimchi và kimjang – văn hóa muối kimchi của Hàn Quốc đã được UNESCO chính thức công nhận vào danh mục di sản văn hóa phi vật thể đại diện của nhân loại đó!",
+    auth: "March 21, 2022",
+    date: "Diep Phạm",
+  },
 ];
