@@ -20,6 +20,9 @@ $(function () {
   const suggestTemplate = $("#suggestTemplate").html();
   const suggestTemp = _.template(suggestTemplate);
 
+  const quickMealTemp = $("#quickTemplate").html();
+  const quickTemp = _.template(quickMealTemp);
+
   $(".course-field").append(
     _.map(courseList, (courseItem) => {
       const dom = $(`<div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -66,5 +69,19 @@ $(function () {
 
       return dom;
     })
+  );
+
+  $(".quick-meal-list").append(
+    _.map(
+      recipesList
+        .filter((quickRecipes) => quickRecipes.duration <= 30)
+        .slice(0, 6),
+      (quickMeal) => {
+        const dom = $(quickTemp(quickMeal));
+
+        return dom;
+        console.log(quickMeal);
+      }
+    )
   );
 });

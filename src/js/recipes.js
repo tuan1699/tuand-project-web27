@@ -108,22 +108,32 @@ function renderRecipes(recipesList) {
 $(function () {
   const recipesTemplate = $("#recipesTemp").html();
   const recipe = _.template(recipesTemplate);
-  let recipeByCategory;
+  let recipeFilted;
 
   const url = new URL(location.href);
+
+  const duration = Number(url.searchParams.get("duration"));
+
   const category = url.searchParams.get("category");
 
   if (category) {
     bycategory.value = category;
-    recipeByCategory = _.filter(recipesList, (recipes) => {
+    recipeFilted = _.filter(recipesList, (recipes) => {
       return recipes.category == category;
     });
+  } else if (duration) {
+    byTime.value = duration;
+    recipeFilted = _.filter(recipesList, (recipes) => {
+      return recipes.duration < duration;
+    });
   } else {
-    recipeByCategory = _.map(recipesList, (recipes) => recipes);
+    recipeFilted = _.map(recipesList, (recipes) => recipes);
   }
 
+  console.log(recipeFilted);
+
   $(".recipes-list").append(
-    _.map(recipeByCategory, (recipes) => {
+    _.map(recipeFilted, (recipes) => {
       const dom = $(recipe(recipes));
 
       dom.find(".add-favourite").on("click", recipes, addToFav);

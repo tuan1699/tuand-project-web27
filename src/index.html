@@ -391,12 +391,14 @@
           class="heading d-flex justify-content-center justify-content-sm-between"
         >
           <h2 class="title">BỮA ĂN NHANH CHUẨN BỊ DƯỚI 30 PHÚT</h2>
-          <p class="see-all d-none d-md-block">Xem tất cả</p>
+          <a href="recipes.html?duration=30" class="text-light">
+            <p class="see-all d-none d-md-block">Xem tất cả</p>
+          </a>
         </div>
         <div class="content">
-          <div class="row">
-            <div class="col-6 col-sm-4 col-lg-2">
-              <a href="" class="quick-link">
+          <div class="row quick-meal-list">
+            <!-- <div class="col-6 col-sm-4 col-lg-2">
+              <a href="recipes.html?id={id}" class="quick-link">
                 <div class="quick-meal-item">
                   <div class="quick-meal-thumb">
                     <img src="./img/home/quick-meal/banh-my-trung.png" alt="" />
@@ -413,101 +415,7 @@
                   </div>
                 </div>
               </a>
-            </div>
-
-            <div class="col-6 col-sm-4 col-lg-2">
-              <a href="" class="quick-link">
-                <div class="quick-meal-item">
-                  <div class="quick-meal-thumb">
-                    <img src="./img/home/quick-meal/ngu-coc.png" alt="" />
-                  </div>
-                  <div class="quick-meal-decr">
-                    <div class="quick-meal-info text-start">
-                      <p class="quick-meal-name underline-hover-effect">
-                        Ngũ cốc các loại
-                      </p>
-                      <div class="quick-meal-time">
-                        30 minutes <i class="bi bi-alarm"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2">
-              <a href="" class="quick-link">
-                <div class="quick-meal-item">
-                  <div class="quick-meal-thumb">
-                    <img src="./img/home/quick-meal/sanwich.png" alt="" />
-                  </div>
-                  <div class="quick-meal-decr">
-                    <div class="quick-meal-info text-start">
-                      <p class="quick-meal-name underline-hover-effect">
-                        Sandwich
-                      </p>
-                      <div class="quick-meal-time">
-                        30 minutes <i class="bi bi-alarm"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2">
-              <a href="" class="quick-link">
-                <div class="quick-meal-item">
-                  <div class="quick-meal-thumb">
-                    <img src="./img/home/quick-meal/my-xao.png" alt="" />
-                  </div>
-                  <div class="quick-meal-decr">
-                    <div class="quick-meal-info text-start">
-                      <p class="quick-meal-name underline-hover-effect">
-                        Mỳ xào rau củ
-                      </p>
-                      <div class="quick-meal-time">
-                        30 minutes <i class="bi bi-alarm"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2">
-              <a href="" class="quick-link">
-                <div class="quick-meal-item">
-                  <div class="quick-meal-thumb">
-                    <img src="./img/home/quick-meal/my-y.png" alt="" />
-                  </div>
-                  <div class="quick-meal-decr">
-                    <div class="quick-meal-info text-start">
-                      <p class="quick-meal-name underline-hover-effect">Mỳ Ý</p>
-                      <div class="quick-meal-time">
-                        30 minutes <i class="bi bi-alarm"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2">
-              <a href="" class="quick-link">
-                <div class="quick-meal-item">
-                  <div class="quick-meal-thumb">
-                    <img src="./img/home/quick-meal/com-chien.png" alt="" />
-                  </div>
-                  <div class="quick-meal-decr">
-                    <div class="quick-meal-info text-start">
-                      <p class="quick-meal-name underline-hover-effect">
-                        Cơm chiên
-                      </p>
-                      <div class="quick-meal-time">
-                        30 minutes <i class="bi bi-alarm"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
+            </div> -->
           </div>
           <button class="btn-see-all btn-quick-meal d-sm-none">
             Xem tất cả
@@ -944,6 +852,26 @@
               <img src="${thumb}" alt="" />
             </div>
             <div class="suggest-item-name">${name}</div>
+          </div>
+        </a>
+      </div>
+    </script>
+
+    <script type="text/html" id="quickTemplate">
+      <div class="col-6 col-sm-4 col-lg-2">
+        <a href="post-item.html?id=${id}" class="quick-link">
+          <div class="quick-meal-item">
+            <div class="quick-meal-thumb">
+              <img src="${thumb}" alt="" />
+            </div>
+            <div class="quick-meal-decr">
+              <div class="quick-meal-info text-start">
+                <p class="quick-meal-name underline-hover-effect">${name}</p>
+                <div class="quick-meal-time">
+                  ${duration} minutes <i class="bi bi-alarm"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </a>
       </div>
