@@ -1,5 +1,9 @@
 .content {
-  margin-top: 40px;
+  margin-top: 20px;
+}
+
+.breadcumb {
+  margin: 0px 0px 40px 0px;
 }
 
 .post-thumbnail {
@@ -7,6 +11,7 @@
 }
 
 .side-bar-content {
+  margin-top: 80px;
   height: 1900px;
   overflow-y: scroll;
 }
@@ -19,7 +24,8 @@
 }
 
 .title-post {
-  font-size: 30px;
+  font-size: 24px;
+  text-align: center;
   font-weight: 500;
 }
 
