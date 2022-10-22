@@ -10,19 +10,20 @@ export const addToFav = (event) => {
 
   if (item) {
     // alert("Bạn rất muốn thực hiện món ăn này đúng không? Mau mau vào bếp nào");
+
     toastr["success"]("Đã thêm bài viết vào danh sách yêu thích!");
 
     toastr.options = {
       closeButton: false,
       debug: false,
       newestOnTop: false,
-      progressBar: false,
-      positionClass: "toast-bottom-center",
+      progressBar: true,
+      positionClass: "toast-bottom-right",
       preventDuplicates: false,
       onclick: null,
       showDuration: "300",
       hideDuration: "1000",
-      timeOut: "5000",
+      timeOut: "2000",
       extendedTimeOut: "1000",
       showEasing: "swing",
       hideEasing: "linear",
@@ -37,13 +38,13 @@ export const addToFav = (event) => {
       closeButton: false,
       debug: false,
       newestOnTop: false,
-      progressBar: false,
-      positionClass: "toast-bottom-center",
+      progressBar: true,
+      positionClass: "toast-bottom-right",
       preventDuplicates: false,
       onclick: null,
       showDuration: "300",
       hideDuration: "1000",
-      timeOut: "5000",
+      timeOut: "2000",
       extendedTimeOut: "1000",
       showEasing: "swing",
       hideEasing: "linear",
@@ -119,10 +120,46 @@ export const addToCart = (event) => {
   console.log(cartBox);
 
   if (item) {
-    alert("Khóa học đã có trong giỏ hàng");
+    Command: toastr["info"]("Khóa học đã có trong giỏ hàng");
+
+    toastr.options = {
+      closeButton: false,
+      debug: false,
+      newestOnTop: false,
+      progressBar: true,
+      positionClass: "toast-bottom-right",
+      preventDuplicates: false,
+      onclick: null,
+      showDuration: "300",
+      hideDuration: "1000",
+      timeOut: "2000",
+      extendedTimeOut: "1000",
+      showEasing: "swing",
+      hideEasing: "linear",
+      showMethod: "fadeIn",
+      hideMethod: "fadeOut",
+    };
   } else {
     cartBox.push(event.data);
-    alert("Đã thêm khóa học vào giỏ hàng");
+    Command: toastr["success"]("Đã thêm khóa học vào giỏ hàng!");
+
+    toastr.options = {
+      closeButton: false,
+      debug: false,
+      newestOnTop: false,
+      progressBar: true,
+      positionClass: "toast-bottom-right",
+      preventDuplicates: false,
+      onclick: null,
+      showDuration: "300",
+      hideDuration: "1000",
+      timeOut: "2000",
+      extendedTimeOut: "1000",
+      showEasing: "swing",
+      hideEasing: "linear",
+      showMethod: "fadeIn",
+      hideMethod: "fadeOut",
+    };
   }
 
   console.log(cartBox);
