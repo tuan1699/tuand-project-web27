@@ -1,9 +1,8 @@
-import "../css/cart.css";
-
 import "../component/auth.css";
 import "../component/footer.css";
 import "../component/sidebar.css";
 import "../component/header.css";
+import "../css/cart.css";
 import $ from "jquery";
 import _ from "lodash";
 
@@ -51,7 +50,7 @@ function renderCart() {
           </div>
         </div>
       </div>
-      <div class="course-price">${course.price}</div>
+      <div class="course-price">${course.price.toLocaleString()} Đ</div>
     </div>`;
     }).join("")
   );

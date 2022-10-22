@@ -1,9 +1,8 @@
-import "../css/user.css";
-
 import "../component/auth.css";
 import "../component/footer.css";
 import "../component/sidebar.css";
 import "../component/header.css";
+import "../css/user.css";
 import $ from "jquery";
 import _ from "lodash";
 // import { recipesList } from "./db";
@@ -30,8 +29,12 @@ navItems.forEach((navItem, index) => {
 $(function () {
   const favBox = JSON.parse(localStorage.getItem("favBox")) || [];
   const favTemp = $("#favItem").html();
-
   const favItem = _.template(favTemp);
+
+  const recipesBox = JSON.parse(localStorage.getItem("recipesBox")) || [];
+  const recipesTemp = $("#recipesTemp").html();
+  const recipesItem = _.template(recipesTemp);
+
   $(".fav-field").append(
     _.map(favBox, (fav) => {
       const dom = $(favItem(fav));
@@ -39,7 +42,26 @@ $(function () {
       return dom;
     })
   );
+
+  $(".recipes-field").append(
+    _.map(recipesBox, (recipes) => {
+      const dom = $(recipesItem(recipes));
+      dom.find(".removeRecipes-btn").on("click", recipes, deleteRecipes);
+
+      return dom;
+    })
+  );
 });
+
+const deleteRecipes = (event) => {
+  event.preventDefault();
+  let recipesBox = JSON.parse(localStorage.getItem("recipesBox")) || [];
+  recipesBox = _.filter(recipesBox, (i) => i.id !== event.data.id);
+
+  localStorage.setItem("recipesBox", JSON.stringify(recipesBox));
+
+  event.target.closest(".recipes").remove();
+};
 
 const deleteItem = (event) => {
   event.preventDefault();

@@ -30,7 +30,7 @@
           <div
             class="header-feature-item d-none d-md-block text-light cart me-3 fs-4"
           >
-            <a href="cart.html" class="text-light"
+            <a href="cart.html" class="text-active"
               ><i class="bi bi-cart2"></i
             ></a>
           </div>
@@ -81,7 +81,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="course-price">${price}</div>
+                <div class="course-price">${price.toLocaleString()} Đ</div>
                 <div class="delete-course"><i class="bi bi-x-lg"></i></div>
               </div>
             </template>
@@ -134,42 +134,7 @@
                     <p>Khóa học</p>
                     <p>Thành tiền</p>
                   </div>
-                  <div class="list-check-out">
-                    <!-- <div
-                      class="item-checkout d-flex justify-content-between align-items-center"
-                    >
-                      <div class="course-info">
-                        <div class="row">
-                          <div class="col-6">
-                            <img src="./img/course/hong-kong.png" alt="" />
-                          </div>
-                          <div class="col-6">
-                            <div class="cart-name">
-                              CHUYÊN ĐỀ ĐIỂM TÂM HONGKONG
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="course-price">1.700.700Đ</div>
-                    </div>
-                    <div
-                      class="item-checkout d-flex justify-content-between align-items-center"
-                    >
-                      <div class="course-info">
-                        <div class="row">
-                          <div class="col-6">
-                            <img src="./img/course/hong-kong.png" alt="" />
-                          </div>
-                          <div class="col-6">
-                            <div class="cart-name">
-                              CHUYÊN ĐỀ ĐIỂM TÂM HONGKONG
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="course-price">1.700.700Đ</div>
-                    </div> -->
-                  </div>
+                  <div class="list-check-out"></div>
                   <div class="summary d-flex justify-content-between">
                     <p>TỔNG</p>
                     <p class="summary-price"></p>

@@ -1,10 +1,10 @@
-import "../css/create-post.css";
 import "../css/user.css";
 
 import "../component/auth.css";
 import "../component/footer.css";
 import "../component/sidebar.css";
 import "../component/header.css";
+import "../css/create-post.css";
 
 import "../js/modal.js";
 import $ from "jquery";

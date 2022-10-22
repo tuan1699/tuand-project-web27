@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Mood</title>
   </head>
@@ -25,9 +24,16 @@
           >
             <i class="bi bi-person-circle"></i>
           </div>
+
           <div class="header-feature-item text-light search-btn me-3 fs-4">
             <i class="bi bi-search"></i>
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Tên món, nguyên liệu, chế độ ăn..."
+            />
           </div>
+
           <div
             class="header-feature-item d-none d-md-block text-light cart me-3 fs-4"
           >
@@ -475,40 +481,8 @@
         </div>
 
         <div class="content">
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <a href="" class="blog-link">
-                <div class="blog-item">
-                  <div class="row">
-                    <div class="col-12 col-sm-6">
-                      <div class="blog-thumb">
-                        <img src="./img/home/blog/dua.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                      <div class="blog-name">
-                        HỌC CÁCH CẮT DỨA (THƠM) 2 KIỂU CỰC DỄ
-                      </div>
-
-                      <div
-                        class="blog-info d-flex align-items-center justify-content-between"
-                      >
-                        <div class="blog-by">by Hà Vy</div>
-                        <div class="line"></div>
-                        <div class="blog-time">March 13, 2021</div>
-                      </div>
-                      <p class="blog-decr d-none d-lg-block">
-                        Mâm cơm nhà vào tháng Ba, thường có canh rau tập tàng
-                        nấu riêu cua. Vì là mùa xuân, mọi thứ trong vườn, ngoài
-                        đồng đều xanh biếc, mơn mởn, ngon nõn...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-12 col-md-6">
+          <div class="row blog-field">
+            <!-- <div class="col-12 col-md-6">
               <a href="" class="blog-link">
                 <div class="blog-item">
                   <div class="row">
@@ -542,72 +516,7 @@
                   </div>
                 </div>
               </a>
-            </div>
-
-            <div class="col-12 col-md-6">
-              <a href="" class="blog-link">
-                <div class="blog-item">
-                  <div class="row">
-                    <div class="col-12 col-sm-6">
-                      <div class="blog-thumb">
-                        <img src="./img/home/blog/hoa-gao.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                      <div class="blog-name">
-                        THÁNG BA, HOA GẠO. THỬ LÀM MÓN “HOA GẠO XÀO” TRONG
-                        TRUYỀN THUYẾT
-                      </div>
-
-                      <div
-                        class="blog-info d-flex align-items-center justify-content-between"
-                      >
-                        <div class="blog-by">by Hà Vy</div>
-                        <div class="line"></div>
-                        <div class="blog-time">March 13, 2021</div>
-                      </div>
-                      <p class="blog-decr d-none d-lg-block">
-                        Chưa năm nào hoa gạo nở đều, đỏ rực và đẹp đẽ như năm
-                        nay. Mùa hoa gạo gắn liền với bao nhiêu kỉ niệm tuổi thơ
-                        đẹp đẽ. Có ai còn nhớ mùa hoa gạo đỏ rực, cả lũ…
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-12 col-md-6">
-              <a href="" class="blog-link">
-                <div class="blog-item">
-                  <div class="row">
-                    <div class="col-12 col-sm-6">
-                      <div class="blog-thumb">
-                        <img src="./img/home/blog/cho-buoi.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                      <div class="blog-name">
-                        CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
-                      </div>
-
-                      <div
-                        class="blog-info d-flex align-items-center justify-content-between"
-                      >
-                        <div class="blog-by">by Hà Vy</div>
-                        <div class="line"></div>
-                        <div class="blog-time">March 13, 2021</div>
-                      </div>
-                      <p class="blog-decr d-none d-lg-block">
-                        CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG hoàn
-                        toàn từ rau củ quả “Trung thu là Tết Thiếu Nhi, Không có
-                        chó bưởi còn gì là vui!”
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -826,7 +735,7 @@
                     <p class="recipes-day">${ day }</p>
                     <p class="recipes-month">${ month }</p>
                   </div>
-                  <span class="add-favourite position-absolute">
+                  <span class="add-recipesBox position-absolute">
                     <i class="bi bi-bookmark"></i>
                   </span>
                 </div>
@@ -844,6 +753,7 @@
         </a>
       </div>
     </script>
+
     <script type="text/html" id="suggestTemplate">
       <div class="col-2">
         <a href="./recipes.html?category=${category}" class="suggest-link">
@@ -870,6 +780,37 @@
                 <div class="quick-meal-time">
                   ${duration} minutes <i class="bi bi-alarm"></i>
                 </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </script>
+
+    <script type="text/html" id="blogTemplate">
+      <div class="col-12 col-md-6">
+        <a href="blog-item.html?id=${id}" class="blog-link">
+          <div class="blog-item">
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="blog-thumb position-relative">
+                  <img src="${thumb}" alt="" />
+                  <span class="add-favourite position-absolute">
+                    <i class="bi bi-bookmark"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="blog-name">${name}</div>
+
+                <div
+                  class="blog-info d-flex align-items-center justify-content-between"
+                >
+                  <div class="blog-by">by ${auth}</div>
+                  <div class="line"></div>
+                  <div class="blog-time">${date}</div>
+                </div>
+                <p class="blog-decr">${decr}</p>
               </div>
             </div>
           </div>

@@ -1,12 +1,13 @@
-import "../css/recipes.css";
 import "../component/auth.css";
 import "../component/footer.css";
 import "../component/sidebar.css";
 import "../component/header.css";
+import "../css/recipes.css";
 import $ from "jquery";
 import _ from "lodash";
 import { recipesList } from "./db";
 import { addToFav } from "./ulist";
+import { addToRecipesBox } from "./ulist";
 
 import "../js/modal.js";
 
@@ -97,7 +98,7 @@ function renderRecipes(recipesList) {
     if (index >= start && index < end) {
       const dom = $(recipe(recipes));
 
-      dom.find(".add-favourite").on("click", recipes, addToFav);
+      dom.find(".add-recipesBox").on("click", recipes, addToRecipesBox);
 
       return dom;
     }
@@ -136,7 +137,7 @@ $(function () {
     _.map(recipeFilted, (recipes) => {
       const dom = $(recipe(recipes));
 
-      dom.find(".add-favourite").on("click", recipes, addToFav);
+      dom.find(".add-recipesBox").on("click", recipes, addToRecipesBox);
 
       return dom;
     })

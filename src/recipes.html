@@ -14,7 +14,7 @@
         </div>
         <div class="nav d-none d-lg-flex">
           <a href="./diet.html" class="nav-item">CHẾ ĐỘ ĂN</a>
-          <a href="#" class="nav-item"> MÓN ĂN</a>
+          <a href="#" class="nav-item text-active"> MÓN ĂN</a>
           <a href="./blog.html" class="nav-item"> BLOG</a>
           <a href="./course.html" class="nav-item"> KHÓA HỌC NẤU ĂN</a>
         </div>
@@ -74,11 +74,11 @@
             </div>
           </div>
 
-          <a href="./create-post.html">
+          <!-- <a href="./create-post.html">
             <p class="create-btn my-3">
               <i class="bi bi-plus"></i> Tạo công thức
             </p>
-          </a>
+          </a> -->
         </div>
         <div class="content">
           <div class="row">
@@ -594,7 +594,7 @@
           <div class="recipes-item border-item">
             <div class="recipes-item-thumb position-relative">
               <img src="${thumb}" alt="" />
-              <span class="add-favourite position-absolute">
+              <span class="add-recipesBox position-absolute">
                 <i class="bi bi-bookmark"></i>
               </span>
             </div>
@@ -619,8 +619,14 @@
       </div>
     </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script type="text/html" id="detail-recipes"></script>
     <script src="js/recipes.js" type="module"></script>
     <script src="js/global.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+    />
   </body>
 </html>

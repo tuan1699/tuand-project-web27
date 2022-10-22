@@ -1,3 +1,11 @@
+.text-active {
+  color: var(--active-color);
+}
+
+.breadcumb {
+  margin: 20px 0 40px 0;
+}
+
 .course-item {
   margin-bottom: 40px;
 }
@@ -55,6 +63,7 @@
 .side-bar-content {
   height: 2100px;
   overflow-y: scroll;
+  margin-top: 80px;
 }
 
 /* Small devices (tablets, 576px and up) */

@@ -1,3 +1,7 @@
+.text-active {
+  color: var(--active-color);
+}
+
 .user-nav-item {
   padding: 8px 40px;
   color: #000;
@@ -11,6 +15,7 @@
 }
 .user-content-item {
   display: none;
+  min-height: 100vh;
 }
 .user-content-item.active {
   display: block;
@@ -74,6 +79,84 @@
   color: #fff;
 }
 
+/* RECIPES FIELD */
+
+.recipes-field > div {
+  margin-bottom: 24px;
+}
+
+.recipes-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipes-item:hover .recipes-item-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.recipes-item-thumb {
+  overflow: hidden;
+}
+
+.recipes-list {
+  padding-bottom: 40px;
+}
+
+.recipes-item-decr {
+  padding: 10px 10px 20px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipes-item-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.recipes-item-bonus {
+  padding: 10px 0;
+}
+
+.duration-icon {
+  margin-left: 8px;
+}
+
+.item-info {
+  color: var(--sub-bg);
+  padding-top: 8px;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.item-by::after {
+  position: relative;
+  top: 4px;
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  margin: 0 16px;
+  background-color: var(--sub-color);
+}
+
+.share {
+  margin-left: 10px;
+}
+
+.border-item {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.recipes-item:hover .removeRecipes-btn {
+  display: block;
+  color: var(--active-color);
+}
+
 /* BLOG FIELD */
 .blog-name {
   font-size: 18px;
@@ -102,6 +185,7 @@
   margin-bottom: 30px;
 }
 
+.removeRecipes-btn,
 .remove-btn {
   display: none;
   position: absolute;
@@ -111,6 +195,7 @@
   color: #fff;
 }
 
+.removeRecipes-btn:hover,
 .remove-btn:hover {
   transform: scale(1.3);
   transition: 0.2s ease;
@@ -118,10 +203,16 @@
 
 .blog-item:hover .remove-btn {
   display: block;
+  color: var(--active-color);
 }
 
 .blog-link:hover .blog-thumb img {
   transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.blog-name:hover {
+  color: var(--active-color);
 }
 
 .blog-thumb {
@@ -151,6 +242,7 @@
   color: #fff;
   background-color: #0668ae;
 }
+
 @media (min-width: 576px) {
   .user-container {
     padding: 80px;

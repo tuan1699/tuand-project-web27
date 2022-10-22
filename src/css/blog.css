@@ -1,3 +1,7 @@
+.text-active {
+  color: var(--active-color);
+}
+
 .content {
   margin-bottom: 40px;
 }

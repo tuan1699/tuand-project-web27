@@ -5,11 +5,28 @@ import $ from "jquery";
 import _ from "lodash";
 import { addToCart } from "./ulist";
 import { addToFav } from "./ulist";
-import { suggestList } from "./db";
+import { addToRecipesBox } from "./ulist";
+import { blogList, suggestList } from "./db";
 import { recipesList } from "./db";
 import { courseList } from "./db";
 
 import "../js/modal.js";
+
+// SEARCH DISPLAY
+const searchInput = document.querySelector(".search-input");
+
+document.querySelector(".bi-search").onclick = function () {
+  searchInput.classList.remove("d-none");
+  searchInput.classList.toggle("d-block");
+};
+
+window.addEventListener("click", function (e) {
+  if (!e.target.matches(".search-input") && !e.target.matches(".bi-search")) {
+    searchInput.classList.remove("d-block");
+
+    searchInput.classList.add("d-none");
+  }
+});
 
 $(function () {
   const recipesTemplate = $("#recipesTemplate").html();
@@ -23,10 +40,13 @@ $(function () {
   const quickMealTemp = $("#quickTemplate").html();
   const quickTemp = _.template(quickMealTemp);
 
+  const blogTemplate = $("#blogTemplate").html();
+  const blogTem = _.template(blogTemplate);
+
   $(".course-field").append(
     _.map(courseList, (courseItem) => {
       const dom = $(`<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <a href="" class="course-link">
+      <a href="course-item.html?id=${courseItem.id}" class="course-link">
         <div class="course-item border-item">
           <div class="course-thumb">
             <img
@@ -57,7 +77,7 @@ $(function () {
     _.map(recipesHomeList, (recipes) => {
       const dom = $(recipe(recipes));
 
-      dom.find(".add-favourite").on("click", recipes, addToFav);
+      dom.find(".add-recipesBox").on("click", recipes, addToRecipesBox);
 
       return dom;
     })
@@ -80,8 +100,17 @@ $(function () {
         const dom = $(quickTemp(quickMeal));
 
         return dom;
-        console.log(quickMeal);
       }
     )
+  );
+
+  $(".blog-field").append(
+    _.map(blogList.slice(3, 7), (blog) => {
+      const dom = $(blogTem(blog));
+
+      dom.find(".add-favourite").on("click", blog, addToFav);
+
+      return dom;
+    })
   );
 });
