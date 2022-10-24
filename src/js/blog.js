@@ -10,6 +10,8 @@ import { blogList } from "./db";
 import { addToFav } from "./ulist";
 
 import "../js/modal.js";
+import "../js/auth.js";
+import "../js/signin.js";
 
 const PRODUCTS_PER_PAGE = 7;
 

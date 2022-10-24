@@ -4,165 +4,186 @@ import _ from "lodash";
 export const addToFav = (event) => {
   event.preventDefault();
 
-  const favouriteBox = JSON.parse(localStorage.getItem("favBox")) || [];
+  let isLogin = localStorage.getItem("token") ? true : false;
 
-  const item = favouriteBox.find((i) => i.id === event.data.id);
+  if (isLogin) {
+    const favouriteBox = JSON.parse(localStorage.getItem("favBox")) || [];
 
-  if (item) {
-    // alert("Bạn rất muốn thực hiện món ăn này đúng không? Mau mau vào bếp nào");
+    const item = favouriteBox.find((i) => i.id === event.data.id);
 
-    toastr["success"]("Đã thêm bài viết vào danh sách yêu thích!");
+    if (item) {
+      // alert("Bạn rất muốn thực hiện món ăn này đúng không? Mau mau vào bếp nào");
 
-    toastr.options = {
-      closeButton: false,
-      debug: false,
-      newestOnTop: false,
-      progressBar: true,
-      positionClass: "toast-bottom-right",
-      preventDuplicates: false,
-      onclick: null,
-      showDuration: "300",
-      hideDuration: "1000",
-      timeOut: "2000",
-      extendedTimeOut: "1000",
-      showEasing: "swing",
-      hideEasing: "linear",
-      showMethod: "fadeIn",
-      hideMethod: "fadeOut",
-    };
+      toastr["success"]("Đã thêm bài viết vào danh sách yêu thích!");
+
+      toastr.options = {
+        closeButton: false,
+        debug: false,
+        newestOnTop: false,
+        progressBar: true,
+        positionClass: "toast-bottom-right",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "2000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut",
+      };
+    } else {
+      favouriteBox.push(event.data);
+      toastr["success"]("Đã thêm bài viết vào danh sách yêu thích!");
+
+      toastr.options = {
+        closeButton: false,
+        debug: false,
+        newestOnTop: false,
+        progressBar: true,
+        positionClass: "toast-bottom-right",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "2000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut",
+      };
+    }
+
+    localStorage.setItem("favBox", JSON.stringify(favouriteBox));
   } else {
-    favouriteBox.push(event.data);
-    toastr["success"]("Đã thêm bài viết vào danh sách yêu thích!");
-
-    toastr.options = {
-      closeButton: false,
-      debug: false,
-      newestOnTop: false,
-      progressBar: true,
-      positionClass: "toast-bottom-right",
-      preventDuplicates: false,
-      onclick: null,
-      showDuration: "300",
-      hideDuration: "1000",
-      timeOut: "2000",
-      extendedTimeOut: "1000",
-      showEasing: "swing",
-      hideEasing: "linear",
-      showMethod: "fadeIn",
-      hideMethod: "fadeOut",
-    };
+    const modalBg = document.querySelector(".modal-bg");
+    modalBg.style.display = "flex";
   }
-
-  localStorage.setItem("favBox", JSON.stringify(favouriteBox));
 };
 
 export const addToRecipesBox = (event) => {
   event.preventDefault();
 
-  const recipesBox = JSON.parse(localStorage.getItem("recipesBox")) || [];
+  let isLogin = localStorage.getItem("token") ? true : false;
 
-  const item = recipesBox.find((i) => i.id === event.data.id);
+  if (isLogin) {
+    const recipesBox = JSON.parse(localStorage.getItem("recipesBox")) || [];
 
-  if (item) {
-    toastr["success"](
-      "Bạn rất muốn thực hiện món ăn này đúng không? Mau mau vào bếp nào"
-    );
+    const item = recipesBox.find((i) => i.id === event.data.id);
 
-    toastr.options = {
-      closeButton: false,
-      debug: false,
-      newestOnTop: false,
-      progressBar: false,
-      positionClass: "toast-bottom-center",
-      preventDuplicates: false,
-      onclick: null,
-      showDuration: "300",
-      hideDuration: "1000",
-      timeOut: "5000",
-      extendedTimeOut: "1000",
-      showEasing: "swing",
-      hideEasing: "linear",
-      showMethod: "fadeIn",
-      hideMethod: "fadeOut",
-    };
+    if (item) {
+      toastr["success"](
+        "Bạn rất muốn thực hiện món ăn này đúng không? Mau mau vào bếp nào"
+      );
+
+      toastr.options = {
+        closeButton: false,
+        debug: false,
+        newestOnTop: false,
+        progressBar: false,
+        positionClass: "toast-bottom-center",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "5000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut",
+      };
+    } else {
+      recipesBox.push(event.data);
+      toastr["success"]("Đã thêm món ăn vào danh sách yêu thích!");
+
+      toastr.options = {
+        closeButton: false,
+        debug: false,
+        newestOnTop: false,
+        progressBar: false,
+        positionClass: "toast-bottom-center",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "5000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut",
+      };
+    }
+
+    localStorage.setItem("recipesBox", JSON.stringify(recipesBox));
   } else {
-    recipesBox.push(event.data);
-    toastr["success"]("Đã thêm món ăn vào danh sách yêu thích!");
-
-    toastr.options = {
-      closeButton: false,
-      debug: false,
-      newestOnTop: false,
-      progressBar: false,
-      positionClass: "toast-bottom-center",
-      preventDuplicates: false,
-      onclick: null,
-      showDuration: "300",
-      hideDuration: "1000",
-      timeOut: "5000",
-      extendedTimeOut: "1000",
-      showEasing: "swing",
-      hideEasing: "linear",
-      showMethod: "fadeIn",
-      hideMethod: "fadeOut",
-    };
+    const modalBg = document.querySelector(".modal-bg");
+    modalBg.style.display = "flex";
   }
-
-  localStorage.setItem("recipesBox", JSON.stringify(recipesBox));
 };
 
 export const addToCart = (event) => {
   event.preventDefault();
 
-  const cartBox = JSON.parse(localStorage.getItem("cartBox")) || [];
+  let isLogin = localStorage.getItem("token") ? true : false;
 
-  const item = cartBox.find((item) => item.id === event.data.id);
-  console.log(cartBox);
+  if (isLogin) {
+    const cartBox = JSON.parse(localStorage.getItem("cartBox")) || [];
 
-  if (item) {
-    Command: toastr["info"]("Khóa học đã có trong giỏ hàng");
+    const item = cartBox.find((item) => item.id === event.data.id);
+    console.log(cartBox);
 
-    toastr.options = {
-      closeButton: false,
-      debug: false,
-      newestOnTop: false,
-      progressBar: true,
-      positionClass: "toast-bottom-right",
-      preventDuplicates: false,
-      onclick: null,
-      showDuration: "300",
-      hideDuration: "1000",
-      timeOut: "2000",
-      extendedTimeOut: "1000",
-      showEasing: "swing",
-      hideEasing: "linear",
-      showMethod: "fadeIn",
-      hideMethod: "fadeOut",
-    };
+    if (item) {
+      Command: toastr["info"]("Khóa học đã có trong giỏ hàng");
+
+      toastr.options = {
+        closeButton: false,
+        debug: false,
+        newestOnTop: false,
+        progressBar: true,
+        positionClass: "toast-bottom-right",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "2000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut",
+      };
+    } else {
+      cartBox.push(event.data);
+      Command: toastr["success"]("Đã thêm khóa học vào giỏ hàng!");
+
+      toastr.options = {
+        closeButton: false,
+        debug: false,
+        newestOnTop: false,
+        progressBar: true,
+        positionClass: "toast-bottom-right",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "2000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut",
+      };
+    }
+
+    console.log(cartBox);
+
+    localStorage.setItem("cartBox", JSON.stringify(cartBox));
   } else {
-    cartBox.push(event.data);
-    Command: toastr["success"]("Đã thêm khóa học vào giỏ hàng!");
-
-    toastr.options = {
-      closeButton: false,
-      debug: false,
-      newestOnTop: false,
-      progressBar: true,
-      positionClass: "toast-bottom-right",
-      preventDuplicates: false,
-      onclick: null,
-      showDuration: "300",
-      hideDuration: "1000",
-      timeOut: "2000",
-      extendedTimeOut: "1000",
-      showEasing: "swing",
-      hideEasing: "linear",
-      showMethod: "fadeIn",
-      hideMethod: "fadeOut",
-    };
+    const modalBg = document.querySelector(".modal-bg");
+    modalBg.style.display = "flex";
   }
-
-  console.log(cartBox);
-
-  localStorage.setItem("cartBox", JSON.stringify(cartBox));
 };

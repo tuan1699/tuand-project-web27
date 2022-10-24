@@ -8,6 +8,8 @@ import _ from "lodash";
 // import { recipesList } from "./db";
 
 import "../js/modal.js";
+import "../js/auth.js";
+import "../js/signin.js";
 
 //  NAVBAR JS
 const navItems = document.querySelectorAll(".user-nav-item");

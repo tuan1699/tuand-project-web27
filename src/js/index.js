@@ -1,6 +1,7 @@
 import "../css/index.css";
 import "../component/auth.css";
 import "../component/footer.css";
+import "../component/header.css";
 import $ from "jquery";
 import _ from "lodash";
 import { addToCart } from "./ulist";
@@ -11,6 +12,8 @@ import { recipesList } from "./db";
 import { courseList } from "./db";
 
 import "../js/modal.js";
+import "../js/auth.js";
+import "../js/signin.js";
 
 // SEARCH DISPLAY
 const searchInput = document.querySelector(".search-input");

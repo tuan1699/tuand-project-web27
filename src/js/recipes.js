@@ -10,6 +10,8 @@ import { addToFav } from "./ulist";
 import { addToRecipesBox } from "./ulist";
 
 import "../js/modal.js";
+import "../js/auth.js";
+import "../js/signin.js";
 
 // DÙNG DOM PARSER ĐỂ THÊM VÀO DANH SÁCH YÊU THÍCH
 

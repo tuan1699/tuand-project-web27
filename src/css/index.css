@@ -23,40 +23,13 @@
   font-size: 24px;
 }
 
-.header-feature-item:hover i {
+.bi-person-circle:hover {
   cursor: pointer;
   color: var(--active-color);
 }
 
 .title {
   font-size: 24px;
-}
-
-.search-btn {
-  position: relative;
-}
-
-.search-input {
-  position: absolute;
-  top: 50px;
-  right: -20px;
-  z-index: 10;
-  font-size: 14px;
-  border-radius: 15px;
-  border: none;
-  width: 250px;
-  padding: 8px 20px;
-  display: none;
-}
-
-.search-input::before {
-  content: "";
-  border: 10px solid;
-  border-color: transparent transparent #fff transparent;
-  position: absolute;
-  top: 30px;
-  right: 5px;
-  z-index: 10;
 }
 
 .modal-layer {

@@ -10,6 +10,8 @@ import { courseList } from "./db";
 import { addToCart } from "./ulist";
 
 import "../js/modal.js";
+import "../js/auth.js";
+import "../js/signin.js";
 
 $(function () {
   const courseTemplate = $("#courseTemplate").html();

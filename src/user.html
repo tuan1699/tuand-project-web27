@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Course</title>
+    <title>Trang Cá Nhân</title>
   </head>
   <body>
     <header class="header">
@@ -20,9 +20,13 @@
         </div>
         <div class="header-feature d-flex align-items-center">
           <div
-            class="header-feature-item user-btn d-none d-md-block text-active me-3"
+            class="header-feature-item user-btn d-none d-md-block text-light me-3"
           >
             <i class="bi bi-person-circle"></i>
+            <div class="user-features">
+              <a href="user.html" class="user-page">Trang cá nhân</a>
+              <div class="log-out">Đăng xuất</div>
+            </div>
           </div>
           <div class="header-feature-item text-light search-btn me-3 fs-4">
             <i class="bi bi-search"></i>
@@ -278,13 +282,13 @@
           </div>
 
           <div class="auth-form__form">
-            <form action="" class="form">
+            <form action="" class="form" id="sign-in-form">
               <div class="form-feild">
                 <input
                   type="text"
                   name="signin-name"
                   id="signin-name"
-                  class="signin-name"
+                  class="input signin-name"
                   placeholder="Tên đăng nhập"
                 />
                 <i class="bi bi-person input-icon"></i>
@@ -293,13 +297,15 @@
               <div class="form-feild">
                 <input
                   type="password"
-                  class="signin-password"
+                  class="input signin-password"
                   name="signin-password"
                   id="signin-password"
                   placeholder="Mật khẩu"
                 />
                 <i class="bi bi-lock input-icon"></i>
+                <span class="message-error"></span>
               </div>
+
               <p class="forget-password text-end">Quên mật khẩu</p>
               <button type="submit" class="submit-btn">Đăng nhập</button>
             </form>
@@ -330,16 +336,17 @@
           </div>
 
           <div class="auth-form__form">
-            <form action="" class="form">
+            <form action="" class="form" id="sign-up-form">
               <div class="form-feild">
                 <input
                   type="text"
-                  name="signin-name"
-                  id="signin-name"
-                  class="signin-name"
+                  name="signup-name"
+                  id="signup-name"
+                  class="input signup-name"
                   placeholder="Tên đăng nhập"
                 />
                 <i class="bi bi-person input-icon"></i>
+                <span class="message-error"></span>
               </div>
 
               <div class="form-feild">
@@ -347,32 +354,35 @@
                   type="email"
                   name="signup-email"
                   id="signup-email"
-                  class="signin-name"
+                  class="input signup-email"
                   placeholder="Email"
                 />
                 <i class="bi bi-person input-icon"></i>
+                <span class="message-error"></span>
               </div>
 
               <div class="form-feild">
                 <input
                   type="password"
-                  class="signin-password"
+                  class="input signup-password"
                   name="signin-password"
-                  id="signin-password"
+                  id="signup-password"
                   placeholder="Mật khẩu"
                 />
                 <i class="bi bi-lock input-icon"></i>
+                <span class="message-error"></span>
               </div>
 
               <div class="form-feild">
                 <input
                   type="password"
-                  class="signin-password"
-                  name="signin-password"
-                  id="signin-password"
+                  class="input confirm-password"
+                  name="confirm-password"
+                  id="confirm-password"
                   placeholder="Nhập lại mật khẩu"
                 />
                 <i class="bi bi-lock input-icon"></i>
+                <span class="message-error"></span>
               </div>
 
               <button type="submit" class="submit-btn">Đăng ký</button>

@@ -50,7 +50,7 @@ function renderCart() {
           </div>
         </div>
       </div>
-      <div class="course-price">${course.price.toLocaleString()} Đ</div>
+      <div class="course-price">${course.price} Đ</div>
     </div>`;
     }).join("")
   );
