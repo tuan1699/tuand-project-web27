@@ -77,6 +77,10 @@
   margin-left: 10px;
 }
 
+.controller {
+  margin-bottom: 40px;
+}
+
 .controller-item {
   width: 50px;
   padding: 10px;

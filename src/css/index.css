@@ -437,6 +437,7 @@
 .course-decr {
   color: #fff;
   margin: 10px 0;
+  display: none;
 }
 
 .course-link:hover .course-thumb img {
@@ -505,17 +506,6 @@
 
   .title {
     font-size: 30px;
-  }
-
-  .course-info {
-    /* height: 150px;
-    margin: 0 10px;
-    display: flex;
-    flex-direction: column; */
-  }
-
-  .course-name {
-    /* flex: 1; */
   }
 }
 

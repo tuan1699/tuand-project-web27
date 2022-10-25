@@ -7,6 +7,7 @@ import $ from "jquery";
 import _ from "lodash";
 
 import "../js/modal.js";
+import "../js/auth.js";
 
 const payOption = document.querySelectorAll("#pay-option");
 const methodDecr = document.querySelectorAll(".method-decr");
@@ -110,3 +111,81 @@ function sum() {
 }
 
 // sum();
+const checkoutForm = document.querySelector("#check-out-form");
+const firstNameCheckout = document.querySelector("#first-name");
+const lastNameCheckout = document.querySelector("#last-name");
+const phoneCheckout = document.querySelector("#number-phone");
+const mailCheckout = document.querySelector("#email-checkout");
+const addressCheckout = document.querySelector("#address");
+
+function showError(input, message) {
+  let errorMessage = input.parentElement.querySelector(".message-error");
+
+  input.classList.add("error");
+  errorMessage.innerText = message;
+}
+
+function showSucess(input) {
+  let errorMessage = input.parentElement.querySelector(".message-error");
+
+  input.classList.remove("error");
+  errorMessage.innerText = "";
+}
+
+function checkEmptyError(listInput) {
+  let isEmptyError = false;
+  listInput.forEach((input) => {
+    input.value = input.value.trim();
+
+    if (!input.value) {
+      isEmptyError = true;
+      showError(input, "Vui lòng nhập đầy đủ thông tin");
+    } else {
+      showSucess(input);
+    }
+  });
+
+  return isEmptyError;
+}
+
+function checkEmailError(input) {
+  const regexEmail =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  input.value = input.value.trim();
+  let isEmailError = !regexEmail.test(input.value);
+
+  if (regexEmail.test(input.value)) {
+    showSucess(input);
+  } else {
+    showError(input, "Email không hợp lệ");
+  }
+
+  return isEmailError;
+}
+
+checkoutForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let isEmptyErr = checkEmptyError([
+    firstNameCheckout,
+    lastNameCheckout,
+    phoneCheckout,
+    addressCheckout,
+  ]);
+
+  let isEmailErr = checkEmailError(mailCheckout);
+
+  if (isEmailErr || isEmptyErr) {
+  } else {
+    alert(
+      "Đăng ký khóa học thành công, vui lòng kiểm tra Email để nhận thông tin chi tiết"
+    );
+
+    firstNameCheckout.value = "";
+    lastNameCheckout.value = "";
+    phoneCheckout.value = "";
+    addressCheckout.value = "";
+    mailCheckout.value = "";
+  }
+});

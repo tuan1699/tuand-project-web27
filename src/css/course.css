@@ -40,13 +40,17 @@
   font-size: 18px;
   padding: 10px 0;
   color: var(--active-color);
-  border-bottom: 1px solid #ccc;
   flex: 1;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
 }
 
 .course-decr {
   color: #fff;
   margin: 10px 0;
+  display: none;
 }
 
 .course-link:hover .course-thumb img {
@@ -157,6 +161,16 @@
   /* .wrapper {
         padding: 0 20px;
       } */
+  .course-decr {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .course-name {
+    border-bottom: 1px solid #ccc;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */

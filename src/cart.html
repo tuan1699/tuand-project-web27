@@ -14,7 +14,7 @@
         </div>
         <div class="nav d-none d-lg-flex">
           <a href="./diet.html" class="nav-item">CHẾ ĐỘ ĂN</a>
-          <a href="./recipes.html" class="nav-item"> MÓN ĂN</a>
+          <a href="./recipes.html" class="nav-item">CÔNG THỨC</a>
           <a href="./blog.html" class="nav-item"> BLOG</a>
           <a href="./course.html" class="nav-item"> KHÓA HỌC NẤU ĂN</a>
         </div>
@@ -88,135 +88,165 @@
           </div>
 
           <div class="check-out-field">
-            <div class="row">
-              <div class="col-12 col-lg-6">
-                <div class="customer-info">
-                  <p class="title-info">THÔNG TIN HỌC VIÊN</p>
-
-                  <div class="info-user-field">
+            <form action="" id="check-out-form">
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <div class="customer-info">
+                    <p class="title-info">THÔNG TIN HỌC VIÊN</p>
                     <div class="row">
                       <div class="col-6">
-                        <input type="text" name="" id="" placeholder="Họ" />
+                        <div class="info-user-field">
+                          <input
+                            type="text"
+                            name=""
+                            id="first-name"
+                            placeholder="Họ"
+                          />
+                          <span class="message-error"></span>
+                        </div>
                       </div>
                       <div class="col-6">
-                        <input type="text" name="" id="" placeholder="Tên" />
+                        <div class="info-user-field">
+                          <input
+                            type="text"
+                            name=""
+                            id="last-name"
+                            placeholder="Tên"
+                          />
+                          <span class="message-error"></span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-
-                  <div class="info-user-field">
-                    <input
-                      type="tel"
+                    <div class="info-user-field">
+                      <input
+                        type="tel"
+                        name=""
+                        id="number-phone"
+                        placeholder="Số điện thoại"
+                      />
+                      <span class="message-error"></span>
+                    </div>
+                    <div class="info-user-field">
+                      <input
+                        type="email"
+                        name=""
+                        id="email-checkout"
+                        placeholder="Email"
+                      />
+                      <span class="message-error"></span>
+                    </div>
+                    <div class="info-user-field">
+                      <input
+                        type="text"
+                        name=""
+                        id="address"
+                        placeholder="Địa chỉ"
+                      />
+                      <span class="message-error"></span>
+                    </div>
+                    <textarea
                       name=""
                       id=""
-                      placeholder="Số điện thoại"
-                    />
+                      cols="30"
+                      rows="10"
+                      placeholder="Thêm thông tin bổ sung"
+                    ></textarea>
                   </div>
-                  <div class="info-user-field">
-                    <input type="text" name="" id="" placeholder="Địa chỉ" />
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="check-out">
+                    <p class="title-info">THÔNG TIN KHÓA HỌC</p>
+                    <div class="list-heading d-flex justify-content-between">
+                      <p>Khóa học</p>
+                      <p>Thành tiền</p>
+                    </div>
+                    <div class="list-check-out"></div>
+                    <div class="summary d-flex justify-content-between">
+                      <p>TỔNG</p>
+                      <p class="summary-price"></p>
+                    </div>
+                    <div class="pay-method">
+                      <p>HÌNH THỨC THANH TOÁN</p>
+                      <ul>
+                        <li>
+                          <div class="pay-method-item">
+                            <input
+                              type="radio"
+                              name="pay-option"
+                              id="pay-option"
+                              checked
+                            />
+                            <span>Thanh toán tại trung tâm</span>
+                            <p class="method-decr active">
+                              Vui lòng đến Chi nhánh gần nhất để thanh toán học
+                              phí, Tư vấn viên sẽ ghi danh và giữ chỗ cho bạn
+                              nhé.
+                            </p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="pay-method-item">
+                            <input
+                              type="radio"
+                              name="pay-option"
+                              id="pay-option"
+                            /><span> Chuyển khoản ngân hàng </span>
+                            <ul class="method-decr">
+                              Sau khi đăng ký khóa học thành công, quý khách vui
+                              lòng chuyển khoản đến số tài khoản như thông tin
+                              bên dưới:
+                              <li>- STK Ngân hàng: 0023100014090004</li>
+                              <li>
+                                - Tên Ngân hàng: Ngân hàng TMCP Phương Đông CN
+                                Gia Định HCM
+                              </li>
+                              <li>- Tên viết tắt: OCB bank</li>
+                              <li>
+                                - Chủ TK: Công ty Cổ phần Hướng Nghiệp Á Âu
+                              </li>
+                              <li>
+                                - Nội dung chuyển khoản: Tên khách hàng SĐT
+                                khách hàng Tên khóa học đăng ký ( Vd: Nguyen Van
+                                A 0969 123 456 CD tra sua).
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="pay-method-item">
+                            <input
+                              type="radio"
+                              name="pay-option"
+                              id="pay-option"
+                            /><span> Thanh toán bằng thẻ nội địa </span>
+                            <p class="method-decr">
+                              Kích vào nút thanh toán và hệ thống sẽ chuyển tiếp
+                              đến website OnePay để tiến hành xử lý thanh toán
+                              của quý khách.
+                            </p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="pay-method-item">
+                            <input
+                              type="radio"
+                              name="pay-option"
+                              id="pay-option"
+                            /><span> Thanh toán bằng thẻ quốc tế </span>
+                            <p class="method-decr">
+                              Kích vào nút thanh toán và hệ thống sẽ chuyển tiếp
+                              đến website OnePay để tiến hành xử lý thanh toán
+                              của Quý khách
+                            </p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="info-user-field">
-                    <input type="text" name="" id="" placeholder="Địa chỉ" />
-                  </div>
-                  <textarea
-                    name=""
-                    id=""
-                    cols="30"
-                    rows="10"
-                    placeholder="Thêm thông tin bổ sung"
-                  ></textarea>
+                  <button class="btn-pay" type="submit">THANH TOÁN</button>
                 </div>
               </div>
-              <div class="col-12 col-lg-6">
-                <div class="check-out">
-                  <p class="title-info">THÔNG TIN KHÓA HỌC</p>
-                  <div class="list-heading d-flex justify-content-between">
-                    <p>Khóa học</p>
-                    <p>Thành tiền</p>
-                  </div>
-                  <div class="list-check-out"></div>
-                  <div class="summary d-flex justify-content-between">
-                    <p>TỔNG</p>
-                    <p class="summary-price"></p>
-                  </div>
-                  <div class="pay-method">
-                    <p>HÌNH THỨC THANH TOÁN</p>
-                    <ul>
-                      <li>
-                        <div class="pay-method-item">
-                          <input
-                            type="radio"
-                            name="pay-option"
-                            id="pay-option"
-                            checked
-                          />
-                          <span>Thanh toán tại trung tâm</span>
-                          <p class="method-decr active">
-                            Vui lòng đến Chi nhánh gần nhất để thanh toán học
-                            phí, Tư vấn viên sẽ ghi danh và giữ chỗ cho bạn nhé.
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="pay-method-item">
-                          <input
-                            type="radio"
-                            name="pay-option"
-                            id="pay-option"
-                          /><span> Chuyển khoản ngân hàng </span>
-                          <ul class="method-decr">
-                            Sau khi đăng ký khóa học thành công, quý khách vui
-                            lòng chuyển khoản đến số tài khoản như thông tin bên
-                            dưới:
-                            <li>- STK Ngân hàng: 0023100014090004</li>
-                            <li>
-                              - Tên Ngân hàng: Ngân hàng TMCP Phương Đông CN Gia
-                              Định HCM
-                            </li>
-                            <li>- Tên viết tắt: OCB bank</li>
-                            <li>- Chủ TK: Công ty Cổ phần Hướng Nghiệp Á Âu</li>
-                            <li>
-                              - Nội dung chuyển khoản: Tên khách hàng SĐT khách
-                              hàng Tên khóa học đăng ký ( Vd: Nguyen Van A 0969
-                              123 456 CD tra sua).
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="pay-method-item">
-                          <input
-                            type="radio"
-                            name="pay-option"
-                            id="pay-option"
-                          /><span> Thanh toán bằng thẻ nội địa </span>
-                          <p class="method-decr">
-                            Kích vào nút thanh toán và hệ thống sẽ chuyển tiếp
-                            đến website OnePay để tiến hành xử lý thanh toán của
-                            quý khách.
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="pay-method-item">
-                          <input
-                            type="radio"
-                            name="pay-option"
-                            id="pay-option"
-                          /><span> Thanh toán bằng thẻ quốc tế </span>
-                          <p class="method-decr">
-                            Kích vào nút thanh toán và hệ thống sẽ chuyển tiếp
-                            đến website OnePay để tiến hành xử lý thanh toán của
-                            Quý khách
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <button class="btn-pay">THANH TOÁN</button>
-                </div>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -313,13 +343,13 @@
           </div>
 
           <div class="auth-form__form">
-            <form action="" class="form">
+            <form action="" class="form" id="sign-in-form">
               <div class="form-feild">
                 <input
                   type="text"
                   name="signin-name"
                   id="signin-name"
-                  class="signin-name"
+                  class="input signin-name"
                   placeholder="Tên đăng nhập"
                 />
                 <i class="bi bi-person input-icon"></i>
@@ -328,13 +358,15 @@
               <div class="form-feild">
                 <input
                   type="password"
-                  class="signin-password"
+                  class="input signin-password"
                   name="signin-password"
                   id="signin-password"
                   placeholder="Mật khẩu"
                 />
                 <i class="bi bi-lock input-icon"></i>
+                <span class="message-error"></span>
               </div>
+
               <p class="forget-password text-end">Quên mật khẩu</p>
               <button type="submit" class="submit-btn">Đăng nhập</button>
             </form>
@@ -365,16 +397,17 @@
           </div>
 
           <div class="auth-form__form">
-            <form action="" class="form">
+            <form action="" class="form" id="sign-up-form">
               <div class="form-feild">
                 <input
                   type="text"
-                  name="signin-name"
-                  id="signin-name"
-                  class="signin-name"
+                  name="signup-name"
+                  id="signup-name"
+                  class="input signup-name"
                   placeholder="Tên đăng nhập"
                 />
                 <i class="bi bi-person input-icon"></i>
+                <span class="message-error"></span>
               </div>
 
               <div class="form-feild">
@@ -382,32 +415,35 @@
                   type="email"
                   name="signup-email"
                   id="signup-email"
-                  class="signin-name"
+                  class="input signup-email"
                   placeholder="Email"
                 />
                 <i class="bi bi-person input-icon"></i>
+                <span class="message-error"></span>
               </div>
 
               <div class="form-feild">
                 <input
                   type="password"
-                  class="signin-password"
+                  class="input signup-password"
                   name="signin-password"
-                  id="signin-password"
+                  id="signup-password"
                   placeholder="Mật khẩu"
                 />
                 <i class="bi bi-lock input-icon"></i>
+                <span class="message-error"></span>
               </div>
 
               <div class="form-feild">
                 <input
                   type="password"
-                  class="signin-password"
-                  name="signin-password"
-                  id="signin-password"
+                  class="input confirm-password"
+                  name="confirm-password"
+                  id="confirm-password"
                   placeholder="Nhập lại mật khẩu"
                 />
                 <i class="bi bi-lock input-icon"></i>
+                <span class="message-error"></span>
               </div>
 
               <button type="submit" class="submit-btn">Đăng ký</button>

@@ -120,6 +120,3 @@ formSignUp.addEventListener("submit", (e) => {
     confirmPassword.value = "";
   }
 });
-
-
-
