@@ -75,7 +75,6 @@
   background-color: #ccc;
 }
 
-.course-item,
 .recipes-item,
 .diet-item {
   margin-bottom: 24px;
@@ -116,7 +115,7 @@
 .btn-see-all.btn-quick-meal {
   border: 1px solid #fff;
   background-color: transparent;
-  padding: 10px;
+
   border-radius: 40px;
   font-size: 16px;
   color: #fff;
@@ -209,7 +208,7 @@
 }
 
 .recipes-item-thumb {
-  height: 200px;
+  padding-top: 130%;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -311,6 +310,9 @@
 }
 
 /* SUGGESTION */
+.suggest-list > div {
+  margin-bottom: 24px;
+}
 
 .suggest-link:hover .suggest-item-thumb img {
   transform: scale(1.2);
@@ -325,6 +327,11 @@
 .suggest-item-thumb {
   border-radius: 40px;
   overflow: hidden;
+}
+
+.suggest-item-name {
+  margin-top: 20px;
+  font-size: 20px;
 }
 /* BLOG */
 .blog-item {
@@ -399,17 +406,22 @@
 /* ------------- */
 
 /* Khóa học nấu ăn */
+
+.course-field > div {
+  margin-bottom: 24px;
+}
 .course-item {
   background-color: var(--sub-bg);
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .course-info {
-  /* height: 150px; */
   margin: 0 10px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .course-name {
@@ -419,6 +431,7 @@
   font-size: 20px;
   padding: 10px 0;
   color: var(--active-color);
+  flex: 1;
 }
 
 .course-decr {
@@ -441,6 +454,7 @@
   padding: 10px 0;
   background-color: #595b68;
   color: #fff;
+  margin-top: auto;
 }
 
 .course-register:hover {
@@ -494,14 +508,14 @@
   }
 
   .course-info {
-    height: 150px;
-    /* margin: 0 10px; */
+    /* height: 150px;
+    margin: 0 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; */
   }
 
   .course-name {
-    flex: 1;
+    /* flex: 1; */
   }
 }
 

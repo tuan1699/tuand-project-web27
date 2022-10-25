@@ -4,11 +4,17 @@
 
 .course-item {
   background-color: var(--sub-bg);
-  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .course-field {
   margin-bottom: 40px;
+}
+
+.course-list > div {
+  margin-bottom: 24px;
 }
 
 .course-title {
@@ -25,6 +31,9 @@
 
 .course-info {
   margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .course-name {
@@ -32,6 +41,7 @@
   padding: 10px 0;
   color: var(--active-color);
   border-bottom: 1px solid #ccc;
+  flex: 1;
 }
 
 .course-decr {
@@ -54,6 +64,7 @@
   padding: 10px 0;
   background-color: #595b68;
   color: #fff;
+  margin-top: auto;
 }
 
 .course-register:hover {
