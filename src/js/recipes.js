@@ -13,104 +13,77 @@ import "../js/modal.js";
 import "../js/auth.js";
 import "../js/signin.js";
 
-// DÙNG DOM PARSER ĐỂ THÊM VÀO DANH SÁCH YÊU THÍCH
+const PRODUCTS_PER_PAGE = 12;
 
-// $(".recipes-list").append(
-//   recipesList.map((recipes) => {
-//     const dom = $(`<div class="col-6 col-sm-6 col-lg-4">
+const pagination = (current, totalPage, prev, next) => {
+  const prevBtn = $(`<span class="controller-item prev-page"
+  ><a href="" class="page-link">
+    <i class="bi bi-chevron-left"></i> </a
+></span>`);
 
-//           <div class="recipes-item border-item">
-//             <div class="recipes-item-thumb position-relative">
-//               <img src="${recipes.thumb}" alt="" />
-//               <span class="add-favourite position-absolute">
-//                 <i class="bi bi-bookmark"></i>
-//               </span>
-//             </div>
+  if (prev === 0) {
+    prevBtn.addClass("disabled");
+  } else {
+    prevBtn.find("a.page-link").attr("href", "?page=" + prev);
+  }
 
-//             <div class="recipes-item-decr">
-//               <div class="recipes-item-name">
-//               ${recipes.name}
-//               </div>
-//               <div
-//                 class="item-info d-none d-sm-flex d-flex align-items-center"
-//               >
-//                 <div class="item-by">by ${recipes.auth}</div>
-//                 <div class="item-time">${recipes.date}</div>
-//               </div>
-//               <div
-//                 class="recipes-item-bonus d-flex justify-content-between"
-//               >
-//                 <div class="duration">
-//                   ${recipes.duration} phút<i class="duration-icon bi bi-clock"></i>
-//                 </div>
-//                 <div class="recipes-feature">
-//                   <i class="share bi bi-share"></i>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
+  const nextBtn = $(`<span class="controller-item next-page"
+  ><a href="" class="page-link">
+    <i class="bi bi-chevron-right"></i> </a
+></span>`);
+  if (next > totalPage) {
+    nextBtn.addClass("disabled");
+  } else {
+    nextBtn.find("a.page-link").attr("href", "?page=" + next);
+  }
 
-//       </div>`);
+  const currentBtn = $(
+    ` <span class="controller-item current-page">${current}</span>`
+  );
 
-//     const favBtn = dom.find(".add-favourite");
-
-//     dom.find(".add-favourite").on("click", () => {
-//       const favouriteBox = JSON.parse(localStorage.getItem("favBox")) || [];
-
-//       const item = favouriteBox.find((i) => i.id === recipes.id);
-
-//       if (item) {
-//         alert(
-//           "Bạn rất muốn thực hiện món ăn này đúng không? Mau mau vào bếp nào"
-//         );
-//       } else {
-//         favouriteBox.push(recipes);
-//         alert("Đã thêm vào danh sách yêu thích");
-//       }
-
-//       localStorage.setItem("favBox", JSON.stringify(favouriteBox));
-
-//       console.log(favouriteBox);
-//     });
-//     return dom;
-//   })
-// );
+  $(".controller").html("");
+  $(".controller").append(prevBtn, currentBtn, nextBtn);
+};
 
 const bySeason = document.querySelector("#season");
 const byRegion = document.querySelector("#region");
-const bycategory = document.querySelector("#category");
+const byCategory = document.querySelector("#category");
 const byTime = document.querySelector("#time");
-const byMethod = document.querySelector("#process");
+const byMethod = document.querySelector("#method");
+const clearBtn = document.querySelector(".clear-filter");
 
-// DÙNG TEMPLATE
-
-// let start = 0;
-// let itemPerPage = 12;
-// let end = itemPerPage;
-// let currentPage = 1;
-// let totalPage = Math.ceil(recipesList.length / itemPerPage);
-// const numberCurrent = document.querySelector(".current-page");
-
-function renderRecipes(recipesList) {
+function renderRecipes(list) {
   const recipesTemplate = $("#recipesTemp").html();
-
   const recipe = _.template(recipesTemplate);
 
-  let html = _.map(recipesList, (recipes, index) => {
-    if (index >= start && index < end) {
+  const url = new URL(location.href);
+  const totalPage = Math.ceil(list.length / PRODUCTS_PER_PAGE);
+  const current =
+    url.searchParams.get("page") > totalPage
+      ? 1
+      : url.searchParams.get("page") || 1;
+
+  const prev = current - 1;
+  const next = +current + 1;
+
+  let html = _.map(
+    list.slice((current - 1) * PRODUCTS_PER_PAGE, current * PRODUCTS_PER_PAGE),
+    (recipes) => {
       const dom = $(recipe(recipes));
 
       dom.find(".add-recipesBox").on("click", recipes, addToRecipesBox);
 
       return dom;
     }
-  });
+  );
+
+  $(".recipes-list").html("");
   $(".recipes-list").append(html);
+
+  pagination(current, totalPage, prev, next);
 }
 
 $(function () {
-  const recipesTemplate = $("#recipesTemp").html();
-  const recipe = _.template(recipesTemplate);
   let recipeFilted;
 
   const url = new URL(location.href);
@@ -120,7 +93,7 @@ $(function () {
   const category = url.searchParams.get("category");
 
   if (category) {
-    bycategory.value = category;
+    byCategory.value = category;
     recipeFilted = _.filter(recipesList, (recipes) => {
       return recipes.category == category;
     });
@@ -132,76 +105,97 @@ $(function () {
   } else {
     recipeFilted = _.map(recipesList, (recipes) => recipes);
   }
-
   console.log(recipeFilted);
-
-  $(".recipes-list").append(
-    _.map(recipeFilted, (recipes) => {
-      const dom = $(recipe(recipes));
-
-      dom.find(".add-recipesBox").on("click", recipes, addToRecipesBox);
-
-      return dom;
-    })
-  );
+  renderRecipes(recipeFilted);
 });
 
-// NEXT PAGE
-// const nextBtn = document.querySelector(".next-page");
-// nextBtn.addEventListener("click", () => {
-//   if (currentPage < totalPage) {
-//     currentPage++;
-//   } else {
-//     currentPage = totalPage;
-//   }
+bySeason.addEventListener("change", () => {
+  if (bySeason.value === "all") {
+    renderRecipes(recipesList);
+  } else {
+    let recipesFilted = _.filter(recipesList, (recipes) => {
+      return recipes.season === bySeason.value;
+    });
+    renderRecipes(recipesFilted);
+  }
+});
 
-//   start = (currentPage - 1) * itemPerPage;
-//   end = currentPage * itemPerPage;
-//   renderRecipes();
-//   numberCurrent.textContent = currentPage;
-// });
+byRegion.addEventListener("change", () => {
+  if (byRegion.value === "all") {
+    renderRecipes(recipesList);
+  } else {
+    let recipesFilted = _.filter(recipesList, (recipes) => {
+      return recipes.region === byRegion.value;
+    });
+    renderRecipes(recipesFilted);
+  }
+});
 
-// PREV PAGE
-// const prevBtn = document.querySelector(".prev-page");
-// prevBtn.addEventListener("click", () => {
-//   if (currentPage <= 1) {
-//     currentPage = 1;
-//   } else {
-//     currentPage--;
-//   }
-//   start = (currentPage - 1) * itemPerPage;
-//   end = currentPage * itemPerPage;
-//   renderRecipes();
-//   numberCurrent.textContent = currentPage;
-// });
+byCategory.addEventListener("change", () => {
+  if (byCategory.value === "all") {
+    renderRecipes(recipesList);
+  } else {
+    let recipesFilted = _.filter(recipesList, (recipes) => {
+      return recipes.category === byCategory.value;
+    });
+    renderRecipes(recipesFilted);
+  }
+});
 
-// LỌC SẢN PHẨM
+byCategory.addEventListener("change", () => {
+  if (byCategory.value === "all") {
+    renderRecipes(recipesList);
+  } else {
+    let recipesFilted = _.filter(recipesList, (recipes) => {
+      return recipes.category === byCategory.value;
+    });
+    renderRecipes(recipesFilted);
+  }
+});
 
-// bySeason.onchange = function () {
-//   renderRecipes();
-// };
+byMethod.addEventListener("change", () => {
+  if (byMethod.value === "all") {
+    renderRecipes(recipesList);
+  } else {
+    let recipesFilted = _.filter(recipesList, (recipes) => {
+      return recipes.method === byMethod.value;
+    });
+    renderRecipes(recipesFilted);
+  }
+});
 
-// function filter(recipesList, filterBy) {
-//   let clone;
-//   if (filterBy === "#") {
-//     clone = recipesList.map((recipes) => recipes);
-//   } else {
-//     clone = recipesList.filter((recipes) => recipes.season === filterBy);
-//   }
-//   return clone;
-// }
+byTime.addEventListener("change", () => {
+  if (byTime.value === "all") {
+    renderRecipes(recipesList);
+  }
 
-// console.log(bySeason);
-// HIỂN THỊ TẤT CẢ CÔNG THỨC
+  if (byTime.value === "30") {
+    let recipeFilted = _.filter(recipesList, (recipes) => {
+      return recipes.duration < Number(byTime.value);
+    });
+    renderRecipes(recipeFilted);
+  }
 
-// const resetFilter = document.querySelector(".clear-filter");
-// resetFilter.onclick = function () {
-//   bySeason.value = "#";
-//   byRegion.value = "#";
-//   byType.value = "#";
-//   byTime.value = "#";
-//   byMethod.value = "#";
-//   renderRecipes();
-// };
+  if (byTime.value === "60") {
+    let recipeFilted = _.filter(recipesList, (recipes) => {
+      return recipes.duration > 30 && recipes.duration < Number(byTime.value);
+    });
+    renderRecipes(recipeFilted);
+  }
 
-// CHI TIẾT SẢN PHẨM
+  if (byTime.value === "120") {
+    let recipeFilted = _.filter(recipesList, (recipes) => {
+      return recipes.duration > byTime.value;
+    });
+    renderRecipes(recipeFilted);
+  }
+});
+
+clearBtn.addEventListener("click", () => {
+  renderRecipes(recipesList);
+  bySeason.value = "all";
+  byRegion.value = "all";
+  byCategory.value = "all";
+  byTime.value = "all";
+  byMethod.value = "all";
+});
