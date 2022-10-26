@@ -12,8 +12,14 @@
   margin-bottom: 40px;
 }
 
+.diet-popular-item:hover .diet-thumb {
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
 .diet-suggest-item,
-.diet-popular-item,
+.diet-thumb,
 .diet-community-item {
   height: 200px;
   background-size: cover;
