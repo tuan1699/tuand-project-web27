@@ -5,6 +5,3 @@ import "../component/header.css";
 import "../css/diet.css";
 
 import "../js/modal.js";
-
-import { dietList } from "./db";
-
