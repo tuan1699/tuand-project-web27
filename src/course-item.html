@@ -25,6 +25,10 @@
             class="header-feature-item user-btn d-none d-md-block text-light me-3"
           >
             <i class="bi bi-person-circle"></i>
+            <div class="user-features">
+              <a href="user.html" class="user-page">Trang cá nhân</a>
+              <div class="log-out">Đăng xuất</div>
+            </div>
           </div>
           <div class="header-feature-item text-light search-btn me-3 fs-4">
             <i class="bi bi-search"></i>
@@ -73,237 +77,73 @@
               <div class="popular-course">
                 <div class="heading-sidebar">KHÓA HỌC ĐƯỢC MUA NHIỀU</div>
                 <div class="course-popular">
-                  <a href="" class="course-popular-link">
-                    <div class="cource-popular-item">
-                      <div class="row align-items-center">
-                        <div class="col-7">
-                          <div class="course-popular-info">
-                            <div class="course-popular-name">
-                              CHUYÊN ĐỀ ĐIỂM TÂM HONGKONG
+                  <template id="course-popular-template">
+                    <a
+                      href="course-item.html?id=${id}"
+                      class="course-popular-link"
+                    >
+                      <div class="cource-popular-item">
+                        <div class="row align-items-center">
+                          <div class="col-7">
+                            <div class="course-popular-info">
+                              <div class="course-popular-name">${name}</div>
+                              <span class="course-popular-price">
+                                ${price}Đ
+                              </span>
                             </div>
-                            <span class="course-popular-price">
-                              1,700,000Đ
-                            </span>
                           </div>
-                        </div>
-                        <div class="col-5">
-                          <div class="cource-popular-thumb">
-                            <img src="./img/course/hong-kong.png" alt="" />
+                          <div class="col-5">
+                            <div class="cource-popular-thumb">
+                              <img src="${thumb}" alt="" />
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </a>
-
-                  <a href="" class="course-popular-link">
-                    <div class="cource-popular-item">
-                      <div class="row align-items-center">
-                        <div class="col-7">
-                          <div class="course-popular-info">
-                            <div class="course-popular-name">
-                              CHUYÊN ĐỀ ĐIỂM TÂM HONGKONG
-                            </div>
-                            <span class="course-popular-price">
-                              1,700,000Đ
-                            </span>
-                          </div>
-                        </div>
-                        <div class="col-5">
-                          <div class="cource-popular-thumb">
-                            <img src="./img/course/hong-kong.png" alt="" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a href="" class="course-popular-link">
-                    <div class="cource-popular-item">
-                      <div class="row align-items-center">
-                        <div class="col-7">
-                          <div class="course-popular-info">
-                            <div class="course-popular-name">
-                              CHUYÊN ĐỀ ĐIỂM TÂM HONGKONG
-                            </div>
-                            <span class="course-popular-price">
-                              1,700,000Đ
-                            </span>
-                          </div>
-                        </div>
-                        <div class="col-5">
-                          <div class="cource-popular-thumb">
-                            <img src="./img/course/hong-kong.png" alt="" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a href="" class="course-popular-link">
-                    <div class="cource-popular-item">
-                      <div class="row align-items-center">
-                        <div class="col-7">
-                          <div class="course-popular-info">
-                            <div class="course-popular-name">
-                              CHUYÊN ĐỀ ĐIỂM TÂM HONGKONG
-                            </div>
-                            <span class="course-popular-price">
-                              1,700,000Đ
-                            </span>
-                          </div>
-                        </div>
-                        <div class="col-5">
-                          <div class="cource-popular-thumb">
-                            <img src="./img/course/hong-kong.png" alt="" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
+                    </a>
+                  </template>
                 </div>
               </div>
 
               <div class="popular-recipes">
                 <div class="heading-sidebar">NHIỀU NGƯỜI THỰC HIỆN</div>
                 <div class="recipes-popular position-relative border-item">
-                  <a href="" class="popular-link">
-                    <div class="recipes-popular-top-1">
-                      <div class="recipes-popular-thumb overflow-hidden">
-                        <img
-                          src="./img/home/recipes/recipes-thumb.png"
-                          alt=""
-                        />
-                      </div>
+                  <template id="popular-template">
+                    <a href="post-item.html?id=${id}" class="popular-link">
                       <div
-                        class="recipes-popular-top position-absolute d-flex align-items-center"
+                        class="recipes-popular-item position-relative d-flex align-items-center"
                       >
-                        <div class="recipes-popular-number">1</div>
+                        <div
+                          class="popular-thumb"
+                          style="background-image: url(${thumb})"
+                        ></div>
+                        <div class="recipes-popular-number">${id}</div>
                         <div class="recipes-popular-decr text-start">
-                          <div class="recipes-popular-name">
-                            SỤN GÀ RANG MUỐI
-                          </div>
-                          <p class="recipes-popular-by">3 month</p>
+                          <div class="recipes-popular-name">${name}</div>
+                          <p class="recipes-popular-by">${date}</p>
                         </div>
                       </div>
-                    </div>
-                  </a>
-                  <a href="" class="popular-link">
-                    <div class="recipes-popular-item d-flex align-items-center">
-                      <div class="recipes-popular-number">2</div>
-                      <div class="recipes-popular-decr text-start">
-                        <div class="recipes-popular-name">
-                          TÔM THỊT NHỒI BÍ ĐAO
-                        </div>
-                        <p class="recipes-popular-by">3 month</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="" class="popular-link">
-                    <div class="recipes-popular-item d-flex align-items-center">
-                      <div class="recipes-popular-number">3</div>
-                      <div class="recipes-popular-decr text-start">
-                        <div class="recipes-popular-name">
-                          HÀU NƯỚNG PHÔ MAI
-                        </div>
-                        <p class="recipes-popular-by">3 month</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="" class="popular-link">
-                    <div class="recipes-popular-item d-flex align-items-center">
-                      <div class="recipes-popular-number">4</div>
-                      <div class="recipes-popular-decr text-start">
-                        <div class="recipes-popular-name">
-                          CÁ NGỪ CUỘN RAU CỦ SỐT NẤM MÈ
-                        </div>
-                        <p class="recipes-popular-by">3 month</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="" class="popular-link">
-                    <div class="recipes-popular-item d-flex align-items-center">
-                      <div class="recipes-popular-number">5</div>
-                      <div class="recipes-popular-decr text-start">
-                        <div class="recipes-popular-name">
-                          TÔM THỊT NHỒI BÍ ĐAO
-                        </div>
-                        <p class="recipes-popular-by">3 month</p>
-                      </div>
-                    </div>
-                  </a>
+                    </a>
+                  </template>
                 </div>
               </div>
 
               <div class="popular-blog">
                 <div class="heading-sidebar">BÀI ĐĂNG NỔI BẬT</div>
-                <div class="popular-blog-item">
-                  <div class="popular-blog-thumb">
-                    <img src="./img/blog/cho-buoi.png" alt="" />
-                  </div>
-
-                  <div class="popular-blog-name">
-                    CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
-                  </div>
-                  <div class="item-info d-flex align-items-center">
-                    <div class="item-by">by Hà Vy</div>
-                    <div class="item-time">March 13, 2021</div>
-                  </div>
-                </div>
-
-                <div class="popular-blog-item">
-                  <div class="popular-blog-thumb">
-                    <img src="./img/blog/cho-buoi.png" alt="" />
-                  </div>
-
-                  <div class="popular-blog-name">
-                    CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
-                  </div>
-                  <div class="item-info d-flex align-items-center">
-                    <div class="item-by">by Hà Vy</div>
-                    <div class="item-time">March 13, 2021</div>
-                  </div>
-                </div>
-
-                <div class="popular-blog-item">
-                  <div class="popular-blog-thumb">
-                    <img src="./img/blog/cho-buoi.png" alt="" />
-                  </div>
-
-                  <div class="popular-blog-name">
-                    CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
-                  </div>
-                  <div class="item-info d-flex align-items-center">
-                    <div class="item-by">by Hà Vy</div>
-                    <div class="item-time">March 13, 2021</div>
-                  </div>
-                </div>
-
-                <div class="popular-blog-item">
-                  <div class="popular-blog-thumb">
-                    <img src="./img/blog/cho-buoi.png" alt="" />
-                  </div>
-
-                  <div class="popular-blog-name">
-                    CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
-                  </div>
-                  <div class="item-info d-flex align-items-center">
-                    <div class="item-by">by Hà Vy</div>
-                    <div class="item-time">March 13, 2021</div>
-                  </div>
-                </div>
-
-                <div class="popular-blog-item">
-                  <div class="popular-blog-thumb">
-                    <img src="./img/blog/cho-buoi.png" alt="" />
-                  </div>
-
-                  <div class="popular-blog-name">
-                    CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
-                  </div>
-                  <div class="item-info d-flex align-items-center">
-                    <div class="item-by">by Hà Vy</div>
-                    <div class="item-time">March 13, 2021</div>
-                  </div>
+                <div class="popular-blog-list">
+                  <template id="blog-template">
+                    <a href="blog-item.html?id=${id}">
+                      <div class="popular-blog-item">
+                        <div class="popular-blog-thumb">
+                          <img src="${thumb}" alt="" />
+                        </div>
+                        <div class="popular-blog-name">${name}</div>
+                        <div class="item-info d-flex align-items-center">
+                          <div class="item-by">${auth}</div>
+                          <div class="item-time">${date}</div>
+                        </div>
+                      </div>
+                    </a>
+                  </template>
                 </div>
               </div>
 
@@ -442,13 +282,13 @@
           </div>
 
           <div class="auth-form__form">
-            <form action="" class="form">
+            <form action="" class="form" id="sign-in-form">
               <div class="form-feild">
                 <input
                   type="text"
                   name="signin-name"
                   id="signin-name"
-                  class="signin-name"
+                  class="input signin-name"
                   placeholder="Tên đăng nhập"
                 />
                 <i class="bi bi-person input-icon"></i>
@@ -457,13 +297,15 @@
               <div class="form-feild">
                 <input
                   type="password"
-                  class="signin-password"
+                  class="input signin-password"
                   name="signin-password"
                   id="signin-password"
                   placeholder="Mật khẩu"
                 />
                 <i class="bi bi-lock input-icon"></i>
+                <span class="message-error"></span>
               </div>
+
               <p class="forget-password text-end">Quên mật khẩu</p>
               <button type="submit" class="submit-btn">Đăng nhập</button>
             </form>
@@ -494,16 +336,17 @@
           </div>
 
           <div class="auth-form__form">
-            <form action="" class="form">
+            <form action="" class="form" id="sign-up-form">
               <div class="form-feild">
                 <input
                   type="text"
-                  name="signin-name"
-                  id="signin-name"
-                  class="signin-name"
+                  name="signup-name"
+                  id="signup-name"
+                  class="input signup-name"
                   placeholder="Tên đăng nhập"
                 />
                 <i class="bi bi-person input-icon"></i>
+                <span class="message-error"></span>
               </div>
 
               <div class="form-feild">
@@ -511,32 +354,35 @@
                   type="email"
                   name="signup-email"
                   id="signup-email"
-                  class="signin-name"
+                  class="input signup-email"
                   placeholder="Email"
                 />
                 <i class="bi bi-person input-icon"></i>
+                <span class="message-error"></span>
               </div>
 
               <div class="form-feild">
                 <input
                   type="password"
-                  class="signin-password"
+                  class="input signup-password"
                   name="signin-password"
-                  id="signin-password"
+                  id="signup-password"
                   placeholder="Mật khẩu"
                 />
                 <i class="bi bi-lock input-icon"></i>
+                <span class="message-error"></span>
               </div>
 
               <div class="form-feild">
                 <input
                   type="password"
-                  class="signin-password"
-                  name="signin-password"
-                  id="signin-password"
+                  class="input confirm-password"
+                  name="confirm-password"
+                  id="confirm-password"
                   placeholder="Nhập lại mật khẩu"
                 />
                 <i class="bi bi-lock input-icon"></i>
+                <span class="message-error"></span>
               </div>
 
               <button type="submit" class="submit-btn">Đăng ký</button>
@@ -551,7 +397,10 @@
     </div>
 
     <script type="text/html" id="courseTemplate">
-      <div class="breadcumb">TRANG CHỦ / KHÓA HỌC NẤU ĂN / ${name}</div>
+      <div class="breadcumb">
+        <a href="index.html">TRANG CHỦ</a> /
+        <a href="course.html">KHÓA HỌC NẤU ĂN</a> / ${name}
+      </div>
       <div class="course-item">
         <div class="row">
           <div class="col-6">

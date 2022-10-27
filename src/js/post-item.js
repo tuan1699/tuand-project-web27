@@ -9,6 +9,9 @@ import $ from "jquery";
 import _ from "lodash";
 
 import "../js/modal.js";
+import "../js/side-bar";
+import "../js/auth.js";
+import "../js/signin.js";
 
 $(function () {
   const url = new URL(location.href);

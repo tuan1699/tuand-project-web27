@@ -5,6 +5,9 @@ import "../component/header.css";
 import "../css/course-item.css";
 
 import "../js/modal.js";
+import "../js/side-bar";
+import "../js/auth.js";
+import "../js/signin.js";
 
 import { courseList } from "./db";
 import { addToCart } from "./ulist";

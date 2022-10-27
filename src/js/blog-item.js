@@ -5,6 +5,9 @@ import "../component/sidebar.css";
 import "../css/blog-item.css";
 
 import "../js/modal.js";
+import "../js/side-bar";
+import "../js/auth.js";
+import "../js/signin.js";
 
 import { blogList } from "./db";
 

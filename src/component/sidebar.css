@@ -51,10 +51,8 @@
 
 .recipes-popular-item {
   gap: 10px;
-  /* padding: 32px 10px 32px 30px; */
   height: 110px;
-  padding-left: 32px;
-
+  padding-left: 20px;
   border-bottom: 1px solid #ccc;
 }
 
@@ -63,9 +61,14 @@
   top: 0;
   height: 100%;
   z-index: -1;
-  margin-left: -32px;
+  margin-left: -20px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.recipes-popular-by {
+  font-size: 14px;
+  color: var(--sub-color);
 }
 
 .popular-link:hover .recipes-popular-item {
@@ -106,6 +109,19 @@
   border-bottom: 1px solid var(--sub-color);
 }
 
+.popular-blog-thumb {
+  overflow: hidden;
+}
+
+.popular-blog-item:hover img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.popular-blog-item:hover .popular-blog-name {
+  color: var(--active-color);
+}
+
 .heading-sidebar {
   font-size: 18px;
   font-weight: 500;
@@ -117,10 +133,24 @@
 
 .popular-recipes,
 .popular-blog,
-.popular-video {
+.popular-video,
+.popular-course {
   margin-bottom: 40px;
 }
 
 .video-item {
   margin-top: 20px;
+}
+
+.cource-popular-thumb {
+  overflow: hidden;
+}
+
+.course-popular-link:hover .cource-popular-thumb img {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.course-popular-link:hover .course-popular-name {
+  color: var(--active-color);
 }

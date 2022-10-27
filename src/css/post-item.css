@@ -83,13 +83,26 @@
 .method-post,
 .cuisine-post,
 .tags-post {
-  padding: 4px 0px;
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
 }
 
-.format-post {
-  font-size: 14px;
-  color: #000;
-  font-weight: 500;
+.format-icon i {
+  font-size: 28px;
+}
+
+.format-icon {
+  margin-right: 12px;
+}
+
+.format-icon img {
+  width: 30px;
+}
+
+.format-value {
+  font-weight: 600;
+  color: rgb(239, 188, 112);
 }
 
 .side-bar-content {

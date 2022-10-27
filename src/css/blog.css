@@ -43,6 +43,10 @@
   transition: 0.5s ease;
 }
 
+.blog-link:hover .blog-name {
+  color: var(--active-color);
+}
+
 /* .blog-decr {
   display: none;
 } */
