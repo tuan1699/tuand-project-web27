@@ -93,9 +93,10 @@
 }
 
 .heading-popular {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   font-size: 18px;
   font-weight: 500;
+  margin-top: 40px;
 }
 
 /* Xem thêm */
@@ -280,7 +281,7 @@
 }
 
 .recipes-popular {
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .recipes-popular-top {
@@ -289,19 +290,55 @@
   left: 0;
   gap: 10px;
   padding: 32px 10px 32px 30px;
-
   color: #fff;
   gap: 10px;
 }
 
 .recipes-popular-item {
   gap: 10px;
-  padding: 32px 10px 32px 30px;
+  /* padding: 32px 10px 32px 30px; */
+  height: 110px;
+  padding-left: 32px;
+
   border-bottom: 1px solid #ccc;
 }
 
+.popular-thumb {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: -1;
+  margin-left: -32px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.popular-link:hover .recipes-popular-item {
+  height: 170px;
+  transition: 0.5s ease;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.recipes-popular-item:hover .popular-thumb {
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  animation: scale 0.2s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes scale {
+  from {
+    transform: scaleY(0.8);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
 .popular-link:hover .recipes-popular-number {
-  color: var(--active-color);
+  color: #fff;
 }
 
 .popular-link:hover .recipes-popular-thumb img {

@@ -607,10 +607,10 @@ export const courseList = [
 
   {
     id: 6,
-    name: "MÓN ĂN ĐƯỜNG PHỐ",
-    thumb: "/img/course/mon-an-duong-pho.png",
-    price: 1600000,
-    decr: "Giúp bạn thấu hiểu cặn kẽ cách chế biến thành công các món ăn vặt đường phố đặc trưng của Việt Nam.     ",
+    name: "MÓN ĂN CHO BÉ",
+    thumb: "/img/course/me-va-be.png",
+    price: 800000,
+    decr: "Giúp bạn thêm nhiều ý tưởng trang trí đồ ăn cho bé ăn ngon miệng hơn",
   },
   {
     id: 7,

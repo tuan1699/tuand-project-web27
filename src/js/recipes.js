@@ -6,12 +6,15 @@ import "../css/recipes.css";
 import $ from "jquery";
 import _ from "lodash";
 import { recipesList } from "./db";
+import { blogList, suggestList } from "./db";
+
 import { addToFav } from "./ulist";
 import { addToRecipesBox } from "./ulist";
 
 import "../js/modal.js";
 import "../js/auth.js";
 import "../js/signin.js";
+import "../js/side-bar";
 
 const PRODUCTS_PER_PAGE = 12;
 
@@ -108,6 +111,8 @@ $(function () {
   console.log(recipeFilted);
   renderRecipes(recipeFilted);
 });
+
+// FILTER
 
 bySeason.addEventListener("change", () => {
   if (bySeason.value === "all") {

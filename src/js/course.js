@@ -12,6 +12,7 @@ import { addToCart } from "./ulist";
 import "../js/modal.js";
 import "../js/auth.js";
 import "../js/signin.js";
+import "../js/side-bar";
 
 $(function () {
   const courseTemplate = $("#courseTemplate").html();

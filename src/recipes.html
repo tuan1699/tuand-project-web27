@@ -165,152 +165,43 @@
                 <div class="popular-recipes">
                   <div class="heading-sidebar">NHIỀU NGƯỜI THỰC HIỆN</div>
                   <div class="recipes-popular position-relative border-item">
-                    <a href="" class="popular-link">
-                      <div class="recipes-popular-top-1">
-                        <div class="recipes-popular-thumb overflow-hidden">
-                          <img
-                            src="./img/home/recipes/recipes-thumb.png"
-                            alt=""
-                          />
-                        </div>
+                    <template id="popular-template">
+                      <a href="post-item.html?id=${id}" class="popular-link">
                         <div
-                          class="recipes-popular-top position-absolute d-flex align-items-center"
+                          class="recipes-popular-item position-relative d-flex align-items-center"
                         >
-                          <div class="recipes-popular-number">1</div>
+                          <div
+                            class="popular-thumb"
+                            style="background-image: url(${thumb})"
+                          ></div>
+                          <div class="recipes-popular-number">${id}</div>
                           <div class="recipes-popular-decr text-start">
-                            <div class="recipes-popular-name">
-                              SỤN GÀ RANG MUỐI
-                            </div>
-                            <p class="recipes-popular-by">3 month</p>
+                            <div class="recipes-popular-name">${name}</div>
+                            <p class="recipes-popular-by">${date}</p>
                           </div>
                         </div>
-                      </div>
-                    </a>
-                    <a href="" class="popular-link">
-                      <div
-                        class="recipes-popular-item d-flex align-items-center"
-                      >
-                        <div class="recipes-popular-number">2</div>
-                        <div class="recipes-popular-decr text-start">
-                          <div class="recipes-popular-name">
-                            TÔM THỊT NHỒI BÍ ĐAO
-                          </div>
-                          <p class="recipes-popular-by">3 month</p>
-                        </div>
-                      </div>
-                    </a>
-                    <a href="" class="popular-link">
-                      <div
-                        class="recipes-popular-item d-flex align-items-center"
-                      >
-                        <div class="recipes-popular-number">3</div>
-                        <div class="recipes-popular-decr text-start">
-                          <div class="recipes-popular-name">
-                            HÀU NƯỚNG PHÔ MAI
-                          </div>
-                          <p class="recipes-popular-by">3 month</p>
-                        </div>
-                      </div>
-                    </a>
-                    <a href="" class="popular-link">
-                      <div
-                        class="recipes-popular-item d-flex align-items-center"
-                      >
-                        <div class="recipes-popular-number">4</div>
-                        <div class="recipes-popular-decr text-start">
-                          <div class="recipes-popular-name">
-                            CÁ NGỪ CUỘN RAU CỦ SỐT NẤM MÈ
-                          </div>
-                          <p class="recipes-popular-by">3 month</p>
-                        </div>
-                      </div>
-                    </a>
-                    <a href="" class="popular-link">
-                      <div
-                        class="recipes-popular-item d-flex align-items-center"
-                      >
-                        <div class="recipes-popular-number">5</div>
-                        <div class="recipes-popular-decr text-start">
-                          <div class="recipes-popular-name">
-                            TÔM THỊT NHỒI BÍ ĐAO
-                          </div>
-                          <p class="recipes-popular-by">3 month</p>
-                        </div>
-                      </div>
-                    </a>
+                      </a>
+                    </template>
                   </div>
                 </div>
 
                 <div class="popular-blog">
                   <div class="heading-sidebar">BÀI ĐĂNG NỔI BẬT</div>
-                  <div class="popular-blog-item">
-                    <div class="popular-blog-thumb">
-                      <img src="./img/blog/cho-buoi.png" alt="" />
-                    </div>
-
-                    <div class="popular-blog-name">
-                      CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
-                    </div>
-                    <div class="item-info d-flex align-items-center">
-                      <div class="item-by">by Hà Vy</div>
-                      <div class="item-time">March 13, 2021</div>
-                    </div>
-                  </div>
-
-                  <div class="popular-blog-item">
-                    <div class="popular-blog-thumb">
-                      <img src="./img/blog/cho-buoi.png" alt="" />
-                    </div>
-
-                    <div class="popular-blog-name">
-                      CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
-                    </div>
-                    <div class="item-info d-flex align-items-center">
-                      <div class="item-by">by Hà Vy</div>
-                      <div class="item-time">March 13, 2021</div>
-                    </div>
-                  </div>
-
-                  <div class="popular-blog-item">
-                    <div class="popular-blog-thumb">
-                      <img src="./img/blog/cho-buoi.png" alt="" />
-                    </div>
-
-                    <div class="popular-blog-name">
-                      CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
-                    </div>
-                    <div class="item-info d-flex align-items-center">
-                      <div class="item-by">by Hà Vy</div>
-                      <div class="item-time">March 13, 2021</div>
-                    </div>
-                  </div>
-
-                  <div class="popular-blog-item">
-                    <div class="popular-blog-thumb">
-                      <img src="./img/blog/cho-buoi.png" alt="" />
-                    </div>
-
-                    <div class="popular-blog-name">
-                      CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
-                    </div>
-                    <div class="item-info d-flex align-items-center">
-                      <div class="item-by">by Hà Vy</div>
-                      <div class="item-time">March 13, 2021</div>
-                    </div>
-                  </div>
-
-                  <div class="popular-blog-item">
-                    <div class="popular-blog-thumb">
-                      <img src="./img/blog/cho-buoi.png" alt="" />
-                    </div>
-
-                    <div class="popular-blog-name">
-                      CÁCH LÀM CHÓ BƯỞI TUYỆT XINH PHÁ CỖ TRÔNG TRĂNG
-                    </div>
-                    <div class="item-info d-flex align-items-center">
-                      <div class="item-by">by Hà Vy</div>
-                      <div class="item-time">March 13, 2021</div>
-                    </div>
+                  <div class="popular-blog-list">
+                    <template id="blog-template">
+                      <a href="blog-item.html?id=${id}">
+                        <div class="popular-blog-item">
+                          <div class="popular-blog-thumb">
+                            <img src="${thumb}" alt="" />
+                          </div>
+                          <div class="popular-blog-name">${name}</div>
+                          <div class="item-info d-flex align-items-center">
+                            <div class="item-by">${auth}</div>
+                            <div class="item-time">${date}</div>
+                          </div>
+                        </div>
+                      </a>
+                    </template>
                   </div>
                 </div>
 

@@ -14,6 +14,7 @@ import { courseList } from "./db";
 import "../js/modal.js";
 import "../js/auth.js";
 import "../js/signin.js";
+import "../js/side-bar";
 
 // SEARCH DISPLAY
 const searchInput = document.querySelector(".search-input");
@@ -45,6 +46,8 @@ $(function () {
 
   const blogTemplate = $("#blogTemplate").html();
   const blogTem = _.template(blogTemplate);
+
+
 
   $(".course-field").append(
     _.map(courseList, (courseItem) => {
@@ -116,4 +119,5 @@ $(function () {
       return dom;
     })
   );
+
 });

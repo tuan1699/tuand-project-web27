@@ -1,6 +1,5 @@
 import "../component/auth.css";
 import "../component/footer.css";
-import "../component/sidebar.css";
 import "../component/header.css";
 import "../css/blog.css";
 
@@ -12,6 +11,7 @@ import { addToFav } from "./ulist";
 import "../js/modal.js";
 import "../js/auth.js";
 import "../js/signin.js";
+import "../js/side-bar";
 
 const PRODUCTS_PER_PAGE = 7;
 
@@ -72,4 +72,14 @@ $(function () {
   );
 
   pagination(current, totalPage, prev, next);
+
+  const popularTemplate = $("#popular-template").html();
+  const popularTem = _.template(popularTemplate);
+  $(".recipes-popular").append(
+    _.map(recipesList.slice(0, 5), (recipes) => {
+      const dom = $(popularTem(recipes));
+
+      return dom;
+    })
+  );
 });
