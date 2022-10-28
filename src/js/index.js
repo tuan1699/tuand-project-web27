@@ -47,8 +47,6 @@ $(function () {
   const blogTemplate = $("#blogTemplate").html();
   const blogTem = _.template(blogTemplate);
 
-
-
   $(".course-field").append(
     _.map(courseList, (courseItem) => {
       const dom = $(`<div class="col-6 col-sm-6 col-md-4 col-lg-3">
@@ -85,6 +83,11 @@ $(function () {
 
       dom.find(".add-recipesBox").on("click", recipes, addToRecipesBox);
 
+      dom.find(".add-recipesBox").on("click", function (event) {
+        event.target.classList.add("active");
+        console.log(event.target);
+      });
+
       return dom;
     })
   );
@@ -115,9 +118,11 @@ $(function () {
       const dom = $(blogTem(blog));
 
       dom.find(".add-favourite").on("click", blog, addToFav);
-
+      dom.find(".add-favourite").on("click", function (event) {
+        event.target.classList.add("active");
+        console.log(event.target);
+      });
       return dom;
     })
   );
-
 });

@@ -1,4 +1,8 @@
 /* Header */
+
+.bi-bookmark-fill.active {
+  color: var(--active-color);
+}
 .header {
   background-color: var(--sub-bg);
 }
@@ -133,6 +137,7 @@
 
 .slider {
   width: 100%;
+  margin-top: 89px;
 }
 
 .slider-item {

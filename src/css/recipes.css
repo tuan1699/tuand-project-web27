@@ -1,7 +1,15 @@
 /* CONTENT */
 
+.bi-bookmark-fill.active {
+  color: var(--active-color);
+}
+
 .recipes-list > div {
   margin-bottom: 24px;
+}
+
+.breadcumb {
+  margin: 119px 0 0 0;
 }
 
 .text-active {

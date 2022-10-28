@@ -2,8 +2,12 @@
   color: var(--active-color);
 }
 
+.body {
+  margin-top: 40px;
+}
+
 .user-nav-item {
-  padding: 8px 40px;
+  padding: 8px 0px;
   color: #000;
 }
 
@@ -251,6 +255,9 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .user-nav-item {
+    padding: 8px 40px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -266,6 +273,10 @@
     width: 1200px;
     margin: auto;
     padding: 0;
+  }
+
+  .user-nav-item {
+    padding: 8px 100px;
   }
 
   .contact-form {

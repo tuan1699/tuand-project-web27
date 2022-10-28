@@ -1,5 +1,13 @@
+.bi-bookmark-fill.active {
+  color: var(--active-color);
+}
+
 .text-active {
   color: var(--active-color);
+}
+
+.breadcumb {
+  margin: 119px 0 0 0;
 }
 
 .content {

@@ -74,93 +74,15 @@
       <div class="body">
         <div class="user-container">
           <div class="user-nav d-flex justify-content-between">
-            <div class="user-nav-item active">Thông tin tài khoản</div>
-            <div class="user-nav-item">Công thức yêu thích</div>
-            <div class="user-nav-item">Bài viết yêu thích</div>
-            <div class="user-nav-item">Khóa học đã mua</div>
+            <!-- <div class="user-nav-item active">Thông tin tài khoản</div> -->
+            <div class="user-nav-item text-center active">
+              Công thức yêu thích
+            </div>
+            <div class="user-nav-item text-center">Bài viết yêu thích</div>
+            <div class="user-nav-item text-center">Khóa học đã mua</div>
           </div>
           <div class="user-content">
             <div class="user-content-item active">
-              <div class="user-info">
-                <div class="row">
-                  <div class="col-6"><p class="info-title">Tên</p></div>
-                  <div class="col-6">
-                    <input type="text" name="" id="" value="Tuấn" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="user-info">
-                <div class="row">
-                  <div class="col-6"><p class="info-title">Năm sinh</p></div>
-                  <div class="col-6">
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="1999"
-                      value="1999"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="user-info">
-                <div class="row">
-                  <div class="col-6"><p class="info-title">Giới tính</p></div>
-                  <div class="col-6">
-                    <input type="text" name="" id="" value="Nam" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="user-info">
-                <div class="row">
-                  <div class="col-6"><p class="info-title">Email</p></div>
-                  <div class="col-6">
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      value="tuandangvan1609@gmail.com"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="user-info">
-                <div class="row">
-                  <div class="col-6"><p class="info-title">Mật khẩu</p></div>
-                  <div class="col-6">
-                    <button class="change-password">Thay đổi mật khẩu</button>
-                  </div>
-                </div>
-              </div>
-              <div class="user-info">
-                <div class="row">
-                  <div class="col-6"><p class="info-title">Địa chỉ</p></div>
-                  <div class="col-6">
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      value="Thái thụy, Thái Bình"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="user-info">
-                <div class="row">
-                  <div class="col-6"></div>
-                  <div class="col-6">
-                    <button class="update">Cập nhật</button>
-                    <button class="cancel">Hủy</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="user-content-item">
               <div class="recipes-field row"></div>
             </div>
 
@@ -402,13 +324,13 @@
       <a href="blog-item.html?id=${id}" class="blog-link">
         <div class="blog-item">
           <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
               <div class="blog-thumb position-relative">
                 <img src="${ thumb }" alt="" />
                 <i class="bi bi-x remove-btn"></i>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
               <div class="blog-name">${name}</div>
               <div class="blog-info d-flex align-items-center">
                 <div class="blog-by">${auth}</div>
@@ -422,7 +344,7 @@
     </script>
 
     <script type="text/html" id="recipesTemp">
-      <div class="col-6 recipes col-sm-6 col-lg-4">
+      <div class="col-12 recipes col-sm-6 col-lg-4">
         <a href="post-item.html?id=${ id }">
           <div class="recipes-item border-item">
             <div class="recipes-item-thumb position-relative">

@@ -3,6 +3,7 @@
 }
 
 .breadcumb {
+  margin-top: 119px;
   margin-bottom: 40px;
 }
 
@@ -106,7 +107,7 @@
 }
 
 .side-bar-content {
-  margin-top: 80px;
+  margin-top: 180px;
 }
 /* Small devices (tablets, 576px and up) */
 @media (min-width: 576px) {

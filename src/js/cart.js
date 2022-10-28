@@ -8,15 +8,26 @@ import _ from "lodash";
 
 import "../js/modal.js";
 import "../js/auth.js";
+import "../js/signin.js";
 
-const payOption = document.querySelectorAll("#pay-option");
-const methodDecr = document.querySelectorAll(".method-decr");
-payOption.forEach((optionItem, index) => {
-  optionItem.onclick = () => {
-    document.querySelector(".method-decr.active").classList.remove("active");
+// PAY METHOD
 
-    methodDecr[index].classList.add("active");
-  };
+const btnPayMethodList = document.querySelectorAll("#pay-option");
+
+btnPayMethodList.forEach((btnPayMethod) => {
+  btnPayMethod.addEventListener("click", () => {
+    const parrent = btnPayMethod.parentElement;
+    const methodDecr = parrent.querySelector(".method-decr");
+    const methodDecrtList = document.querySelectorAll(".method-decr");
+    for (let i = 0; i < methodDecrtList.length; i++) {
+      methodDecrtList[i].style.maxHeight = null;
+    }
+    if (methodDecr.style.maxHeight) {
+      methodDecr.style.maxHeight = null;
+    } else {
+      methodDecr.style.maxHeight = methodDecr.scrollHeight + "px";
+    }
+  });
 });
 
 // Render cart từ local Storage
@@ -26,36 +37,40 @@ function renderCart() {
   const cartItemTemp = $("#item-in-cart").html();
 
   const cartItem = _.template(cartItemTemp);
-  $(".cart-list").append(
-    _.map(cartBox, (course) => {
-      const dom = $(cartItem(course));
-      dom.find(".delete-course").on("click", course, deleteItem);
-      return dom;
-    })
-  );
 
-  $(".list-check-out").html(
-    _.map(cartBox, (course) => {
-      return `<div
-      class="item-checkout d-flex justify-content-between align-items-center"
-    >
-      <div class="course-info">
-        <div class="row">
-          <div class="col-6">
-            <img src="${course.thumb}" alt="" />
-          </div>
-          <div class="col-6">
-            <div class="cart-name">
-            ${course.name}
+  if (cartBox.length !== 0) {
+    $(".cart-list").html("");
+    $(".cart-list").append(
+      _.map(cartBox, (course) => {
+        const dom = $(cartItem(course));
+        dom.find(".delete-course").on("click", course, deleteItem);
+        return dom;
+      })
+    );
+
+    $(".list-check-out").html(
+      _.map(cartBox, (course) => {
+        return `<div
+        class="item-checkout d-flex justify-content-between align-items-center"
+      >
+        <div class="course-info">
+          <div class="row">
+            <div class="col-6">
+              <img src="${course.thumb}" alt="" />
+            </div>
+            <div class="col-6">
+              <div class="cart-name">
+              ${course.name}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="course-price">${course.price} Đ</div>
-    </div>`;
-    }).join("")
-  );
-  sum();
+        <div class="course-price">${course.price} Đ</div>
+      </div>`;
+      }).join("")
+    );
+    sum();
+  }
 }
 
 const deleteItem = (event) => {

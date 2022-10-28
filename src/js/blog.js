@@ -65,7 +65,10 @@ $(function () {
         const dom = $(blogTemp(blog));
 
         dom.find(".add-favourite").on("click", blog, addToFav);
-
+        dom.find(".add-favourite").on("click", function (event) {
+          event.target.classList.add("active");
+          console.log(event.target);
+        });
         return dom;
       }
     )

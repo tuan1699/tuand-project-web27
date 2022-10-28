@@ -97,6 +97,7 @@ export const addToRecipesBox = (event) => {
       };
     } else {
       recipesBox.push(event.data);
+      
       toastr["success"]("Đã thêm món ăn vào danh sách yêu thích!");
 
       toastr.options = {
