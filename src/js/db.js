@@ -12,6 +12,7 @@ export const recipesList = [
     region: "north",
     category: "main",
     method: "Nướng",
+    ingredient: "Thịt gà",
   },
 
   {
@@ -27,6 +28,7 @@ export const recipesList = [
     region: "north",
     category: "sub",
     method: "Nướng",
+    ingredient: "Hàu, Phô mai",
   },
   {
     id: 3,
@@ -41,6 +43,7 @@ export const recipesList = [
     region: "north",
     category: "sub",
     method: "Hấp",
+    ingredient: "Xôi nếp, thịt gà",
   },
 
   {
@@ -56,6 +59,7 @@ export const recipesList = [
     region: "north",
     category: "main",
     method: "boil",
+    ingredient: "Thịt gà",
   },
 
   {
@@ -71,6 +75,7 @@ export const recipesList = [
     region: "north",
     category: "sub",
     method: "luoc",
+    ingredient: "Cá hồi",
   },
 
   {
@@ -86,6 +91,7 @@ export const recipesList = [
     region: "north",
     category: "main",
     method: "luoc",
+    ingredient: "Cá trắm, măng",
   },
 
   {
@@ -101,6 +107,7 @@ export const recipesList = [
     region: "north",
     category: "main",
     method: "luoc",
+    ingredient: "Cá vược",
   },
 
   {
@@ -116,6 +123,7 @@ export const recipesList = [
     region: "north",
     category: "main",
     method: "luoc",
+    ingredient: "Thịt lơn",
   },
   {
     id: 9,
@@ -130,6 +138,7 @@ export const recipesList = [
     region: "north",
     category: "main",
     method: "luoc",
+    ingredient: "Thịt gà",
   },
   {
     id: 10,
@@ -144,6 +153,7 @@ export const recipesList = [
     region: "north",
     category: "main",
     method: "luoc",
+    ingredient: "Cá",
   },
   {
     id: 11,
@@ -158,6 +168,7 @@ export const recipesList = [
     region: "north",
     category: "main",
     method: "luoc",
+    ingredient: "Thịt lợn",
   },
   {
     id: 12,
@@ -172,6 +183,7 @@ export const recipesList = [
     region: "north",
     category: "sub",
     method: "luoc",
+    ingredient: "Bánh mỳ, trứng",
   },
   {
     id: 13,
@@ -186,6 +198,7 @@ export const recipesList = [
     region: "north",
     category: "main",
     method: "fry",
+    ingredient: "Thịt bò",
   },
   {
     id: 14,
@@ -200,6 +213,7 @@ export const recipesList = [
     region: "north",
     category: "cake",
     method: "grill",
+    ingredient: "Bánh mỳ",
   },
   {
     id: 15,
@@ -214,6 +228,7 @@ export const recipesList = [
     region: "south-side",
     category: "sub",
     method: "fried",
+    ingredient: "Mỳ, rau củ, trứng",
   },
   {
     id: 16,
@@ -228,6 +243,7 @@ export const recipesList = [
     region: "north-side",
     category: "cake",
     method: "grill",
+    ingredient: "Bánh mỳ, trứng",
   },
   {
     id: 17,
@@ -242,6 +258,7 @@ export const recipesList = [
     region: "south-side",
     category: "main",
     method: "fried",
+    ingredient: "Cơm, trứng, tôm",
   },
   {
     id: 18,
@@ -256,6 +273,7 @@ export const recipesList = [
     region: "south-side",
     category: "summer",
     method: "grill",
+    ingredient: "Bánh mỳ, trứng",
   },
   {
     id: 19,
@@ -270,6 +288,7 @@ export const recipesList = [
     region: "south-side",
     category: "cake",
     method: "grill",
+    ingredient: "Bánh mỳ, thịt nguội",
   },
   {
     id: 20,
@@ -284,6 +303,7 @@ export const recipesList = [
     region: "south-side",
     category: "sub",
     method: "salad",
+    ingredient: "Ngũ cốc",
   },
   {
     id: 21,
@@ -298,6 +318,7 @@ export const recipesList = [
     region: "south-side",
     category: "appetizer",
     method: "salad",
+    ingredient: "Tôm, củ hũ dừa",
   },
   {
     id: 22,
@@ -312,6 +333,7 @@ export const recipesList = [
     region: "south-side",
     category: "appetizer",
     method: "salad",
+    ingredient: "Tôm, thịt, ngó sen",
   },
   {
     id: 23,
@@ -326,6 +348,7 @@ export const recipesList = [
     region: "north-side",
     category: "appetizer",
     method: "salad",
+    ingredient: "Thịt lợn, hoa chuối",
   },
   {
     id: 24,
@@ -340,10 +363,11 @@ export const recipesList = [
     region: "south-side",
     category: "appetizer",
     method: "salad",
+    ingredient: "Thịt bò",
   },
   {
     id: 25,
-    name: "GỎI BÒ MÈ BÓP THẤU",
+    name: "BÁNH TRÁNG CUỘN",
     thumb: "./img/recipes/thit-nguoi.png",
     auth: "Lan Anh",
     day: "05",
@@ -354,6 +378,7 @@ export const recipesList = [
     region: "central",
     category: "appetizer",
     method: "salad",
+    ingredient: "Bánh tráng, thịt lợn, nem lụi",
   },
   {
     id: 26,
@@ -368,6 +393,7 @@ export const recipesList = [
     region: "central",
     category: "appetizer",
     method: "salad",
+    ingredient: "Càng cua",
   },
   {
     id: 27,
@@ -382,6 +408,7 @@ export const recipesList = [
     region: "south-side",
     category: "beverage",
     method: "boil",
+    ingredient: "Bí đao, sữa, trà",
   },
   {
     id: 28,
@@ -396,6 +423,7 @@ export const recipesList = [
     region: "north-side",
     category: "beverage",
     method: "boil",
+    ingredient: "Hạt đác",
   },
   {
     id: 29,
@@ -410,6 +438,7 @@ export const recipesList = [
     region: "north-side",
     category: "beverage",
     method: "boil",
+    ingredient: "Đào",
   },
   {
     id: 30,
@@ -424,6 +453,7 @@ export const recipesList = [
     region: "north-side",
     category: "beverage",
     method: "boil",
+    ingredient: "Sữa chua",
   },
 
   {
@@ -439,6 +469,7 @@ export const recipesList = [
     region: "south-side",
     category: "beverage",
     method: "boil",
+    ingredient: "Cà phê",
   },
 
   {
@@ -454,6 +485,7 @@ export const recipesList = [
     region: "central",
     category: "dessert",
     method: "tea",
+    ingredient: "Đậu đen",
   },
   {
     id: 33,
@@ -468,6 +500,7 @@ export const recipesList = [
     region: "south-side",
     category: "dessert",
     method: "tea",
+    ingredient: "Hạt sen",
   },
   {
     id: 33,
@@ -482,6 +515,7 @@ export const recipesList = [
     region: "central",
     category: "dessert",
     method: "grill",
+    ingredient: "Chuối",
   },
   {
     id: 34,
@@ -496,6 +530,7 @@ export const recipesList = [
     region: "central",
     category: "dessert",
     method: "cake",
+    ingredient: "Bột, sữa",
   },
   {
     id: 35,
@@ -510,6 +545,7 @@ export const recipesList = [
     region: "central",
     category: "dessert",
     method: "beverage",
+    ingredient: "Sương sáo, nước dừa",
   },
   {
     id: 36,
@@ -524,6 +560,7 @@ export const recipesList = [
     region: "central",
     category: "dessert",
     method: "boil",
+    ingredient: "Chuối, nước cốt dừa",
   },
 ];
 

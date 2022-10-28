@@ -75,7 +75,10 @@ function renderRecipes(list) {
       const dom = $(recipe(recipes));
 
       dom.find(".add-recipesBox").on("click", recipes, addToRecipesBox);
-
+      dom.find(".add-recipesBox").on("click", function (event) {
+        event.target.classList.add("active");
+        console.log(event.target);
+      });
       return dom;
     }
   );
