@@ -16,6 +16,7 @@ export default defineConfig({
         cart: resolve(__dirname, "src/cart.html"),
         postitem: resolve(__dirname, "src/post-item.html"),
         blogitem: resolve(__dirname, "src/blog-item.html"),
+        courseitem: resolve(__dirname, "src/course-item.html"),
         user: resolve(__dirname, "src/user.html"),
       },
     },

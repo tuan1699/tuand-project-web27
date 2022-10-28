@@ -6,6 +6,10 @@
   margin-bottom: 40px;
 }
 
+.add-favourite.active {
+  color: var(--active-color);
+}
+
 .blog-list {
   padding-bottom: 40px;
 }

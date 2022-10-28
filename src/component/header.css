@@ -8,6 +8,11 @@
   min-height: 68px;
 }
 
+.logo {
+  width: 50px;
+  padding: 10px 0;
+}
+
 .nav-item {
   color: #fff;
   text-decoration: none;
