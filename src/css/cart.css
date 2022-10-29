@@ -17,6 +17,10 @@ textarea {
   padding: 4px 0 4px 20px;
 }
 
+.check-out-field {
+  margin-bottom: 40px;
+}
+
 li {
   list-style: none;
 }
