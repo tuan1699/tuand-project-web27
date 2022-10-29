@@ -11,7 +11,7 @@ export const recipesList = [
     season: "spring",
     region: "north",
     category: "main",
-    method: "Nướng",
+    method: "grill",
     ingredient: "Thịt gà",
   },
 
@@ -27,7 +27,7 @@ export const recipesList = [
     season: "summer",
     region: "north",
     category: "sub",
-    method: "Nướng",
+    method: "grill",
     ingredient: "Hàu, Phô mai",
   },
   {
@@ -42,7 +42,7 @@ export const recipesList = [
     season: "fall",
     region: "north",
     category: "sub",
-    method: "Hấp",
+    method: "boil",
     ingredient: "Xôi nếp, thịt gà",
   },
 
@@ -74,7 +74,7 @@ export const recipesList = [
     season: "spring",
     region: "north",
     category: "sub",
-    method: "luoc",
+    method: "boil",
     ingredient: "Cá hồi",
   },
 
@@ -90,7 +90,7 @@ export const recipesList = [
     season: "summer",
     region: "north",
     category: "main",
-    method: "luoc",
+    method: "boil",
     ingredient: "Cá trắm, măng",
   },
 
@@ -106,7 +106,7 @@ export const recipesList = [
     season: "fall",
     region: "north",
     category: "main",
-    method: "luoc",
+    method: "boil",
     ingredient: "Cá vược",
   },
 
@@ -122,8 +122,8 @@ export const recipesList = [
     season: "winter",
     region: "north",
     category: "main",
-    method: "luoc",
-    ingredient: "Thịt lơn",
+    method: "boil",
+    ingredient: "Thịt lợn",
   },
   {
     id: 9,
@@ -137,7 +137,7 @@ export const recipesList = [
     season: "spring",
     region: "north",
     category: "main",
-    method: "luoc",
+    method: "boil",
     ingredient: "Thịt gà",
   },
   {
@@ -152,7 +152,7 @@ export const recipesList = [
     season: "summer",
     region: "north",
     category: "main",
-    method: "luoc",
+    method: "boil",
     ingredient: "Cá",
   },
   {
@@ -167,7 +167,7 @@ export const recipesList = [
     season: "fall",
     region: "north",
     category: "main",
-    method: "luoc",
+    method: "boil",
     ingredient: "Thịt lợn",
   },
   {
@@ -182,7 +182,7 @@ export const recipesList = [
     season: "fall",
     region: "north",
     category: "sub",
-    method: "luoc",
+    method: "boil",
     ingredient: "Bánh mỳ, trứng",
   },
   {
